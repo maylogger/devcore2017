@@ -18,3 +18,5 @@
 .DS_Store
 
 log/.log
+
+tmp/restart.txt
