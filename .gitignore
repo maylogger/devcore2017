@@ -20,3 +20,5 @@
 log/.log
 
 tmp/restart.txt
+
+log/development.log
