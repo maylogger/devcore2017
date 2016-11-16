@@ -1,6 +1,9 @@
 require 'slim'
 require 'susy'
 
+# slim setting
+Slim::Engine.set_options pretty: true
+
 ###
 # Page options, layouts, aliases and proxies
 ###
