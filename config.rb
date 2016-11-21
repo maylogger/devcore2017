@@ -1,6 +1,3 @@
-require 'slim'
-require 'susy'
-
 # slim setting
 Slim::Engine.set_options pretty: true
 
