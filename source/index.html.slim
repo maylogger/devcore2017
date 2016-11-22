@@ -1,6 +1,12 @@
----
-title: hello test slim
----
 
-h1 Hello
-p= lorem.date
+p = "#{t(:hello)}，你面對的是駭客，我們也是"
+h1
+  em 戴夫寇爾
+  | 以真實的
+  = link_to "滲透測試", data.menu.pt.url
+  |、
+  = link_to "顧問服務", data.menu.consolting.url
+  |、
+  = link_to "教育訓練", data.menu.training.url
+  br
+  | 保護你的商業價值
