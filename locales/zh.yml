@@ -1,3 +1,43 @@
 ---
 zh:
-  hello: "嗨"
+
+  site:
+    name:        DEVCORE 戴夫寇爾
+    url:         http://core.dev/
+    og-image:    http://core.dev/images/fb.png
+    slogan1:     你面對的是<a href="/en/mind/">駭客</a>，我們也是。
+    slogan2:     <em>戴夫寇爾</em>以真實的<a href="/pt/">滲透測試</a>、<a href="/consolting/">顧問服務</a>、<a href="/training/">教育訓練</a>，
+    slogan3:     保護你的商業價值。
+    description: 戴夫寇爾以真實的滲透測試、顧問服務、教育訓練，保護你的商業價值。
+
+  menu-label:    主選單
+  menu:
+    mind:
+      name:      駭客思維
+      url:       /mind/
+    pt:
+      name:      滲透測試
+      url:       /pt/
+    consolting:
+      name:      資安顧問
+      url:       /consolting/
+    training:
+      name:      教育訓練
+      url:       /training/
+    about:
+      name:      關於我們
+      url:       /about/
+    news:
+      name:      最新消息
+      url:       /news/
+
+  lang-label:    語言
+  lang:
+    en:
+      name:      English
+      url:       http://core.dev/en/
+    zh:
+      name:      中文
+      url:       http://core.dev/
+
+  hello:         嗨

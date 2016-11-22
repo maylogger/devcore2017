@@ -1,3 +1,43 @@
 ---
 en:
-  hello: "Hello"
+
+  site:
+    name:        DEVCORE
+    url:         http://core.dev/en/
+    og-image:    http://core.dev/images/fb-en.png
+    slogan1:     We are all <a href="/en/mind/">Hackers</a>.
+    slogan2:     We provide <a href="/en/pt/">Penetration Test</a>, <a href="/en/consolting/">Consolting</a> & <a href="/en/training/">Training</a> service.
+    slogan3:     We protect your values.
+    description: We protect your values.
+
+  menu-label:    Main Navigation
+  menu:
+    mind:
+      name:      Hackers Mind
+      url:       /en/mind/
+    pt:
+      name:      Penetration Test
+      url:       /en/pt/
+    consolting:
+      name:      Consolting
+      url:       /en/consolting/
+    training:
+      name:      Training
+      url:       /en/training/
+    about:
+      name:      About
+      url:       /en/about/
+    news:
+      name:      News
+      url:       /en/news/
+
+  lang-label:    Language
+  lang:
+    en:
+      name:      English
+      url:       http://core.dev/en/
+    zh:
+      name:      中文
+      url:       http://core.dev/
+
+  hello:         Hello
