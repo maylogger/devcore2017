@@ -1,0 +1,18 @@
+mind:
+  name: Hackers Mind
+  url: /mind/
+pt:
+  name: PT
+  url: /pt/
+consolting:
+  name: Consolting
+  url: /consolting/
+training:
+  name: Training
+  url: /training/
+about:
+  name: About
+  url: /about/
+news:
+  name: News
+  url: /news/
