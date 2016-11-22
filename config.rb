@@ -1,4 +1,5 @@
 # slim setting
+require 'slim'
 Slim::Engine.set_options pretty: true
 
 ###
