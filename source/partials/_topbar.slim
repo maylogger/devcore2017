@@ -1,5 +1,12 @@
 .topbar
-  = image_tag "logo-mobile.svg", alt: data.site.name, class: "logo", width: "120", height: "30"
+  = image_tag "logo-mobile.svg", alt: t("site.name"), class: "logo", width: "120", height: "30"
+
+  h2 = t("menu-label")
   ul.topmenu
-    - data.menu.each do | item, details |
-      li = link_to details["name"], details["url"]
+    - t("menu").each do | item, details |
+      li = link_to details[:name], details[:url]
+
+  h2 = t("lang-label")
+  ul.langmenu
+    - t("lang").each do | item, details |
+      li = link_to details[:name], details[:url]
