@@ -21,6 +21,8 @@ page '/*.txt', layout: false
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
 # General configuration
+# Localization (i18n)
+activate :i18n, :mount_at_root => :zh
 
 # Reload the browser automatically whenever files change
 configure :development do
