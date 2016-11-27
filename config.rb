@@ -24,6 +24,14 @@ page '/*.txt', layout: false
 # Localization (i18n)
 activate :i18n, :mount_at_root => :zh
 
+# for blog
+activate :blog do |blog|
+  # set options on blog
+  blog.prefix = "news"
+  blog.summary_separator = "READMORE"
+  blog.paginate = true
+end
+
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload

@@ -16,3 +16,7 @@ gem 'middleman-compass', '>= 4.0.0'
 gem 'slim', '>= 3.0'
 gem 'susy'
 gem 'puma'
+
+#for blog
+gem "middleman-blog", "~> 4.0"
+gem "nokogiri"
