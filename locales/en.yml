@@ -1,6 +1,6 @@
 ---
 en:
-
+  class:         en
   site:
     name:        DEVCORE
     url:         http://core.dev/en/
@@ -11,7 +11,7 @@ en:
     description: We protect your values.
 
   menu-label:    Main Navigation
-  menu:
+  service:
     mind:
       name:      Hackers Mind
       url:       /en/mind/
@@ -24,12 +24,16 @@ en:
     training:
       name:      Training
       url:       /en/training/
-    about:
-      name:      About
-      url:       /en/about/
+  menu:
     news:
       name:      News
       url:       /en/news/
+    about:
+      name:      About
+      url:       /en/about/
+    contact:
+      name:      Contact Us
+      url:       /contact/
 
   lang-label:    Language
   lang:

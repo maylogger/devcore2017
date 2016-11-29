@@ -1,6 +1,6 @@
 ---
 zh:
-
+  class:         zh
   site:
     name:        DEVCORE 戴夫寇爾
     url:         http://core.dev/
@@ -11,7 +11,7 @@ zh:
     description: 戴夫寇爾以真實的滲透測試、顧問服務、教育訓練，保護你的商業價值。
 
   menu-label:    主選單
-  menu:
+  service:
     mind:
       name:      駭客思維
       url:       /mind/
@@ -24,12 +24,16 @@ zh:
     training:
       name:      教育訓練
       url:       /training/
-    about:
-      name:      關於我們
-      url:       /about/
+  menu:
     news:
       name:      最新消息
       url:       /news/
+    about:
+      name:      關於我們
+      url:       /about/
+    contact:
+      name:      聯絡我們
+      url:       /contact/
 
   lang-label:    語言
   lang:
