@@ -1,0 +1,8 @@
+body {
+  color: $darkgray;
+  background: white;
+  a {
+    @include unstyled-link;
+    @include link-colors($green);
+  }
+}
