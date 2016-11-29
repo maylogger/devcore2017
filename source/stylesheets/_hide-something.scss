@@ -1,0 +1,13 @@
+.topbar {
+  h2 {
+    @extend %hidden;
+  }
+  ul {
+    @include reset-list-style;
+    @include reset-box-model;
+  }
+}
+body.en .langmenu .en,
+body.zh .langmenu .zh {
+  @extend %hidden;
+}
