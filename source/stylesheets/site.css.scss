@@ -1,2 +1,51 @@
+// breakpoint
+$large:         800px;
+$large-columns: 8;
+
+// font setting
+$base-font-size:   20px;
+$base-line-height: 34px;
+$rhythm-unit:      "rem";
+
+// baseline color for debug
+$grid-background-baseline-color: rgba(#009a8e,.1);
+
+// import library
 @import "normalize";
-@import "topbar"
+@import "compass";
+@import "susy";
+@import "breakpoint";
+@import "tools";
+@import "hide-something";
+
+// brand colors
+$black:         #222;
+$darkgray:      #53565a;
+$green:         #44d62c;
+$lightgray:     #ededed;
+@import "basic-colors";
+
+// susy setting
+$susy: (
+  columns: 4,
+  global-box-sizing: border-box,
+  debug: (image: show)
+);
+
+@include border-box-sizing;
+@include establish-baseline;
+
+// layout css
+.page {
+  @include container;
+  padding-left: 20px;
+  padding-right: 20px;
+  @include desktop {
+    @include show-grid();
+    max-width: 1280px;
+  }
+}
+
+// partials
+@import "topbar";
+@import "typography";
