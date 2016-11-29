@@ -4,7 +4,8 @@ html.no-js lang="zh-TW"
     = partial "layouts/layout-head"
     = partial "layouts/layout-og"
 
-  body class="#{page_classes}"
-    = partial "partials/topbar"
-    = yield
-    = partial "layouts/layout-foot"
+  body class="#{page_classes} #{t("class")}"
+    .page
+      = partial "partials/topbar"
+      = yield
+      = partial "layouts/layout-foot"
