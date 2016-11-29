@@ -1,3 +1,39 @@
+// topbar's height
+$topbar-height: 1.7em * 3;
+
 .topbar {
-  padding: 20px;
+  .bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: $topbar-height;
+  }
+  .logo {
+    display: block;
+    position: relative;
+    top: -.25rem;
+  }
 }
+
+.topmenu,
+.langmenu {
+  display: none;
+  li {
+    display: inline;
+    font-size: .8rem;
+    &:after {
+      content: "/";
+      color: $lightgray;
+    }
+  }
+  a {
+    @include link-colors( $darkgray, $green );
+  }
+}
+
+@include desktop {
+  .topmenu,
+  .langmenu {
+    display: inline;
+  }
+};
