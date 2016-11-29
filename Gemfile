@@ -17,6 +17,9 @@ gem 'slim', '>= 3.0'
 gem 'susy'
 gem 'puma'
 
-#for blog
+# for blog
 gem "middleman-blog", "~> 4.0"
 gem "nokogiri"
+
+# for layout
+gem "breakpoint"
