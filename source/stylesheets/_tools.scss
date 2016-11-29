@@ -1,0 +1,15 @@
+%hidden {
+  display: none;
+}
+
+// for big media
+@mixin desktop {
+  @include susy-breakpoint($large, $large-columns) {
+    @content;
+  }
+}
+
+.mobile-only {
+  display: block !important;
+  @include desktop { display: none !important };
+}
