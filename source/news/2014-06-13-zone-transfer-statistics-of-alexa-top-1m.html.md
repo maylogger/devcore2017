@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Zone Transfer Statistics of Alexa Top 1 Million"
 description: "Zone Transfer 雖然已經是一個古老的 DNS 資安問題，但仍然有許多企業對此不設防。本篇將為大家說明 Alexa Top 1M 的 Zone Transfer 資安議題相關統計結果。"
 category: "技術專欄"

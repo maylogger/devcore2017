@@ -1,17 +1,15 @@
 ---
-layout: post
+
 title: "Android WebView 為你的使用者打開了漏洞之門你知道嗎？"
 description: "廣為 Android 開發者所使用的 WebView，在你打開了 JavaScript 功能的時候，背後一些由於系統漏洞而引發出來意想不到的風險卻有機會由此而生你知道嗎？我們在下面的文章為大家對這些風險漏洞做個整理。"
 category: "技術專欄"
 tags: [Mobile, Android, WebView, UXSS]
 author: "anfa"
 keywords: "WebView, UXSS, CVE"
-og_image: "https://lh3.googleusercontent.com/-BtDqPupmJiA/VDy2gz9bkQI/AAAAAAAAAuM/liUV3DXWcuE/s500-no/14773948755_6f8774540b_o.jpg"
+image: "https://lh3.googleusercontent.com/-BtDqPupmJiA/VDy2gz9bkQI/AAAAAAAAAuM/liUV3DXWcuE/s500-no/14773948755_6f8774540b_o.jpg"
+image_credit: "https://www.flickr.com/photos/chrisgold/14773948755/in/photostream/"
+image_caption: "Chris Goldberg(flickr)"
 ---
-
-
-[![opened door](https://lh3.googleusercontent.com/-BtDqPupmJiA/VDy2gz9bkQI/AAAAAAAAAuM/liUV3DXWcuE/s500-no/14773948755_6f8774540b_o.jpg "opened door")](https://lh3.googleusercontent.com/-BtDqPupmJiA/VDy2gz9bkQI/AAAAAAAAAuM/liUV3DXWcuE/s500-no/14773948755_6f8774540b_o.jpg)
-[Credit: [Chris Goldberg(flickr)](https://www.flickr.com/photos/chrisgold/14773948755/in/photostream/)]
 
 為了解決在應用程式中顯示網頁的需求，開發者一般會使用到由系統提供的 WebView 元件。而由於 JavaScript 被廣泛應用在網頁上，開發者通常也會把 WebView 處理 JavaScript 的功能打開，好讓大部分網頁能正常運作。但就在開啟這個像是必不可少的 JavaScript 功能時，背後一些由於系統漏洞而引發出來意想不到的風險卻有機會由此而生。接下來的部分將把這些漏洞為大家做個整理。
 

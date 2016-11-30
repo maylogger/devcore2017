@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Content-Security-Policy - HTTP Headers 的資安議題 (2)"
 description: "Content-Security-Policy 主要目的是用來防止 Cross-Site Scripting (XSS) 跟網頁樣式置換，本文將介紹 Content-Security-Policy 的使用方式、實際使用案例、常見誤用案例。"
 category: "技術專欄"

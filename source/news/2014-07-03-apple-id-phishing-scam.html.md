@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Apple ID 釣魚郵件案例"
 description: "又收到釣魚郵件了！好的釣魚郵件可以輕易騙取別人的帳號密碼，不好的釣魚郵件甚至可以讓我們破解攻擊者的手法。這次我們來看看一個 Apple ID 的釣魚郵件。"
 category: "案例剖析"

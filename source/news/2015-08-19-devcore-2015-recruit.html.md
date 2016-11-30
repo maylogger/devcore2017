@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "[已結束] DEVCORE 徵求行政出納人才"
 description: "DEVCORE 誠徵行政出納人才"
 category: "最新消息"

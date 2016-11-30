@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "HttpOnly - HTTP Headers 的資安議題 (3)"
 description: "HttpOnly 主要目的是禁止 JavaScript 直接存取 cookie，以避免他人盜用使用者的帳號。本文將介紹 HttpOnly 的使用方式、實際使用案例。"
 category: "技術專欄"

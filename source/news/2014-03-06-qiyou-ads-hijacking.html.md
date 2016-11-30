@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "奇優廣告 Qiyou 廣告手法剖析"
 description: "廣告網站為了增加廣告曝光度以及點擊率，使用各種複雜多變的手法顯示廣告。戴夫寇爾將於本文分析奇優廣告 Qiyou 是如何利用 JavaScript 控制滑鼠事件顯示廣告。"
 category: "案例剖析"

@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "HTTP Session 攻擊與防護"
 description: "Session 保護是網站防止使用者帳號被竊的決定要素之一。如果能做好防護，將能防止帳號遭竊，或是在第一時間強制登出網站保護帳號。本文將介紹 Session 攻擊的手法以及防禦的方式，提供給管理者、開發者參考。"
 category: "技術專欄"

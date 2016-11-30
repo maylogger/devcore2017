@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "OpenSSL Heartbleed 全球駭客的殺戮祭典，你參與了嗎？"
 description: "OpenSSL CVE-2014-0160 Heartbleed 漏洞你聽過嗎？你知道攻擊是怎麼發生的嗎？我們整理了一些大眾向我們詢問的問題，像是攻擊方式、防禦方式等。號稱本年度最嚴重的漏洞，已經不容你再度錯過。"
 category: "技術專欄"

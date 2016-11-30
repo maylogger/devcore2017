@@ -1,12 +1,12 @@
 ---
-layout: post
+
 title: "How I Hacked Facebook, and Found Someone's Backdoor Script"
 description: "Bug Bounty Hunting from Pentest View, and How to Find Remote Code Execution and Someone's Backdoor on Facebook Server..."
 category: "案例剖析"
 tags: ["Facebook", "BugBounty", "RCE", "Backdoor", "Reconnaissance", "Pentest"]
 author: "orange"
 keywords: "Facebook, BugBounty, RCE, Backdoor, Reconnaissance, Pentest"
-og_image: "http://devco.re/images/news/20160421/facebook.jpg"
+image: "/images/news/20160421/facebook.jpg"
 ---
 
 by [Orange Tsai](http://blog.orange.tw/)  

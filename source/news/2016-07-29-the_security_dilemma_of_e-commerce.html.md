@@ -1,16 +1,15 @@
 ---
-layout: post
+
 title: "電商業者的資安困境？"
 description: "電商業者到底發生了什麼事？為什麼就是不處理個資外洩呢？其實有的時候不是企業不處理，搞不好是有苦難言。今天我們來談談電商業者所遇到的困境是什麼。"
 category: "科普文章"
 tags: [ecommerce,]
 author: "allenown"
 keywords: "電子商務, 個資"
-og_image: "http://devco.re/images/news/20160729/cart.jpg"
+image: "/images/news/20160729/cart.jpg"
+image_credit: "https://www.flickr.com/photos/zionfiction/7968029824/"
+image_caption: "Flickr"
 ---
-
-
-![Photo Credit: https://www.flickr.com/photos/zionfiction/7968029824/](/images/news/20160729/cart.jpg)
 
 台灣電商網站蓬勃發展，豐富的個資、金流都吸引了攻擊者。近期刑事局 165 反詐騙網站上常看到很多電商網站面臨個資外洩的問題，新聞也不斷報導民眾因為個資外洩被詐騙集團騙取錢財。資安問題是電商業者面臨到最大的危機，民眾也很憤怒為什麼這些企業都不肯把資安做好。但我相信，電商網站的業主也是有苦難言。不少企業知道該把資安做好，有些可能不得其法，也可能什麼都做了，卻還是無法防止自己的網站出現在 165 詐騙排行的榜單上。
 

@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "如何正確的取得使用者 IP？"
 description: "很多網站都有取得使用者 IP 的功能，但是到底有多少網站寫的是對的？網路上又有多少錯誤的教學？本文將介紹利用 HTTP Header 偽造 IP 的方式，以及如何安全、正確取得 IP 的教學。"
 category: "技術專欄"
