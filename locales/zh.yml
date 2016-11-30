@@ -5,8 +5,8 @@ zh:
     name:        DEVCORE 戴夫寇爾
     url:         http://core.dev/
     og-image:    http://core.dev/images/fb.png
-    slogan1:     你面對的是<a href="/en/mind/">駭客</a>，我們也是。
-    slogan2:     <em>戴夫寇爾</em>以真實的<a href="/pt/">滲透測試</a>、<a href="/consolting/">顧問服務</a>、<a href="/training/">教育訓練</a>，
+    slogan1:     你面對的是<a href="/services/hackers-mind.html">駭客</a>，我們也是。
+    slogan2:     <em>戴夫寇爾</em>以真實的<a href="/services/penetration-test.html">滲透測試</a>、<a href="/services/security-consulting.html">顧問服務</a>、<a href="/services/security-training.html">教育訓練</a>，
     slogan3:     保護你的商業價值。
     description: 戴夫寇爾以真實的滲透測試、顧問服務、教育訓練，保護你的商業價值。
 
@@ -14,16 +14,16 @@ zh:
   service:
     mind:
       name:      駭客思維
-      url:       /mind/
+      url:       /services/hackers-mind.html
     pt:
       name:      滲透測試
-      url:       /pt/
+      url:       /services/penetration-test.html
     consolting:
       name:      資安顧問
-      url:       /consolting/
+      url:       /services/security-consulting.html
     training:
       name:      教育訓練
-      url:       /training/
+      url:       /services/security-training.html
   menu:
     news:
       name:      最新消息

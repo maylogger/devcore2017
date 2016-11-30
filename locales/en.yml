@@ -14,16 +14,16 @@ en:
   service:
     mind:
       name:      Hackers Mind
-      url:       /en/mind/
+      url:       /en/services/hackers-mind.html
     pt:
       name:      Penetration Test
-      url:       /en/pt/
+      url:       /en/services/penetration-test.html
     consolting:
       name:      Consolting
-      url:       /en/consolting/
+      url:       /en/services/security-consolting.html
     training:
       name:      Training
-      url:       /en/training/
+      url:       /en/services/security-training.html
   menu:
     news:
       name:      News
