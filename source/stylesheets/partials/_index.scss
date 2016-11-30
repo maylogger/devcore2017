@@ -1,0 +1,10 @@
+.hero {
+  padding-top: rhythm(3);
+  h1 {
+    @include adjust-font-size-to( pow($ms-ratio-desktop, 2) );
+    @include trailing-border(1px, 3.5);
+  }
+  a {
+    text-decoration: underline;
+  }
+}

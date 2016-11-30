@@ -1,10 +1,11 @@
 // breakpoint
 $large:         800px;
-$large-columns: 8;
+$large-columns: 10;
 
 // font setting
 $base-font-size:   20px;
-$base-line-height: 34px;
+$base-line-height: 36px;
+$round-to-nearest-half-line: true;
 $rhythm-unit:      "rem";
 
 // baseline color for debug
@@ -29,7 +30,7 @@ $lightgray:     #ededed;
 $susy: (
   columns: 4,
   global-box-sizing: border-box,
-  debug: (image: show)
+  // debug: (image: show)
 );
 
 @include border-box-sizing;
@@ -46,6 +47,10 @@ $susy: (
   }
 }
 
-// partials
-@import "topbar";
-@import "typography";
+// module partials
+@import "partials/topbar";
+@import "partials/typography";
+@import "partials/article";
+
+// page partials
+@import "partials/index";

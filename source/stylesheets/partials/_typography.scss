@@ -1,0 +1,72 @@
+body {
+  font-family: -apple-system, "Avenir Next", "PingFangTC-Light", sans-serif;
+}
+
+// modular scale
+$ms-ratio: 1.25em;
+$ms-ratio-desktop: 1.333em;
+
+h1,h2,h3,h4,h5,h6 {
+  @include reset-box-model;
+}
+h1,h2,h3,h4 {
+  font-weight: 300;
+}
+h5 {
+  font-weight: 400;
+}
+h1 {
+  letter-spacing: -.025em;
+}
+
+@include desktop {
+  h5 {
+    letter-spacing: .2em;
+  }
+  h6 {
+    letter-spacing: .4em;
+  }
+}
+
+@mixin type-scale($ratio) {
+  h1,%xxl { @include adjust-font-size-to( pow($ratio, 3) )}
+  h2,%xl  { @include adjust-font-size-to( pow($ratio, 2) )}
+  h3,%l   { @include adjust-font-size-to( pow($ratio, 1) )}
+  h4,%m   { @include adjust-font-size-to( pow($ratio, 0) )}
+  h5,%s   { @include adjust-font-size-to( pow($ratio, -1) )}
+  h6,%xs  { @include adjust-font-size-to( pow($ratio, -2) )}
+}
+
+@include type-scale($ms-ratio);
+@include desktop {
+  @include type-scale($ms-ratio);
+};
+
+em {
+  font-style: normal;
+}
+
+p {
+  font-weight: 300;
+  @include reset-box-model;
+  margin: rhythm(1) 0;
+}
+
+small {
+  @extend %xs;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+figure {
+  @include reset-box-model;
+}
+
+figcaption {
+  text-align: center;
+  @extend %xs;
+  line-height: rhythm(1);
+}
