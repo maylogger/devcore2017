@@ -39,7 +39,7 @@ h1 {
 
 @include type-scale($ms-ratio);
 @include desktop {
-  @include type-scale($ms-ratio);
+  @include type-scale($ms-ratio-desktop);
 };
 
 em {
