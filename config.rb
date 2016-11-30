@@ -30,6 +30,7 @@ activate :blog do |blog|
   blog.prefix = "news"
   blog.summary_separator = "READMORE"
   blog.paginate = true
+  blog.layout = "news"
 end
 
 # Reload the browser automatically whenever files change
