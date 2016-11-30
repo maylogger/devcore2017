@@ -1,0 +1,27 @@
+= wrap_layout :layout do
+  article.news
+    - if current_page.data.image_credit
+      = link_to image_tag( current_page.data.image ), current_page.data.image_credit
+    - else
+      - if current_page.data.image
+        = image_tag current_page.data.image
+
+    h1 = current_page.data.title
+    - if current_page.data.image_caption
+      small.photo-credit
+        | Photo Credit: 
+        = link_to current_page.data.image_caption, current_page.data.image_credit
+
+    = yield
+
+  -# .article-nav
+  -#   .prev
+  -#     - prev_article = current_article.previous_article
+  -#     - if prev_article
+  -#       |Previous:
+  -#       = link_to prev_article.title, prev_article.url
+  -#   .next
+  -#     - next_article = current_article.next_article
+  -#     - if next_article
+  -#       |Next:
+  -#       = link_to next_article.title, next_article.url
