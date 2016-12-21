@@ -6,8 +6,8 @@ $base-font-size:   20px;
 $base-line-height: ms(1, $base-font-size);
 $round-to-nearest-half-line: true;
 
-$rhythm-unit: "rem";
-$rhythm-gap: 16px;
+$rhythm-unit: "px";
+$rhythm-gap: 8px;
 $rem-with-px-fallback: false;
 
 $scut-rem-base: scut-strip-unit($base-font-size);
