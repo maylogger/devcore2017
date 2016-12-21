@@ -2,7 +2,7 @@
 require "stylesheets"
 
 # Require Modernizr
-require "modernizr"
+# require "modernizr"
 
 # Require Custom Modules
 # EX:
