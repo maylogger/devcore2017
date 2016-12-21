@@ -9,6 +9,13 @@
   }
 }
 
+// for big media
+@mixin desktop {
+  @include susy-breakpoint($large, $large-columns) {
+    @content;
+  }
+}
+
 @mixin reverse-hide-visually() {
   border: 0;
   clip: auto;
@@ -26,7 +33,7 @@
     @if $description !=  '' {
       $description: $description + ' | ';
     }
-    
+
     $description: $description + $property +': '+ inspect($value);
   }
 
@@ -57,18 +64,18 @@
     transition-delay: 0s;
     overflow: auto;
     height: auto;
-  }  
+  }
 }
 
 @mixin show() {
   opacity: 1;
   visibility: visible;
   transition-delay: 0s;
-  height: auto;  
+  height: auto;
 }
 
 @mixin input-placeholder() {
-  &::-webkit-input-placeholder, 
+  &::-webkit-input-placeholder,
   &::-moz-placeholder,
   &:-ms-input-placeholder { @content; }
 }

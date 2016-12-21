@@ -16,6 +16,8 @@ $layout-base: (
 $susy: layout(4 $layout-base);
 
 // {{ Element twick points }}
+$large:         900px;
+$large-columns: 10;
 
 // {{ Device layouts }}
 $susy-media: (

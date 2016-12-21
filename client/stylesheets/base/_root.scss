@@ -14,10 +14,7 @@ body {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  background: linear-gradient(to bottom
-                            , rgba(225,223,216,.5) 0%
-                            , rgba(255,255,255,0)  50%
-                            , rgba(225,223,216,.5) 100%) 50% 50% no-repeat;
+  background-color: white;
   min-height: 100vh;
   // justify-content: space-between;
 }

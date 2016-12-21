@@ -13,11 +13,6 @@ $gray:          tint($gray-base, 33.5%) !default;
 $gray-light:    tint($gray-base, 46.5%) !default;
 $gray-lighter:  tint($gray-base, 93.5%) !default;
 
-//  Texts
-//  -----
-
-$text-color: $gray-dark;
-
 //  Pallete
 //  -----------
 
@@ -27,10 +22,22 @@ $info:    #5bc0dc;
 $warning: #f0ad4e;
 $danger:  #d9534f;
 
+// Brand colors
+// -----------------
+$black:         #222;
+$darkgray:      #53565a;
+$green:         #44d62c;
+$lightgray:     #ededed;
+
+//  Texts
+//  -----
+
+$text-color: $darkgray;
+
 //  Links
 //  -----
 
-$link-color:           $primary !default;
+$link-color:           $green !default;
 $link-hover-color:     shade($link-color, 15%) !default;
 $link-focus-color:     $gray-dark !default;
 $link-active-color:    $gray-dark !default;
