@@ -4,6 +4,45 @@ a {
   color: $link-color;
 }
 
+// {{ Typography }}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 300;
+  margin: r(1) n();
+}
+h5 {
+  font-weight: 400;
+}
+h1 {
+  letter-spacing: -.025em;
+}
+
+@include desktop {
+  h5 {
+    letter-spacing: .2em;
+  }
+  h6 {
+    letter-spacing: .4em;
+  }
+}
+
+h1 {@include ms-respond(font-size, 3);}
+h2 {@include ms-respond(font-size, 2);}
+h3 {@include ms-respond(font-size, 1);}
+h4 {@include ms-respond(font-size, 0);}
+h5 {@include ms-respond(font-size, -1);}
+h6 {@include ms-respond(font-size, -2);}
+
+em {font-style: normal;}
+
+p {
+  font-weight: 300;
+  margin: r(1) 0;
+}
+
+small {
+  @include ms-respond(font-size, -1);
+}
+
 // {{ Selection style }}
 // ::selection {
 //   text-shadow: none;
