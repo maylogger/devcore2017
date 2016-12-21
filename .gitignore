@@ -2,6 +2,7 @@
 /.cache
 /.bundle
 /.webpack
+/node_modules
 /build
 /dist
 /log
