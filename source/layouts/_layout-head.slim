@@ -7,5 +7,5 @@ meta name="viewport" content="width=device-width, initial-scale=1"
 - else
   title= t("site.name")
 
-= javascript_include_tag "head.min", :"data-headjs-load" => "init.js"
-= stylesheet_link_tag "site"
+- if production?
+  = stylesheet_link_tag :webpack_bundle

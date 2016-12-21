@@ -1,7 +1,12 @@
 /.sass-cache
 /.cache
 /.bundle
+/.webpack
+/node_modules
+/npm-debug.log
 /build
+/dist
 /log
 /tmp
 .DS_Store
+.tags
