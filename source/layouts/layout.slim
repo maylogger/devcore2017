@@ -7,5 +7,7 @@ html.no-js lang="zh-TW"
   body class="#{page_classes} #{t("class")}"
     .page
       = partial "components/topbar"
-      = yield
+      
+      main role="main" = yield
+      
       = partial "layouts/layout-foot"
