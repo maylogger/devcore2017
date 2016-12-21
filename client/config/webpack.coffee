@@ -61,7 +61,7 @@ module.exports = (env) ->
         include: path_to.icons
         loaders: [
           "svg-sprite?#{config.svg_sprite}"
-          "image-webpack?{svgo: #{JSON.stringify config.svgo}}"
+          "image-webpack?{svgo: #{config.svgo}}"
         ]
       ,
         test: /\.(png|jpe?g|gif|svg)$/i
@@ -102,7 +102,7 @@ module.exports = (env) ->
       require("postcss-strip-units")()
       require("postcss-calc")()
     ]
-    
+
     imageWebpackLoader:
       bypassOnDebug: on
       mozjpeg:

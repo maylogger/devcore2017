@@ -1,0 +1,6 @@
+.logo {
+  @extend %scut-image-replace;
+  margin: 0 n();
+  size: 120px 30px;
+  background: url(logo-mobile.svg) 50% 50% / contain no-repeat transparent;
+}
