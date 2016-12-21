@@ -15,14 +15,3 @@ require "modernizr"
 # Inject SVG Sprite
 sprites = require.context "icons", off
 sprites.keys().forEach sprites
-
-$(document).on "page:change", ->
-  # Async apply Typekit
-  `
-  try{Typekit.load({ async: true });}catch(e){}
-  `
-
-  # EX:
-  # new MainMenu()
-  # new HomeBanners()
-  # new HomeCover()

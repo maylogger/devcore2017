@@ -33,11 +33,6 @@ activate :blog do |blog|
   blog.layout = "news"
 end
 
-# Reload the browser automatically whenever files change
-configure :development do
-  activate :livereload
-end
-
 ###
 # Helpers
 ###
@@ -55,7 +50,7 @@ activate :external_pipeline,
   name: :webpack,
   command: build? ? 'npm run webpack' : 'npm run webpack-dev-server',
   source:  '.webpack',
-  latency: 0
+  latency: 1
 
 # Reload the browser automatically whenever files change
 configure :development do
