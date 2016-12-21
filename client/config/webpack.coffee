@@ -72,7 +72,7 @@ module.exports = (env) ->
         ]
       ,
         test: /\.modernizrrc$/
-        loaders: ["modernizr", "yaml"]
+        loaders: ["modernizr", "json", "yaml"]
       # ,
       #   test: /\.js$/
       #   include: "node_modules"
