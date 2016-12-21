@@ -21,7 +21,7 @@ config =
     spriteModule: path.resolve path_to.root, "config/custom-sprite"
     name: 'icon-[name]'
   svgo: JSON.stringify
-    plugins: svgo_plugins.push {convertColors: {currentColor: on}}
+    plugins: [svgo_plugins..., {convertColors: {currentColor: on}}]
 
 module.exports = (env) ->
   webpack_config =
@@ -61,7 +61,7 @@ module.exports = (env) ->
         include: path_to.icons
         loaders: [
           "svg-sprite?#{config.svg_sprite}"
-          "image-webpack?{svgo: #{config.svgo}}"
+          "image-webpack?{svgo: #{JSON.stringify config.svgo}}"
         ]
       ,
         test: /\.(png|jpe?g|gif|svg)$/i
