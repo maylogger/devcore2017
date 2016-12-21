@@ -1,6 +1,40 @@
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 76px;
+}
+.topbar__menu {
+  margin-right: r(1);
+  font-size: ms(-2);
+  font-weight: 600;
+  line-height: 1;
+}
+.topbar__hamburger {
+  $gap: 10px;
+  padding: $gap;
+  size: 36px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: $gray;
+
+  .bars {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    size: 100%;
+  }
+
+  .bar {
+    height: 2px;
+    background-color: white;
+  }
+}
+
+.logo-wrapper {margin-right: auto;}
 .logo {
   @extend %scut-image-replace;
-  margin: 0 n();
+  margin: 0 n() r(1);
   size: 120px 30px;
   background: url(logo-mobile.svg) 50% 50% / contain no-repeat transparent;
 }

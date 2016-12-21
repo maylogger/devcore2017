@@ -1,22 +1,11 @@
 .topbar
-  .bar
-    a.logo-wrapper href="/"
-      h1.logo = t("site.name")
-      
-    .hamburger-icon
-      span
-      span
-      span
-    .menu
-      h2 = t("menu-label")
-      ul.topmenu
-        - t("service").each do | item, details |
-          li.mobile-only = link_to details[:name], details[:url]
-        - t("menu").each do | item, details |
-          li = link_to details[:name], details[:url]
-
-      h2 = t("lang-label")
-      ul.langmenu
-        - t("lang").each do | item, details |
-          = content_tag :li, :class => item
-            = link_to details[:name], details[:url]
+  a.logo-wrapper href="/"
+    h1.logo = t("site.name")
+    
+  span.topbar__menu menu
+  
+  button.appearance-none.topbar__hamburger type='button'    
+    .bars
+      .bar
+      .bar
+      .bar
