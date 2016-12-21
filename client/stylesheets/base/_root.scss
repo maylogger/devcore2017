@@ -1,0 +1,44 @@
+//  Root
+//  ====
+
+@import "~sass-toolkit/stylesheets/toolkit/kickstart";
+
+html {
+  font-family: $base-font-family;
+  text: $text-color 1.5 $base-font-size;
+  -webkit-font-smoothing: antialiased;
+  &:after { @include share-breakpoints($susy-media); }
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  background: linear-gradient(to bottom
+                            , rgba(225,223,216,.5) 0%
+                            , rgba(255,255,255,0)  50%
+                            , rgba(225,223,216,.5) 100%) 50% 50% no-repeat;
+  min-height: 100vh;
+  // justify-content: space-between;
+}
+
+main[role="main"] {}
+
+// Turbolinks
+html.turbolinks-progress-bar::before {background-color: $nprogress-color !important;}
+
+// Allow only vertical resizing of textareas.
+textarea {resize: vertical;}
+img, svg {vertical-align: middle;}
+img[data-sizes="auto"]:not(.slick-slide) {
+  display: block;
+  size: 100% auto;
+}
+
+.cf {clear: fix;}
+.clr{clear: both;}
+
+.text-center {text-align: center;}
+
+// Hide from both screenreaders and browsers: h5bp.com/u
+.hidden { @include Hidden; }

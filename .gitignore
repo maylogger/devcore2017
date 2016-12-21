@@ -1,7 +1,10 @@
 /.sass-cache
 /.cache
 /.bundle
+/.webpack
 /build
+/dist
 /log
 /tmp
 .DS_Store
+.tags

@@ -1,0 +1,66 @@
+{
+  "name": "scaffold",
+  "version": "1.0.0",
+  "description": "A website for scaffold",
+  "main": "client/index.coffee",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:judewang/scaffold.git"
+  },
+  "author": "Jude Wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/judewang/scaffold/issues"
+  },
+  "homepage": "https://github.com/judewang/scaffold#readme",
+  "publicPath": "/",
+  "scripts": {
+    "start": "bundle exec middleman & npm run webpack-dev-server",
+    "build": "bundle exec middleman build",
+    "build:staging": "TARGET=staging bundle exec middleman build",
+    "deploy": "coffee deploy.coffee",
+    "webpack-dev-server": "webpack-dev-server --inline --hot --config webpack-dev.config.coffee",
+    "webpack": "webpack --config webpack.config.coffee"
+  },
+  "dependencies": {
+    "animate.css": "daneden/animate.css",
+    "modernizr": "^3.3.1",
+    "modularscale-sass": "^2.1.1",
+    "node.normalize.scss": "^3.0.3",
+    "sass-toolkit": "^2.10.2",
+    "scut": "^1.4.0",
+    "smooth-scroll": "cferdinandi/smooth-scroll",
+    "susy": "^2.2.12"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.5.4",
+    "coffee-loader": "^0.7.2",
+    "coffee-script": "^1.12.2",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "gulp": "^3.9.1",
+    "gulp-error-notifier": "^1.1.0",
+    "gulp-replace": "^0.5.4",
+    "image-webpack-loader": "^3.1.0",
+    "inquirer": "^2.0.0",
+    "modernizr-loader": "^1.0.0",
+    "node-sass": "^4.1.1",
+    "postcss-assets": "^4.1.0",
+    "postcss-calc": "^5.3.1",
+    "postcss-clearfix": "^1.0.0",
+    "postcss-loader": "^1.2.1",
+    "postcss-short": "^3.0.1",
+    "postcss-strip-units": "^1.2.0",
+    "resolve-url-loader": "^1.6.1",
+    "sass-loader": "^3.2.3",
+    "sass-resources-loader": "^1.1.0",
+    "script-loader": "^0.7.0",
+    "style-loader": "^0.13.1",
+    "svg-sprite-loader": "^0.1.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2",
+    "webpack-merge": "^1.1.2",
+    "yaml-loader": "^0.4.0"
+  }
+}
