@@ -11,16 +11,11 @@ start = () ->
       type: 'list'
       choices: ['staging', 'static_sources']
       default: 'staging'
-    ,
-      name: 'message'
-      message: 'You can deploy with customize commit message.'
-      type: 'input'
-      default: ''
     ]
-    .then ({env, message}) ->
+    .then ({env}) ->
       console.log "Start deploy branch #{current_branch} to #{env} server."
 
-      task = exec "TARGET=#{env} MESSAGE='#{message}' bundle exec middleman deploy"
+      task = exec "TARGET=#{env} bundle exec middleman deploy"
       task.stdout.on 'data', (data) -> console.log data.toString()
       task.stderr.on 'data', (data) -> console.error data.toString()
 
