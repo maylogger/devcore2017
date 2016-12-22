@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>googleplus</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/sns/g+" fill="#FFFFFF">
+            <g id="Shape">
+                <path d="M19,23 L19,25.4 L22.97,25.4 C22.81,26.429 21.77,28.42 19,28.42 C16.61,28.42 14.66,26.441 14.66,24 C14.66,21.56 16.61,19.58 19,19.58 C20.36,19.58 21.27,20.16 21.79,20.66 L23.69,18.83 C22.47,17.69 20.89,17 19,17 C15.13,17 12,20.13 12,24 C12,27.87 15.13,31 19,31 C23.04,31 25.721,28.16 25.721,24.16 C25.721,23.7 25.67,23.35 25.61,23 L19,23 L19,23 Z M19,23 L36,25 L33,25 L33,28 L31,28 L31,25 L28,25 L28,23 L31,23 L31,20 L33,20 L33,23 L36,23 L36,25 L19,23 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

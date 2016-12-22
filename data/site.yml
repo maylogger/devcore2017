@@ -1,2 +1,10 @@
 type:        "website"
 fbadmins:    "612130717"
+
+sns:
+  - name: fb
+    url:  https://www.facebook.com/D3VC0RE
+  - name: googleplus
+    url:  https://plus.google.com/118439315679478709768/posts
+  - name: twitter
+    url:  https://twitter.com/d3vc0r3

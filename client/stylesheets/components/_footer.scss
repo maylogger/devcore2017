@@ -1,0 +1,24 @@
+.main-footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  @include rhythm-padding(.5);
+}
+.main-footer__sns {
+  color: white;
+  background-color: $green;
+  margin: n() 16px;
+  @include ir(1/1, 32px);
+}
+.main-footer__copyright {
+  @include leader(.5);
+  @include rhythm-type(-2);
+  width: 100%;
+  text-align: center;
+
+  .link {
+    margin-left: r(1);
+    color: $text-color;
+    @include scut-link-bb;
+  }
+}

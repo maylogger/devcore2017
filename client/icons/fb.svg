@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>fb</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/sns/fb" fill="#FFFFFF">
+            <g id="Shape">
+                <path d="M21,20 L18,20 L18,24 L21,24 L21,36 L26,36 L26,24 L29.642,24 L30,20 L26,20 L26,18.333 C26,17.378 26.192,17 27.115,17 L30,17 L30,12 L26.192,12 C22.596,12 21,13.583 21,16.615 L21,20 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

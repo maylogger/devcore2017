@@ -1,0 +1,9 @@
+footer.main-footer
+  - data.site.sns.each do |media|
+    = link_to media.url, class: "main-footer__sns"
+      = inline_svg media.name
+
+  small.main-footer__copyright
+    | © DEVCORE 2016
+    
+    = link_to "About", t("menu.about.url"), class: "link"
