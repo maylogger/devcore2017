@@ -21,7 +21,7 @@ body {background-color: white;}
   @include desktop {max-width: 1280px;}
 }
 
-main[role="main"] {flex: 1;}
+main[role="main"] {flex: 1 0 auto;}
 
 // Turbolinks
 html.turbolinks-progress-bar::before {background-color: $nprogress-color !important;}

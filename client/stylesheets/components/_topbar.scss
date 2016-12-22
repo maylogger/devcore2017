@@ -3,6 +3,7 @@
   justify-content: flex-end;
   align-items: center;
   height: 76px;
+  flex-shrink: 0;
 }
 .topbar__menu {
   margin-right: r(1);
