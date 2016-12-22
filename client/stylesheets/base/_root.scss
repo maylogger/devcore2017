@@ -2,10 +2,11 @@
 //  ====
 
 @import "~sass-toolkit/stylesheets/toolkit/kickstart";
+@include establish-baseline();
 
 html {
   font-family: $base-font-family;
-  text: $text-color 1.5 $base-font-size;
+  color: $text-color;
   -webkit-font-smoothing: antialiased;
   &::after { @include share-breakpoints($susy-media); }
 }

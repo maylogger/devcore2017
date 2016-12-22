@@ -6,7 +6,7 @@
   flex-shrink: 0;
 }
 .topbar__menu {
-  margin-right: r(1);
+  margin-right: r(.5);
   font-size: ms(-2);
   font-weight: 600;
   line-height: 1;
@@ -54,7 +54,7 @@
 .logo-wrapper {margin-right: auto;}
 .logo {
   @extend %scut-image-replace;
-  margin: 0 n() r(1);
+  margin: 0 n() r(.5);
   size: 120px 30px;
   background: url(logo-mobile.svg) 50% 50% / contain no-repeat transparent;
 }

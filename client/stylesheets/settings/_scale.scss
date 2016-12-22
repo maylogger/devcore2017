@@ -3,11 +3,11 @@
 
 $base-font-size:   20px;
 // $ideal-font-size:  36px;
-$base-line-height: ms(1, $base-font-size);
+$base-line-height: 36px;
 $round-to-nearest-half-line: true;
 
 $rhythm-unit: "px";
-$rhythm-gap: 8px;
+$rhythm-gap: rhythm(.5);
 $rem-with-px-fallback: false;
 
 $scut-rem-base: scut-strip-unit($base-font-size);
@@ -17,5 +17,12 @@ $ms-ratio:         1.25;
 $ms-ratio-desktop: 1.33;
 $ms-range:         $ms-ratio 0,
                    $ms-ratio-desktop $large;
+
+@mixin rhythm-type($level) {
+  @include adjust-font-size-to(ms($level));
+  @include desktop {
+    @include adjust-font-size-to(ms($level, $Ratios: $ms-ratio-desktop));
+  }
+}
 
 // {{ Component size }}

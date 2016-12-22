@@ -8,7 +8,7 @@
   background-color: white;
   @include toggle-fade();
 }
-.drawer__contact {margin: r(6) auto;}
+.drawer__contact {margin: rhythm(2) auto;}
 
 .main-menu {
   display: flex;
@@ -16,27 +16,27 @@
   align-items: center;
 }
 .main-menu__link {
-  @include ms-respond(font-size, 1);
+  @include rhythm-type(1);
   color: $text-color;
 
-  & + & {margin-top: r(3);}
+  & + & {margin-top: rhythm(1);}
 }
 
 .lang-menu {
   display: flex;
   justify-content: center;
   align-items: baseline;
-  font-size: ms(-1);
   font-weight: 600;
+  @include rhythm-type(-1);
 }
 .lang-menu__label {color: $gray;}
 .lang-menu__link {
-  margin-left: r(1);
+  margin-left: r(.5);
   color: $text-color;
 
   & + &::before {
     content: "|";
-    margin-right: r(1);
+    margin-right: r(.5);
     position: relative -1px n() n() n();
   }
 }

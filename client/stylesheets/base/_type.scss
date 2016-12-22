@@ -7,7 +7,7 @@ a {
 // {{ Typography }}
 h1,h2,h3,h4,h5,h6 {
   font-weight: 300;
-  margin: r(2) n();
+  @include rhythm-margins(.5);
 }
 h5 {
   font-weight: 400;
@@ -25,22 +25,22 @@ h1 {
   }
 }
 
-h1 {@include ms-respond(font-size, 3);}
-h2 {@include ms-respond(font-size, 2);}
-h3 {@include ms-respond(font-size, 1);}
-h4 {@include ms-respond(font-size, 0);}
-h5 {@include ms-respond(font-size, -1);}
-h6 {@include ms-respond(font-size, -2);}
+h1 {@include rhythm-type(3);}
+h2 {@include rhythm-type(2);}
+h3 {@include rhythm-type(1);}
+h4 {@include rhythm-type(0);}
+h5 {@include rhythm-type(-1);}
+h6 {@include rhythm-type(-2);}
 
 em {font-style: normal;}
 
 p {
   font-weight: 300;
-  margin: r(2) 0;
+  @include rhythm-margins(.5);
 }
 
 small {
-  @include ms-respond(font-size, -1);
+  @include rhythm-type(-1);
 }
 
 // {{ Selection style }}
