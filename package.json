@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "animate.css": "daneden/animate.css",
+    "jquery": "2.x",
     "modernizr": "^3.3.1",
     "modularscale-sass": "^2.1.1",
     "node.normalize.scss": "^3.0.3",
