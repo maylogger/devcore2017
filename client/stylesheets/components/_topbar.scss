@@ -12,6 +12,7 @@
 }
 .topbar__hamburger {
   $gap: 10px;
+  $bar: 2px;
   padding: $gap;
   size: 36px;
   text-align: center;
@@ -26,8 +27,26 @@
   }
 
   .bar {
-    height: 2px;
+    height: $bar;
     background-color: white;
+    transition: transform .3s ease 0s;
+  }
+
+  &.active {
+    position: relative;
+    z-index: index($layers, drawer-element);
+    background-color: $lightgray;
+
+    .bar {
+      &:first-child,
+      &:last-child {
+        position: absolute 50% $gap n() $gap;
+        margin-top: - $bar / 2;
+      }
+      &:first-child {transform: rotate(45deg);}
+      &:last-child {transform: rotate(-45deg);}
+      &:nth-child(2) {display: none;}
+    }
   }
 }
 

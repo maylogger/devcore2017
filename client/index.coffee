@@ -6,7 +6,7 @@ require "stylesheets"
 
 # Require Custom Modules
 # EX:
-# { MainMenu } = require "./modules/sidebar"
+ActiveToggle = require "./modules/toggle"
 
 # Require entry modules
 # EX:
@@ -15,3 +15,6 @@ require "stylesheets"
 # Inject SVG Sprite
 sprites = require.context "icons", off
 sprites.keys().forEach sprites
+
+# Running after DOM ready
+new ActiveToggle "[data-toggle]"
