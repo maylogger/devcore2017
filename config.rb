@@ -74,6 +74,7 @@ case ENV['TARGET'].to_s.downcase
 when 'staging'
   activate :deploy do |deploy|
     deploy.deploy_method = :git
+    deploy.build_before = true
     # deploy.commit_message = ENV['MESSAGE'].to_s
   end
 else
