@@ -20,8 +20,10 @@ config =
   svg_sprite: JSON.stringify
     spriteModule: path.resolve path_to.root, "config/custom-sprite"
     name: 'icon-[name]'
-  svgo: JSON.stringify
-    plugins: [svgo_plugins..., {convertColors: {currentColor: on}}]
+  svg_icon: JSON.stringify
+    bypassOnDebug: off
+    svgo:
+      plugins: [svgo_plugins..., {convertColors: {currentColor: on}}]
 
 module.exports = (env) ->
   webpack_config =
@@ -61,7 +63,7 @@ module.exports = (env) ->
         include: path_to.icons
         loaders: [
           "svg-sprite?#{config.svg_sprite}"
-          "image-webpack?{svgo: #{JSON.stringify config.svgo}}"
+          "image-webpack?#{config.svg_icon}"
         ]
       ,
         test: /\.(png|jpe?g|gif|svg)$/i
