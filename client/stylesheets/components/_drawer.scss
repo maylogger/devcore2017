@@ -1,0 +1,42 @@
+.drawer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed 0 0 0 0;
+  z-index: index($layers, drawer);
+  background-color: white;
+  @include toggle-fade();
+}
+.drawer__contact {margin: r(6) auto;}
+
+.main-menu {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.main-menu__link {
+  @include ms-respond(font-size, 1);
+  color: $text-color;
+
+  & + & {margin-top: r(3);}
+}
+
+.lang-menu {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  font-size: ms(-1);
+  font-weight: 600;
+}
+.lang-menu__label {color: $gray;}
+.lang-menu__link {
+  margin-left: r(1);
+  color: $text-color;
+
+  & + &::before {
+    content: "|";
+    margin-right: r(1);
+    position: relative -1px n() n() n();
+  }
+}

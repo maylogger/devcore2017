@@ -1,0 +1,16 @@
+.drawer
+  nav.main-menu
+    .hidden = t("menu-label")
+    
+    - t("service").each do | item, details |
+      = link_to details[:name], details[:url], class: "main-menu__link"
+    - t("menu").each do | item, details |
+      = link_to details[:name], details[:url], class: "main-menu__link"
+      
+  = link_to "Contact", t("contact")[:url], class: "drawer__contact button--dense"
+
+  nav.lang-menu
+    .lang-menu__label = "#{t('lang-label')}:"
+    
+    - t("lang").each do | item, details |
+      = link_to details[:name], details[:url], class: "lang-menu__link"

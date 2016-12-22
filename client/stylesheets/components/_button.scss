@@ -1,1 +1,10 @@
 .appearance-none {@include Normalize();}
+
+.button--dense {
+  display: inline-block;
+  padding: r(.6) r(2.5);
+  font-size: ms(-1);
+  font-weight: 600;
+  line-height: 1;
+  border: 2px solid $green;
+}

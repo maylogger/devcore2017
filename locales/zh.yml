@@ -25,23 +25,23 @@ zh:
       name:      教育訓練
       url:       /services/security-training.html
   menu:
-    news:
-      name:      最新消息
-      url:       /news/
     about:
       name:      關於我們
       url:       /about/
-    contact:
-      name:      聯絡我們
-      url:       /contact/
+    news:
+      name:      最新消息
+      url:       /news/
+  contact:
+    name:      聯絡我們
+    url:       /contact/
 
   lang-label:    語言
   lang:
-    en:
-      name:      English
-      url:       http://core.dev/en/
     zh:
       name:      中文
       url:       http://core.dev/
-
+    
+    en:
+      name:      English
+      url:       http://core.dev/en/
   hello:         嗨
