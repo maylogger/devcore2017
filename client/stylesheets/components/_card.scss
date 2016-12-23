@@ -1,0 +1,27 @@
+.card {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: center;
+}
+.card__title {
+  @include rhythm-type(0);
+  font-weight: 600;
+  order: 1;
+}
+.card__tags {
+  @include scut-list-inline();
+  order: 2;
+}
+.card__tag {
+  @include rhythm-type(-2);
+  vertical-align: top;
+
+  &:not(:last-child)::after {content: ",";}
+}
+.card__general {
+  @include rhythm-type(-2);
+  @include trailer(.5);
+  color: $accent;
+  order: -1;
+}

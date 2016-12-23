@@ -1,10 +1,16 @@
-// {{ Links }}
+/**
+ * Links
+ */
+
 a {
   text-decoration: none;
   color: $link-color;
 }
 
-// {{ Typography }}
+/**
+ * Typography
+ */
+
 h1,h2,h3,h4,h5,h6 {
   font-weight: 300;
   @include rhythm-margins(.5);
@@ -43,7 +49,20 @@ small {
   @include rhythm-type(-1);
 }
 
-// {{ Selection style }}
+/**
+ * Heading
+ */
+
+.section-heading {
+  @include rhythm-margins(1);
+  @include rhythm-type(-1);
+  color: $secondary;
+  @include scut-side-lined($color: tint($secondary, 60%), $space: r(1), $v-adjust: 1px);
+}
+
+/**
+ * Selection style
+ */
 // ::selection {
 //   text-shadow: none;
 //   background-color: $gray-lighter;
