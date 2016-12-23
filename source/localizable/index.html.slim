@@ -1,19 +1,17 @@
-.billboard
-  = image_tag "billboard-home.jpg", class: "billboard__image"
+---
+billboard:
+  title: 你面對的是<a href="/services/hackers-mind.html">駭客</a><br>我們也是
+  subtitle: |
+    戴夫寇爾以真實的<br>
+    <a href="/services/penetration-test.html">滲透測試</a>、
+    <a href="/services/security-consulting.html">顧問服務</a>、
+    <a href="/services/security-training.html">教育訓練</a>
+    <br>
+    保護你的商業價值
+  image: billboard-home.jpg
+---
 
-  h2.billboard__title
-    | 你面對的是#{link_to "駭客", "/services/hackers-mind.html"}
-    br
-    | 我們也是
-
-  p.billboard__sub-title
-    | 戴夫寇爾以真實的
-    br
-    | #{link_to "滲透測試", "/services/penetration-test.html"}、
-    | #{link_to "顧問服務", "/services/security-consulting.html"}、
-    | #{link_to "教育訓練", "/services/security-training.html"}
-    br
-    | 保護你的商業價值
+= partial "components/billboard"
 
 h2.section-heading 最新消息
 
