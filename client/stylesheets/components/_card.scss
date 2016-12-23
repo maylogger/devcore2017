@@ -7,6 +7,7 @@
 .card__thumbnail {
   .title {
     @include rhythm-type(0);
+    @include rhythm-margins(.25);
     font-weight: 600;
     color: $primary;
   }
@@ -23,7 +24,7 @@
 }
 .card__general {
   @include rhythm-type(-2);
-  @include trailer(.5);
+  @include trailer(.25);
   color: $accent;
   order: -1;
 }
