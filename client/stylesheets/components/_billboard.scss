@@ -1,3 +1,5 @@
-.billboard {
-  @include trailer(2);
+.billboard {@include trailer(2);}
+.billboard__image {
+  width: 100%;
+  margin: n() r(-1);
 }
