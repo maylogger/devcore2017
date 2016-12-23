@@ -1,0 +1,5 @@
+.home-news {
+  @include padding-leader();
+
+  .card + .card {@include leader(2);}
+}

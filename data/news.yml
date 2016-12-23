@@ -1,0 +1,32 @@
+- title: "Advisory: Accellion File Transfer Appliance Vulnerability"
+  tags:
+    - Advisory
+    - Facebook
+    - BugBounty
+    - RCE
+    - CVE
+  general: 技術專欄
+
+- title: Accellion File Transfer Appliance 弱點報告
+  tags:
+    - Facebook
+    - BugBounty
+    - RCE
+    - Backdoor
+    - Reconnaissance
+    - Pentest
+  general: 技術專欄
+
+- title: 電商業者的資安困境？
+  tags:
+    - ecommerce
+  general: 技術專欄
+
+- title: How I Hacked Facebook, and Found Someone's Backdoor Script
+  tags:
+    - Advisory
+    - Facebook
+    - BugBounty
+    - RCE
+    - CVE
+  general: 技術專欄

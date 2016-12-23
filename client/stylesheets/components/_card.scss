@@ -4,10 +4,12 @@
   align-items: center;
   text-align: center;
 }
-.card__title {
-  @include rhythm-type(0);
-  font-weight: 600;
-  order: 1;
+.card__thumbnail {
+  .title {
+    @include rhythm-type(0);
+    font-weight: 600;
+    color: $primary;
+  }
 }
 .card__tags {
   @include scut-list-inline();
