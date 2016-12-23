@@ -1,0 +1,27 @@
+.service {
+  @include rhythm-margins(2);
+}
+.service__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include rhythm-type(1);
+  font-weight: 600;
+
+  .text {flex: 1 1 auto;}
+
+  .to-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: r(1);
+    width: 50px;
+  }
+  .to-top__text {
+    @include rhythm-type(-2);
+    color: $secondary;
+  }
+
+  .icon {size: 17px 20px;}
+}

@@ -1,0 +1,9 @@
+section.service id=id
+  h3.service__title
+    span.text = title
+    
+    = link_to "#", class: "to-top"
+      span.to-top__text 目錄
+      = inline_svg "arrow"
+
+  = yield

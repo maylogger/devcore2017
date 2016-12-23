@@ -1,9 +1,30 @@
-.billboard
-  = image_tag "billboard-penetration-test.jpg", class: "billboard__image"
+---
+billboard:
+  title: 用最真實的攻擊，<br>驗證企業的防禦
+  subtitle: 瞭解滲透測試
+  image: billboard-penetration-test.jpg
+  
+table_of_contents:
+  - 為何企業需要滲透測試服務 ›
+  - 滲透測試與弱點掃描有何差異 ›
+  - 自動測試與人工測試有何差異 ›
+  - 滲透測試有無相關規範 ›
+  - 滲透測試執行流程有哪些 ›
+  - 滲透測試執行結果是什麼 ›
+  - 其他滲透測試常見問題 ›
+---
 
-  h2.billboard__title
-    | 用最真實的攻擊，
-    br
-    | 驗證企業的防禦
-    
-  p.billboard__sub-title 瞭解滲透測試
+= partial "components/billboard"
+
+h3.section-heading 目錄
+
+nav
+  ul.table-of-contents
+    - current_page.data.table_of_contents.each_with_index do |text, index|
+      li.table-of-contents__cell = link_to text, "#service-content-#{index}"
+
+= partial "components/service", locals: {title: "為何企業需要滲透測試服務？", id: "service-content-0"}
+  = simple_format "駭客攻擊就像生活中的病毒，隨時隨地都有可能接觸到並且遭受感染。而滲透測試如同健康檢查，若企業能定時執行深層的資安健檢，面對各種攻擊時即可提高存活的機率。"
+  
+= partial "components/service", locals: {title: "滲透測試服務是什麼？", id: "service-content-1"}
+  = simple_format "滲透測試服務 (Penetration Test, PT) 是委請受信任的第三方專業資安團隊，從駭客的角度出發，模擬攻擊者的思考方式對企業進行各種入侵攻擊測試。\n滲透測試結束後，專家會列出詳細的攻擊手法與步驟，提供完整的修補建議並輔導開發者修補漏洞，讓企業能儘速降低遭受入侵的風險。開發者修補完畢後，資安團隊會再次確認是否可使用其他手法繞過防護，以確保企業不會因為同樣的問題遭受損失。"

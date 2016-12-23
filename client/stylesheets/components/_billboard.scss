@@ -1,4 +1,7 @@
-.billboard {@include trailer(2);}
+.billboard {
+  @include trailer(2);
+  margin-top: - $topbar-height;
+}
 .billboard__image {
   width: 100%;
   margin: n() r(-1);

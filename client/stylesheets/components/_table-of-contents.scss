@@ -1,0 +1,8 @@
+.table-of-contents {
+  @extend %scut-list-unstyled;
+  @include rhythm-type(-1);
+  @include trailer();
+}
+.table-of-contents__cell {
+  & + & {@include leader(.25);}
+}
