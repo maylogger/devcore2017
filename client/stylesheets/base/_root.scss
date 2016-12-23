@@ -2,10 +2,14 @@
 //  ====
 
 @import "~sass-toolkit/stylesheets/toolkit/kickstart";
-@include establish-baseline();
+@include desktop {
+  @include establish-baseline();
+}
 
 html {
   font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: 1.5;
   color: $text-color;
   -webkit-font-smoothing: antialiased;
   &::after { @include share-breakpoints($susy-media); }
@@ -18,7 +22,7 @@ body {background-color: white;}
   display: flex;
   flex-flow: column nowrap;
   height: 100vh;
-  padding: n() r(2);
+  padding: n() r(1);
   @include desktop {max-width: 1280px;}
 }
 
