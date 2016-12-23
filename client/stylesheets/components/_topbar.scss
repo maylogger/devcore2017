@@ -2,8 +2,9 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 76px;
+  height: $topbar-height;
   flex-shrink: 0;
+  position: relative;
 }
 .topbar__menu {
   margin-right: r(.5);
