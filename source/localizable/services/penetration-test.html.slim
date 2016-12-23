@@ -18,10 +18,11 @@ table_of_contents:
 
 h3.section-heading 目錄
 
-nav
+nav#table-of-contents
   ul.table-of-contents
     - current_page.data.table_of_contents.each_with_index do |text, index|
-      li.table-of-contents__cell = link_to text, "#service-content-#{index}"
+      li.table-of-contents__cell
+        = link_to text, "#service-content-#{index}", "data-scroll" => ""
 
 = partial "components/service", locals: {title: "為何企業需要滲透測試服務？", id: "service-content-0"}
   = simple_format "駭客攻擊就像生活中的病毒，隨時隨地都有可能接觸到並且遭受感染。而滲透測試如同健康檢查，若企業能定時執行深層的資安健檢，面對各種攻擊時即可提高存活的機率。"
