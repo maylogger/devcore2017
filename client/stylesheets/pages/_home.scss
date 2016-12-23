@@ -3,3 +3,15 @@
 
   .card + .card {@include leader(2);}
 }
+
+.home-contact {
+  @include rhythm(.5, 1.5, 1.5, .5);
+  text-align: center;
+  border: 2px solid $divider-gray;
+  border-width: 2px 0 2px 0;
+  @include bleed-x(r(1));
+}
+.home-contact__title {
+  @include rhythm-type(0);
+  @include leader(0);
+}
