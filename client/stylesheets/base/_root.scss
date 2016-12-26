@@ -2,9 +2,6 @@
 //  ====
 
 @import "~sass-toolkit/stylesheets/toolkit/kickstart";
-@include desktop {
-  @include establish-baseline();
-}
 
 html {
   font-family: $base-font-family;
@@ -13,6 +10,10 @@ html {
   color: $text-color;
   -webkit-font-smoothing: antialiased;
   &::after { @include share-breakpoints($susy-media); }
+}
+
+@include desktop {
+  @include establish-baseline();
 }
 
 body {background-color: white;}

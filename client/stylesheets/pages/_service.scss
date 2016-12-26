@@ -10,9 +10,19 @@
 
 
   ul {
+    $size: 30px;
     margin-left: -7px;
-    @include scut-list-custom($marker-width: rhythm(1) - 5px){
-      content: url(ok.svg);
+    @include scut-list-custom($marker-width: $size - 3px) {
+      content: "";
+      size: $size;
+      background: url(ok.svg) 50% 50% / contain no-repeat;
+    }
+    @include desktop {
+      $size: rhythm();
+      @include scut-list-custom($marker-width: $size - 5px) {
+        content: "";
+        size: $size;
+      }
     }
   }
 
