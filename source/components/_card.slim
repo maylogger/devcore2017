@@ -6,7 +6,7 @@ section.card
     
     h3.title = title
   
-  ul.card__tags
+  ul.card__tags.list--punctuated
     - tags.each do |tag|
       li.card__tag
         = link_to tag, "#link"

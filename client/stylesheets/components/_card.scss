@@ -16,14 +16,16 @@
   }
 }
 .card__tags {
-  @include scut-list-inline();
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
   order: 2;
 }
 .card__tag {
   @include rhythm-type(-2);
+  margin-left: 4px;
   vertical-align: top;
-
-  &:not(:last-child)::after {content: ",";}
 }
 .card__general {
   @include rhythm-type(-2);
