@@ -1,5 +1,29 @@
 .service {
   @include rhythm-margins(2);
+
+  h4 {
+    margin-bottom: 0;
+    & + p,
+    & + ul,
+    & + ol {margin-top: 0;}
+  }
+
+
+  ul {
+    margin-left: -7px;
+    @include scut-list-custom($marker-width: rhythm(1) - 5px){
+      content: url(ok.svg);
+    }
+  }
+
+  li ul {
+    list-style-type: circle;
+    margin: 0 n() 0 .5em;
+    background: none;
+    & > li::before {display: none;}
+  }
+
+  figure {@include rhythm-margins(1);}
 }
 .service__title {
   display: flex;
