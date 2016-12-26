@@ -27,10 +27,10 @@
   }
 
   li ul {
-    list-style-type: circle;
+    list-style-type: circle !important;
     margin: 0 n() 0 .5em;
     background: none;
-    & > li::before {display: none;}
+    & > li::before {display: none !important;}
   }
 
   figure {@include rhythm-margins(1);}
