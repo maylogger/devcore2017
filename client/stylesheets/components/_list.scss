@@ -1,0 +1,17 @@
+.list--unstyled {
+  @extend %scut-list-unstyled;
+}
+.list--punctuated {
+  @include scut-list-punctuated();
+}
+
+/**
+ * Refereances list
+ */
+
+.references {
+  @include rhythm-type(-1);
+}
+.references__list {
+  display: inline-block;
+}
