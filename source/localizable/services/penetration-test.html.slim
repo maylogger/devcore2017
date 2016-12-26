@@ -42,6 +42,8 @@ nav#table-of-contents
   p 弱點掃瞄可由自動化掃瞄軟體在較短的時間內執行完畢，因此時間與金錢成本相對較低。但是弱點掃瞄僅能檢測既有的漏洞，無法及時檢測出最新的資安漏洞並給予修補建議，同時對於弱點的誤判率也較高。目前滲透測試為求完整，通常已將弱點掃瞄包含在內。詳細的關係圖與比較表如下所示：
   
   figure = image_tag "http://devco.re/assets/themes/devcore/images/penetration-test-vs-vulnerability-assessment.png"
+  
+  = partial "components/penetration-test-vs-vulnerability-assessment-table"
 
 = partial "components/service", locals: {title: "自動測試與人工測試有何差異？", id: "service-content-3"}
   p 自動測試與人工測試的差異主要有下列幾項：

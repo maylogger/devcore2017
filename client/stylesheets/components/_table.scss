@@ -1,0 +1,22 @@
+.vs-table {
+  width: 100%;
+  table-layout: fixed;
+  font-size: ms(-1);
+  background-color: $lightgray;
+}
+.vs-table__th {
+  padding: r(1) r(1.5);
+  text-align: left;
+  width: 50%;
+  vertical-align: top;
+
+  .sub-title {display: inline-block;}
+}
+.vs-table__td {
+  padding: 0 r(1.5) r(1);
+  vertical-align: top;
+
+  .term {
+    font-weight: bold;
+  }
+}
