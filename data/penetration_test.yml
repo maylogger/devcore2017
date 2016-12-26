@@ -1,0 +1,137 @@
+specification:
+  - title: OWASP (Open Web Application Security Project)
+    description: 網站應用程式安全測試清單第三版
+    link: "https://www.owasp.org/images/5/56/OWASP_Testing_Guide_v3.pdf"
+
+  - title: OSSTMM (Open Source Security Testing Methodology Manual)
+    description: 開源安全測試方法指南第三版
+    link: "http://www.isecom.org/research/osstmm.html"
+
+  - title: NIST SP 800-115 (National Institute of Standards and Technology - Special Publication 800-115)
+    description: 美國國家標準與技術研究院 - 資訊安全測試與評估指南
+    link: "http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf"
+
+workflow:
+  - title: 確認專案需求
+    steps:
+      - name: 啟動專案起始會議，瞭解客戶需求
+      - name: 確認作業方式與執行規範
+      - name: 簽署合約取得合法滲透授權
+
+  - title: 資訊蒐集與分析規劃
+    steps:
+      - name: 蒐集該目標之公開資訊
+      - name: 分析與規劃滲透方式（包含 OWASP 與 OSSTMM 等國際規範）
+      - name: 準備對應之滲透測試工具與設備
+
+  - title: 執行滲透測試
+    steps:
+      - name: 資料洩漏
+        items:
+          - 測試是否有敏感資料或系統訊息洩漏
+      - name: 弱點測試
+        items:
+          - 掃瞄該目標已知弱點
+      - name: 建立滲透途徑
+        items:
+          - 配合已蒐集之資訊嘗試各項滲透方式
+      - name: 安全漏洞滲透
+        items:
+          - 作業系統安全漏洞滲透
+          - 應用軟體安全漏洞滲透
+          - 網站邏輯漏洞滲透
+          - 密碼破解
+      - name: 信任關係測試
+        items:
+          - 測試主機間的信任關係
+      - name: 權限跳脫與提升
+        items:
+          - 嘗試攻擊與擴張權限
+          - 鎖定特定弱點之攻擊
+          - 試圖取得系統更高權限
+          - 撰寫客製化滲透工具攻擊特定弱點
+          - 滲透內網其他主機（需取得客戶授權）
+
+  - title: 滲透測試報告
+    steps:
+      - name: 評估各弱點潛在威脅、損害程度
+      - name: 撰寫各弱點修補方式
+      - name: 遞交測試結果報告
+      - name: 提供客戶弱點修正顧問諮詢
+      - name: 擬定定期執行安全稽核計劃
+
+  - title: 簡報與文件交付
+    steps:
+      - name: 針對專案結果進行簡報並交付相關文件
+
+faq:
+  - title: 滲透測試有什麼前置作業嗎？
+    answer: 戴夫寇爾與委託者會溝通測試執行時間，基本上以上班時間為準，以便發現重大漏洞時可請企業開發人員及時修補。同時也會告知測試來源 IP，以便企業分辨測試來源是否合法，避免同時遭到入侵攻擊而未發覺。
+
+  - title: 滲透測試需要多久的時間？
+    answer: 根據不同系統的規模大小而訂，通常單一網站從初測、修補到複測，至少需要一個月的時間。
+
+  - title: 滲透測試包含社交工程與 DDoS 嗎？
+    answer: 為避免影響企業正常營運，除非客戶特別要求，否則戴夫寇爾的滲透測試不會包含社交工程與 DDoS。
+
+  - title: 滲透測試過程中會不會影響我的其他主機？
+    answer: 若無取得合法授權，戴夫寇爾不會對授權目標之外的主機進行檢測。
+
+  - title: 滲透測試所取得之資訊是否容易外洩？
+    answer: 戴夫寇爾資安專家皆具備高度企業倫理與道德，不會將測試資訊以任何資訊傳遞給第三方。測試過程中之資料傳遞也會以高強度的密碼加密傳輸，以確保資料的安全性。
+
+  - title: 滲透測試執行完畢後就可以高枕無憂？
+    answer: 駭客攻擊手法層出不窮，即使網站不進行任何更動，也難以保證未來不會被新的攻擊方式入侵。並且一般商務網站也不可能永遠不開發新功能，因此仍建議每年定期執行滲透測試。
+
+  - title: 滲透測試該多久執行一次？
+    answer: 金管會規定銀行體系之網站必須一年執行兩次滲透測試，而一般的企業網站或網路服務則建議每年至少執行一次滲透測試。
+
+  - title: 可以委託戴夫寇爾測試其他企業的網站嗎？
+    answer: 滲透測試會觸及企業的敏感資訊，必須取得合法的授權後才能進行測試，因此僅能接受該網站的擁有者或所屬企業委託測試。
+
+  - title: 執行滲透測試的廠商需要特定資格嗎？
+    answer: 目前並無相關法規，但購買滲透測試服務前最好確認廠商是否真的有能力可提供高品質的服務，例如廠商是否曾揭露大型軟體、網路服務的漏洞、廠商是否曾在各大研討會發表資安技術等，以避免廠商僅擁有軟體。
+
+vs_table:
+  ths:
+    - title: 滲透測試
+      subtitle: Penetration Test
+    - title: 弱點掃瞄
+      subtitle: Vulnerability Assessment
+
+  rows:
+    - tds:
+      - term: 執行方式
+        description: 專業技術顧問手動進行
+      - term: 執行方式
+        description: 自動化工具
+    - tds:
+      - term: 門檻
+        description: 高，測試者需要經驗與專業知識
+      - term: 門檻
+        description: 低，工具安裝完畢即可執行
+    - tds:
+      - term: 流量
+        description: 低
+      - term: 流量
+        description: 高
+    - tds:
+      - term: 誤判率
+        description: 低，專家可驗證該弱點之利用方式與價值
+      - term: 誤判率
+        description: 高，工具無法確認該弱點是否可被利用
+    - tds:
+      - term: 創造力
+        description: 高，專家可能在檢測過程中找到無人發現的新弱點
+      - term: 創造力
+        description: 低，僅能根據規則發現已知弱點
+    - tds:
+      - term: 報告內容
+        description: 專家會列出詳細攻擊手法，並提供客製化的專業修補建議
+      - term: 報告內容
+        description: 僅陳列弱點報表，通常不包含修補建議
+    - tds:
+      - term: 成本
+        description: 高，通常金額是弱點掃瞄的數倍
+      - term: 成本
+        description: 低，有低價的商業工具或免費工具

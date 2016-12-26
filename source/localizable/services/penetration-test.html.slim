@@ -43,7 +43,21 @@ nav
   
   figure = image_tag "http://devco.re/assets/themes/devcore/images/penetration-test-vs-vulnerability-assessment.png"
   
-  = partial "components/penetration-test-vs-vulnerability-assessment-table"
+  table.vs-table
+    thead
+      tr
+        - data.penetration_test.vs_table.ths.each do |th|
+          th.vs-table__th
+            => th.title
+            span.sub-title = th.subtitle
+    
+    tbody
+      - data.penetration_test.vs_table.rows.each do |row|
+        tr
+          - row.tds.each do |td|
+            td.vs-table__td
+              .term = td.term
+              = td.description
 
 = partial "components/service", locals: {title: "自動測試與人工測試有何差異？", id: "service-content-3"}
   p 自動測試與人工測試的差異主要有下列幾項：
@@ -72,88 +86,26 @@ nav
   p 檢測的服務項目會包括網路掃瞄、弱點掃瞄、滲透測試三大層面，並且遵循下列國際標準：
   
   ul
-    li
-      h4 OWASP (Open Web Application Security Project)
-      p
-        = "網站應用程式安全測試清單第三版#{tag :br}"
-        = link_to "https://www.owasp.org/images/5/56/OWASP_Testing_Guide_v3.pdf", 
-                  "https://www.owasp.org/images/5/56/OWASP_Testing_Guide_v3.pdf",
-                  class: "url"
-    li
-      h4 OSSTMM (Open Source Security Testing Methodology Manual)
-      p
-        = "開源安全測試方法指南第三版#{tag :br}"
-        = link_to "http://www.isecom.org/research/osstmm.html",
-                  "http://www.isecom.org/research/osstmm.html",
-                  class: "url"
-
-    li
-      h4 NIST SP 800-115 (National Institute of Standards and Technology - Special Publication 800-115)
-      p
-        = "美國國家標準與技術研究院 - 資訊安全測試與評估指南#{tag :br}"
-        = link_to "http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf",
-                  "http://csrc.nist.gov/publications/nistpubs/800-115/SP800-115.pdf",
-                  class: "url"
-
+    - data.penetration_test.specification.each do |test|
+      li
+        h4 = test.title
+        p
+          = test.description
+          br
+          = link_to test.link, test.link ,class: "url"
+                  
 = partial "components/service", locals: {title: "滲透測試執行流程有哪些？", id: "service-content-5"}
-  h4 確認專案需求
-  ol 
-    li 啟動專案起始會議，瞭解客戶需求
-    li 確認作業方式與執行規範
-    li 簽署合約取得合法滲透授權
-    
-  h4 資訊蒐集與分析規劃
-  ol
-    li 蒐集該目標之公開資訊
-    li 分析與規劃滲透方式（包含 OWASP 與 OSSTMM 等國際規範）
-    li 準備對應之滲透測試工具與設備
-    
-  h4 執行滲透測試
-  ol
-    li
-      | 資料洩漏
-      ul
-        li 測試是否有敏感資料或系統訊息洩漏
-    li 
-      | 弱點測試
-      ul
-        li 掃瞄該目標已知弱點
-    li 
-      | 建立滲透途徑
-      ul
-        li 配合已蒐集之資訊嘗試各項滲透方式
-    li 
-      | 安全漏洞滲透
-      ul
-        li 作業系統安全漏洞滲透
-        li 應用軟體安全漏洞滲透
-        li 網站邏輯漏洞滲透
-        li 密碼破解
-    li 
-      | 信任關係測試
-      ul
-        li 測試主機間的信任關係
-    li 
-      | 權限跳脫與提升
-      ul
-        li 嘗試攻擊與擴張權限
-        li 鎖定特定弱點之攻擊
-        li 試圖取得系統更高權限
-        li 撰寫客製化滲透工具攻擊特定弱點
-        li 滲透內網其他主機（需取得客戶授權）
-        
-  h4 滲透測試報告
-  ol
-    li 評估各弱點潛在威脅、損害程度
-    li 撰寫各弱點修補方式
-    li 遞交測試結果報告
-    li 提供客戶弱點修正顧問諮詢
-    li 擬定定期執行安全稽核計劃
-    
-  h4 簡報與文件交付
-  ol
-    li 針對專案結果進行簡報並交付相關文件
-
+  - data.penetration_test.workflow.each do |flow|
+    h4 = flow.title
+    ol
+      - flow.steps.each do |step|
+        li
+          = step.name
+          - if step.items
+            ul
+              - step.items.each do |item|
+                li = item
+                
 = partial "components/service", locals: {title: "滲透測試執行結果是什麼？", id: "service-content-6"}
   p 初次滲透測試執行完畢後，資安專家會依照所發現的漏洞評估災情，根據嚴重程度分級，詳細列出攻擊步驟，並給予完整的修復建議，輔導企業修補漏洞。待企業修補完畢後，資安專家會再次驗證該漏洞是否已正確修復，若發現能利用其他手法再次繞過，則會回報給企業，請開發者再次進行修補。執行結果報告內容可參考此下圖：
   
@@ -163,38 +115,7 @@ nav
 
 = partial "components/service", locals: {title: "其他滲透測試常見問答", id: "service-content-7"}
   ul
-    li
-      h4 滲透測試有什麼前置作業嗎？
-      p 戴夫寇爾與委託者會溝通測試執行時間，基本上以上班時間為準，以便發現重大漏洞時可請企業開發人員及時修補。同時也會告知測試來源 IP，以便企業分辨測試來源是否合法，避免同時遭到入侵攻擊而未發覺。
-
-    li
-      h4 滲透測試需要多久的時間？
-      p 根據不同系統的規模大小而訂，通常單一網站從初測、修補到複測，至少需要一個月的時間。
-
-    li
-      h4 滲透測試包含社交工程與 DDoS 嗎？
-      p 為避免影響企業正常營運，除非客戶特別要求，否則戴夫寇爾的滲透測試不會包含社交工程與 DDoS。
-
-    li
-      h4 滲透測試過程中會不會影響我的其他主機？
-      p 若無取得合法授權，戴夫寇爾不會對授權目標之外的主機進行檢測。
-
-    li
-      h4 滲透測試所取得之資訊是否容易外洩？
-      p 戴夫寇爾資安專家皆具備高度企業倫理與道德，不會將測試資訊以任何資訊傳遞給第三方。測試過程中之資料傳遞也會以高強度的密碼加密傳輸，以確保資料的安全性。
-
-    li
-      h4 滲透測試執行完畢後就可以高枕無憂？
-      p 駭客攻擊手法層出不窮，即使網站不進行任何更動，也難以保證未來不會被新的攻擊方式入侵。並且一般商務網站也不可能永遠不開發新功能，因此仍建議每年定期執行滲透測試。
-
-    li
-      h4 滲透測試該多久執行一次？
-      p 金管會規定銀行體系之網站必須一年執行兩次滲透測試，而一般的企業網站或網路服務則建議每年至少執行一次滲透測試。
-
-    li
-      h4 可以委託戴夫寇爾測試其他企業的網站嗎？
-      p 滲透測試會觸及企業的敏感資訊，必須取得合法的授權後才能進行測試，因此僅能接受該網站的擁有者或所屬企業委託測試。
-
-    li
-      h4 執行滲透測試的廠商需要特定資格嗎？
-      p 目前並無相關法規，但購買滲透測試服務前最好確認廠商是否真的有能力可提供高品質的服務，例如廠商是否曾揭露大型軟體、網路服務的漏洞、廠商是否曾在各大研討會發表資安技術等，以避免廠商僅擁有軟體。
+    - data.penetration_test.faq.each do |question|
+      li
+        h4 = question.title
+        p  = question.answer
