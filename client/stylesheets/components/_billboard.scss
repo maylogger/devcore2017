@@ -3,7 +3,7 @@
   margin-top: - $topbar-height;
 }
 .billboard__image {
-  width: calc(100% + #{r(1) * 2});
+  width: calc(100% + #{r(1.5) * 2});
   max-width: none;
-  margin: n() r(-1);
+  margin: n() r(-1.5);
 }

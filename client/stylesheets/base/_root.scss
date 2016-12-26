@@ -22,7 +22,7 @@ body {background-color: white;}
   display: flex;
   flex-flow: column nowrap;
   height: 100vh;
-  padding: n() r(1);
+  padding: n() r(1.5);
   @include desktop {max-width: 1280px;}
 }
 
@@ -43,7 +43,8 @@ img[data-sizes="auto"]:not(.slick-slide) {
 figure {
   margin: 0;
   padding: 0;
-  border: 0l
+  border: 0;
+  text-align: center;
 }
 
 figcaption {

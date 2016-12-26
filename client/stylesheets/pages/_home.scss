@@ -5,7 +5,7 @@
   text-align: center;
   border: 2px solid $divider-gray;
   border-width: 2px 0 2px 0;
-  @include bleed-x(r(1));
+  @include bleed-x(r(1.5));
 }
 .home-contact__title {
   @include rhythm-type(0);
