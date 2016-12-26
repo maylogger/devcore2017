@@ -13,9 +13,9 @@ table_of_contents:
 
 = partial "components/billboard"
 
-h3.section-heading 目錄
+h3#table-of-contents.section-heading 目錄
 
-nav#table-of-contents
+nav
   ul.table-of-contents
     - current_page.data.table_of_contents.each_with_index do |text, index|
       li.table-of-contents__cell
