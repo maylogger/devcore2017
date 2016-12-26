@@ -1,8 +1,4 @@
-.home-news {
-  @include padding-leader();
-
-  .card + .card {@include leader(2);}
-}
+.home-news {@include padding-leader();}
 
 .home-contact {
   @include rhythm(.5, 1.5, 1.5, .5);

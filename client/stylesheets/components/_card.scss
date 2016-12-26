@@ -1,13 +1,16 @@
 .card {
   display: flex;
+  padding: r(1) r(2) r(3);
   flex-flow: column nowrap;
   align-items: center;
   text-align: center;
 }
 .card__thumbnail {
+  .image {max-width: 208px;}
+
   .title {
     @include rhythm-type(0);
-    @include rhythm-margins(.25);
+    margin: r(.5) n();
     font-weight: 600;
     color: $primary;
   }
@@ -24,7 +27,8 @@
 }
 .card__general {
   @include rhythm-type(-2);
-  @include trailer(.25);
+  margin-bottom: r(.5);
+  letter-spacing: .4em;
   color: $accent;
   order: -1;
 }
