@@ -2,8 +2,20 @@
   @include trailer(2);
   margin-top: - $topbar-height;
 }
+.billboard--text-only {
+  @include rhythm(1.5);
+  text-align: center;
+}
 .billboard__image {
   width: calc(100% + #{r(1.5) * 2});
   max-width: none;
   margin: n() r(-1.5);
+}
+.billboard__title {
+  font-weight: bold;
+
+  .billboard--text-only & {margin-bottom: 0;}
+}
+.billboard__sub-title {
+  .billboard--text-only & {margin-top: 0;}
 }

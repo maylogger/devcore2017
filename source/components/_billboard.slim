@@ -1,5 +1,8 @@
-.billboard
-  = image_tag current_page.data.billboard.image, class: "billboard__image"
+- text_only = text_only || false
+
+.billboard class=("billboard--text-only" if text_only)
+  - unless text_only
+    = image_tag current_page.data.billboard.image, class: "billboard__image"
 
   h2.billboard__title = current_page.data.billboard.title
 
