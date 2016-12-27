@@ -13,14 +13,14 @@ table_of_contents:
   - 擔任顧問的人員資歷 ›
 ---
 
-= partial "components/billboard"
-
-= partial "components/table-of-contents", locals: {\
-  id: "service-content",
-  contents: current_page.data.table_of_contents\
-}
-
 article.article
+  = partial "components/billboard"
+
+  = partial "components/table-of-contents", locals: {\
+    id: "service-content",
+    contents: current_page.data.table_of_contents\
+  }
+
   = partial "components/service", locals: {title: "資安顧問服務是什麼", id: "service-content-0"}
     = simple_format "資安顧問服務長期協防企業面對駭客攻擊，以自有的專業與駭客站在同一個技術水平進行防禦。服務內容包含定期滲透測試檢測、資安教育訓練、資安事件處理、資安通報及網路與電話顧問諮詢。"
     

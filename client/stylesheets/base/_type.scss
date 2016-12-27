@@ -61,9 +61,10 @@ small {
  * Heading
  */
 
-.section-heading {
+.heading--side-lined {
   @include rhythm-margins(1);
   @include rhythm-type(-1);
+  font-weight: bold;
   color: $secondary;
   @include scut-side-lined($color: tint($secondary, 60%), $space: r(1), $v-adjust: 1px);
 }
