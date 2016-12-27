@@ -1,0 +1,35 @@
+.article {
+  h4 {
+    margin-bottom: 0;
+    & + p,
+    & + ul,
+    & + ol {margin-top: 0;}
+  }
+
+
+  ul:not(.list--unstyled) {
+    $size: 30px;
+    margin-left: -7px;
+    @include scut-list-custom($marker-width: $size - 3px) {
+      content: "";
+      size: $size;
+      background: url(ok.svg) 50% 50% / contain no-repeat;
+    }
+    @include desktop {
+      $size: rhythm();
+      @include scut-list-custom($marker-width: $size - 5px) {
+        content: "";
+        size: $size;
+      }
+    }
+  }
+
+  li ul {
+    list-style-type: circle !important;
+    margin: 0 n() 0 .5em;
+    background: none;
+    & > li::before {display: none !important;}
+  }
+
+  figure {@include rhythm-margins(1);}
+}
