@@ -1,0 +1,15 @@
+---
+title: 文章分類：最新消息
+billboard:
+  title: 最新訊息
+  subtitle: 資訊安全業界大小事
+---
+
+= partial "components/billboard", locals: {text_only: true}
+
+- data.news.each do |news|
+  = partial "components/card", locals: {\
+    title: news.title,
+    tags:  news.tags,
+    general: news.general\
+  }
