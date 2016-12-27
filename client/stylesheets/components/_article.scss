@@ -3,7 +3,8 @@
     margin-bottom: 0;
     & + p,
     & + ul,
-    & + ol {margin-top: 0;}
+    & + ol,
+    & + blockquote {margin-top: 0;}
   }
 
 
@@ -31,5 +32,38 @@
     & > li::before {display: none !important;}
   }
 
+  ul, ol {@include rhythm();}
+
   figure {@include rhythm-margins(1);}
+
+  blockquote {
+    margin: rhythm() 0;
+    padding-left: r(4);
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute r(.5) n() r(.5) 0;
+      width: r(.5);
+      background-color: $primary;
+    }
+    &::after {
+      content: '';
+      position: absolute r(.5) n() n() 0;
+      size: r(.5);
+      background-color: $accent;
+    }
+
+    p {
+      &:first-child {margin-top: 0;}
+      & + footer {
+        margin-top: rhythm(-1);
+        font-weight: 300;
+      }
+    }
+
+    footer {
+      cite::before {content: '— ';}
+    }
+  }
 }

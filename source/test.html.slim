@@ -1,8 +1,48 @@
-- @text = "永東茶國邊機"
-h1 = @text
-h2 = @text
-h3 = @text
-h4 = @text
-h5 = @text
-h6 = @text
-p = lorem.paragraph
+article.article
+  - @text = "永東茶國邊機"
+  h1 = @text
+  h2 = @text
+  h3 = @text
+  h4 = @text
+  h5 = @text
+  h6 = @text
+
+  h4 Paragraph
+  p = lorem.paragraph
+
+  h4 Unordered List
+  ul
+    li Lorem ipsum dolor sit amet
+    li consectetur adipiscing elit
+    li sed do eiusmod tempor
+    
+  h4 Ordered List
+  ol
+    li Lorem ipsum dolor sit amet
+    li consectetur adipiscing elit
+    li sed do eiusmod tempor
+    
+  h4 Blockquote 
+  blockquote
+    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    footer: cite by Lorem Ipsum
+
+  h4 Code
+  code
+    |
+      function client_properties($client_id = '', $user = '', $manager = '', $client_type = 0, $client_name = '', $order_by = 'client_id', $order_type = 'a', $limit = '', $offset = '', $exclude_del = 1, $user_type = '', $user_status = '') {
+      $sql = ($user_type  = '' ? 'SELECT t_mail_server.* FROM t_mail_server ' : 'SELECT t_mail_server.*, t_profile.c_flag as profile_flag FROM t_mail_server, t_profile ');
+      $filter['client_id'] = $client_id;
+      $filter['client_name'] = $client_name;
+      $filter['client_type'] = $client_type;
+      $filter['user'] = mysql_escape_like( $user );
+      $filter['user_type'] = $user_type;
+      $filter['manager'] = $manager;
+      $filter['user_status'] = $user_status;
+      $sql &= construct_where_clause( $filter, $exclude_del );
+
+      // ...
+
+      $result = array(  );
+      @mysql_query( $sql );
+      ( $db_result =  || fatal_error( 'exec:mysql_query(' . $sql . ') respond:' . mysql_error(  ), __FILE__, 221 ) );
