@@ -12,16 +12,19 @@
 
   .to-top {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
     margin-left: r(1);
     width: 50px;
+    color: $accent;
   }
   .to-top__text {
     @include rhythm-type(-2);
     color: $secondary;
   }
 
-  .icon {size: 17px 20px;}
+  .icon {
+    margin-left: auto;
+    size: 17px 20px;
+  }
 }

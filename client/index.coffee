@@ -1,3 +1,5 @@
+$ = require "jquery"
+
 # Require Stylesheets
 require "stylesheets"
 
@@ -20,6 +22,9 @@ sprites = require.context "icons", off
 sprites.keys().forEach sprites
 
 # Running after DOM ready
+new ActiveToggle "[data-toggle]"
+
 smoothScroll.init()
 
-new ActiveToggle "[data-toggle]"
+$(document).on "click", "[data-smooth]", (e) ->
+  smoothScroll.animateScroll document.querySelector $(e.currentTarget).data("smooth")
