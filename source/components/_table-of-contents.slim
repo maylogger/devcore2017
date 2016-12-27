@@ -1,0 +1,7 @@
+h3#table-of-contents.section-heading 目錄
+
+nav
+  ul.table-of-contents
+    - contents.each_with_index do |text, index|
+      li.table-of-contents__cell
+        = link_to text, "#-#{id}-#{index}", "data-scroll" => ""
