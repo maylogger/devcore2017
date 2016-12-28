@@ -8,7 +8,7 @@
   }
 
 
-  ul:not(.list--unstyled) {
+  ul {
     $size: 30px;
     margin-left: -7px;
     @include scut-list-custom($marker-width: $size - 3px) {
@@ -56,14 +56,12 @@
 
     p {
       &:first-child {margin-top: 0;}
-      & + footer {
-        margin-top: rhythm(-1);
-        font-weight: 300;
-      }
+      & + cite {margin-top: rhythm(-1);}
     }
 
-    footer {
-      cite::before {content: '— ';}
+    cite {
+      display: block;
+      &::before {content: '— ';}
     }
   }
 }
