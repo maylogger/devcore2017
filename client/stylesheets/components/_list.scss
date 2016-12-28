@@ -14,4 +14,10 @@
 }
 .references__list {
   display: inline-block;
+  margin: 0 !important;
+  padding-left: 0 !important;
+
+  li {
+    &::before {display: none !important;}
+  }
 }

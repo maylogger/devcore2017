@@ -1,14 +1,13 @@
 = wrap_layout :layout do
-  article.article
-    = partial "components/post-header", locals: {\
-      category: current_page.data.category,
-      image: current_page.data.image,
-      title: current_page.data.title,
-      tags: current_page.data.tags,
-      author: current_page.data.author\
-    }
-
-    = yield
+  = partial "components/post-header", locals: {\
+    category: current_page.data.category,
+    image: current_page.data.image,
+    title: current_page.data.title,
+    tags: current_page.data.tags,
+    author: current_page.data.author\
+  }
+    
+  article.article = yield
 
   -# .article-nav
   -#   .prev

@@ -5,7 +5,7 @@ section.post-header
 
   h1.post-header__title = title
   
-  ul.post-header__tags.list--punctuated.list--unstyled
+  ul.post-header__tags.list--punctuated
     - tags.each do |tag|
       li.post-header__tag
         = link_to tag, "#link"

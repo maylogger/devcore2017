@@ -17,14 +17,14 @@ table_of_contents:
   - 其他滲透測試常見問題 ›
 ---
 
+= partial "components/billboard"
+
+= partial "components/table-of-contents", locals: {\
+  id: "service-content",
+  contents: current_page.data.table_of_contents\
+}
+
 article.article
-  = partial "components/billboard"
-
-  = partial "components/table-of-contents", locals: {\
-    id: "service-content",
-    contents: current_page.data.table_of_contents\
-  }
-
   = partial "components/service", locals: {title: "滲透測試服務是什麼？", id: "service-content-0"}
     p 滲透測試服務 (Penetration Test, PT) 是委請受信任的第三方專業資安團隊，從駭客的角度出發，模擬攻擊者的思考方式對企業進行各種入侵攻擊測試。
     p 滲透測試執行期間，資安專家會以駭客思維嘗試入侵該企業的網站、網路系統、儲存設備等軟硬體，找出各種潛在的漏洞，以驗證企業的設備與資料是否可被破壞或竊取，同時也評估資訊系統與硬體的全盤架構，確認其安全性是否有待加強。

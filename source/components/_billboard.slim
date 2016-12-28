@@ -1,9 +1,13 @@
+- is_homepage = current_page.data.is_homepage || false
 - text_only = text_only || false
 
-.billboard class=("billboard--text-only" if text_only)
+section.billboard class=("billboard--text-only" if text_only)
   - unless text_only
     = image_tag current_page.data.billboard.image, class: "billboard__image"
 
   p.billboard__title = current_page.data.billboard.title
 
-  h2.billboard__sub-title = current_page.data.billboard.subtitle
+  - if is_homepage
+    h2.billboard__sub-title = current_page.data.billboard.subtitle
+  - else
+    h1.billboard__sub-title = current_page.data.billboard.subtitle
