@@ -1,16 +1,12 @@
 = wrap_layout :layout do
-  article.news
-    - if current_page.data.image_credit
-      = link_to image_tag( current_page.data.image ), current_page.data.image_credit
-    - else
-      - if current_page.data.image
-        = image_tag current_page.data.image
-
-    h1 = current_page.data.title
-    - if current_page.data.image_caption
-      small.photo-credit
-        | Photo Credit: 
-        = link_to current_page.data.image_caption, current_page.data.image_credit
+  article.article
+    = partial "components/post-header", locals: {\
+      category: current_page.data.category,
+      image: current_page.data.image,
+      title: current_page.data.title,
+      tags: current_page.data.tags,
+      author: current_page.data.author\
+    }
 
     = yield
 

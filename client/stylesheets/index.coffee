@@ -17,3 +17,4 @@ require "components/_list.scss"
 
 require "pages/_home.scss"
 require "pages/_service.scss"
+require "pages/_news.scss"
