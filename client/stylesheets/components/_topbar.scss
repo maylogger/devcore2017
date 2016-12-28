@@ -16,7 +16,7 @@
   $gap: 10px;
   $bar: 2px;
   padding: $gap;
-  size: 36px;
+  size: $hamburger-size;
   text-align: center;
   border-radius: 50%;
   background-color: $gray;
@@ -35,7 +35,7 @@
   }
 
   &.active {
-    position: relative;
+    position: fixed $hamburger-leader r(1.5) n() n();
     z-index: index($layers, drawer-element);
     background-color: $lightgray;
 
