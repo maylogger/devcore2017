@@ -12,10 +12,13 @@
   margin: n() r(-1.5);
 }
 .billboard__title {
+  @include rhythm-type(2);
   font-weight: bold;
 
   .billboard--text-only & {margin-bottom: 0;}
 }
 .billboard__sub-title {
+  @include rhythm-type(0);
+  font-weight: 300;
   .billboard--text-only & {margin-top: 0;}
 }
