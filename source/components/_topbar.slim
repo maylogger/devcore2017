@@ -1,6 +1,11 @@
+- is_homepage = current_page.data.is_homepage || false
+
 .topbar
   a.logo-wrapper href="/"
-    h1.logo = t("site.name")
+    - if is_homepage
+      h1.logo = t("site.name")
+    - else
+      .logo = t("site.name")
     
   span.topbar__menu menu
   
