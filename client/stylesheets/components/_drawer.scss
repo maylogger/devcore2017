@@ -1,25 +1,32 @@
+.drawer-activated {overflow: hidden;}
+
 .drawer {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: center;
   position: fixed 0 0 0 0;
   z-index: index($layers, drawer);
   background-color: white;
   @include toggle-fade();
 }
-.drawer__contact {margin: rhythm(2) auto;}
+.drawer__container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: rhythm(12);
+}
 
 .main-menu {
   display: flex;
   flex-flow: column nowrap;
+  justify-content: space-between;
   align-items: center;
+  height: rhythm(8);
 }
 .main-menu__link {
   @include rhythm-type(1);
   color: $text-color;
-
-  & + & {margin-top: rhythm(1);}
 }
 
 .lang-menu {
