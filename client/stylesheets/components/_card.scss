@@ -5,15 +5,28 @@
   align-items: center;
   text-align: center;
 }
-.card__thumbnail {
-  .image {max-width: 208px;}
-
-  .title {
-    @include rhythm-type(0);
-    margin: r(.5) n();
-    font-weight: 600;
-    color: $primary;
+.card__thumbnail-wrapper {
+  display: inline-block;
+  margin: n() auto;
+  position: relative;
+  z-index: index($layers, base);
+  &::before {
+    display: block;
+    content: '';
+    position: absolute 0 0 0 0;
   }
+  .card:nth-child(3n+1) &::before {background-color: transparentize($accent, .7);}
+  .card:nth-child(3n+2) &::before {background-color: transparentize($primary, .7);}
+  .card:nth-child(3n) &::before {background-color: transparentize($secondary, .7);}
+}
+.card__thumbnail {
+  max-width: 208px;
+}
+.card__title {
+  @include rhythm-type(0);
+  margin: r(.5) n();
+  font-weight: 600;
+  color: $primary;
 }
 .card__tags {
   display: flex;
