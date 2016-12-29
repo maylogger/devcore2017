@@ -12,6 +12,7 @@ smoothScroll = require "smooth-scroll"
 # Require Custom Modules
 # EX:
 ActiveToggle = require "./modules/toggle"
+ShareButton  = require "./modules/sns"
 
 # Require entry modules
 # EX:
@@ -28,3 +29,10 @@ smoothScroll.init()
 
 $(document).on "click", "[data-smooth]", (e) ->
   smoothScroll.animateScroll document.querySelector $(e.currentTarget).data("smooth")
+
+sns_widgets =
+  '#sns-facebook': 'facebook'
+  '#sns-twitter': 'twitter'
+
+for element, type of sns_widgets
+  new ShareButton(element, document.location.href, document.title, type).init()

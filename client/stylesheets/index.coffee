@@ -14,6 +14,7 @@ require "components/_table-of-contents.scss"
 require "components/_card.scss"
 require "components/_table.scss"
 require "components/_list.scss"
+require "components/_sns.scss"
 
 require "pages/_home.scss"
 require "pages/_service.scss"

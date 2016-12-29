@@ -1,0 +1,9 @@
+.sns-widgets {
+  @include rhythm-type(-2);
+  @include rhythm-margins(2);
+  text-align: center;
+}
+.sns-widgets__button {
+  color: $accent;
+  @include scut-link-bb();
+}
