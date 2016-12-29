@@ -33,10 +33,7 @@
   @include leader(.5);
   color: $secondary;
 
-  .author-name {
-    font-weight: bold;
-    color: $secondary;
-  }
+  .author-name {color: $secondary;}
 }
 
 .news-author-photo {
