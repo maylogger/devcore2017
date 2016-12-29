@@ -31,6 +31,7 @@
   blockquote {
     margin: rhythm() 0;
     padding-left: r(4);
+    word-break: break-all;
     position: relative;
 
     &::before {
