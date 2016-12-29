@@ -17,14 +17,14 @@ table_of_contents:
   - 其他滲透測試常見問題 ›
 ---
 
-= partial "components/billboard"
-
-= partial "components/table-of-contents", locals: {\
-  id: "service-content",
-  contents: current_page.data.table_of_contents\
-}
-
 article.article
+  = partial "components/billboard"
+
+  = partial "components/table-of-contents", locals: {\
+    id: "service-content",
+    contents: current_page.data.table_of_contents\
+  }
+
   = partial "components/service", locals: {title: "滲透測試服務是什麼？", id: "service-content-0"}
     p 滲透測試服務 (Penetration Test, PT) 是委請受信任的第三方專業資安團隊，從駭客的角度出發，模擬攻擊者的思考方式對企業進行各種入侵攻擊測試。
     p 滲透測試執行期間，資安專家會以駭客思維嘗試入侵該企業的網站、網路系統、儲存設備等軟硬體，找出各種潛在的漏洞，以驗證企業的設備與資料是否可被破壞或竊取，同時也評估資訊系統與硬體的全盤架構，確認其安全性是否有待加強。
@@ -60,16 +60,16 @@ article.article
   = partial "components/service", locals: {title: "自動測試與人工測試有何差異？", id: "service-content-3"}
     p 自動測試與人工測試的差異主要有下列幾項：
     
-    h4 即時性
+    h3 即時性
     p 自動測試的檢測規則需要定期更新，若軟體尚未更新或已過期，就無法檢測出最新的漏洞。在專家的人工測試之下，則不會有此狀況發生。
 
-    h4 準確率
+    h3 準確率
     p 自動測試的結果通常有為數不少的誤報，因此需要有專家驗證滲透測試報告的內容。雖然某些滲透測試軟體的檢測準確率有一定水準，但通常其價格也較貴。而人工滲透測試所找出來的弱點都是 100% 確定可利用的，不會有誤報的狀況。
 
-    h4 檢測深度
+    h3 檢測深度
     p 自動測試僅能依照既有規則對資訊系統進行檢測，無法將檢測到的弱點加以組合。而具備駭客思維的資安專家，則可利用多個弱點進行組合式攻擊，往往會發現能造成重大危害的潛在漏洞。
 
-    h4 商業邏輯判斷
+    h3 商業邏輯判斷
     p 程式無法判斷邏輯漏洞。以下圖內容為例，網站會員在查詢自己的個人資料時，網址可能會帶有與帳號相關的參數（如圖 1），然而攻擊者可能會將網址的 id=101 改成圖 2 的 id=102，觀察網站是否會顯示其他使用者的個人資料。若能成功看到其他使用者的資料，則代表有邏輯漏洞。這類型的邏輯漏洞，只能靠人工的方式找出，而無法用自動化滲透測試工具掃瞄。
     
     figure
@@ -86,7 +86,7 @@ article.article
     ul
       - data.penetration_test.specification.each do |test|
         li
-          h4 = test.title
+          h3 = test.title
           p
             = test.description
             br
@@ -94,7 +94,7 @@ article.article
                     
   = partial "components/service", locals: {title: "滲透測試執行流程有哪些？", id: "service-content-5"}
     - data.penetration_test.workflow.each do |flow|
-      h4 = flow.title
+      h3 = flow.title
       ol
         - flow.steps.each do |step|
           li
@@ -115,5 +115,5 @@ article.article
     ul
       - data.penetration_test.faq.each do |question|
         li
-          h4 = question.title
+          h3 = question.title
           p  = question.answer

@@ -1,12 +1,4 @@
 .article {
-  h4 {
-    margin-bottom: 0;
-    & + p,
-    & + ul,
-    & + ol,
-    & + blockquote {margin-top: 0;}
-  }
-
   ul {
     $size: 30px;
     margin-left: -7px;

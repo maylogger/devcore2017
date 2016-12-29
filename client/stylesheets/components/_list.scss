@@ -12,12 +12,9 @@
 .references {
   @include rhythm-type(-1);
 }
-.references__list {
-  display: inline-block;
-  margin: 0 !important;
-  padding-left: 0 !important;
-
-  li {
-    &::before {display: none !important;}
+.references__cell {
+  & + &::before {
+    content: ", ";
+    margin: n() .5em n() .125em;
   }
 }

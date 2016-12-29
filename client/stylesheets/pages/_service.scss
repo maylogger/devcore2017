@@ -1,5 +1,15 @@
 .service {
   @include rhythm-margins(2);
+
+  h3 {
+    @include rhythm-type(0);
+    margin-bottom: 0;
+    font-weight: 600;
+    & + p,
+    & + ul,
+    & + ol,
+    & + blockquote {margin-top: 0;}
+  }
 }
 .service__title {
   display: flex;

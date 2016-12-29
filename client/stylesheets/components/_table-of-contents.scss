@@ -2,7 +2,9 @@
   @extend %scut-list-unstyled;
   @include rhythm-type(-1);
   @include trailer();
+  padding-left: 0 !important;
 }
 .table-of-contents__cell {
+  &::before {display: none !important;}
   & + & {@include leader(.25);}
 }
