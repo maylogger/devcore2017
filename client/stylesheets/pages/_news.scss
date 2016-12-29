@@ -33,13 +33,17 @@
   @include leader(.5);
   color: $secondary;
 
-  .author-photo {
-    display: inline-block;
-    border-radius: 50%;
-  }
-
   .author-name {
     font-weight: bold;
     color: $secondary;
   }
+}
+
+.news-author-photo {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.news-author-info {
+  @include rhythm-type(-1);
 }
