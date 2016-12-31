@@ -56,7 +56,7 @@ READMORE
 
 ### 誰在利用 Heartbleed 漏洞竊取資料呢？
 
-由 github 上面的 [commit 記錄](https://github.com/openssl/openssl/commit/4817504d069b4c5082161b02a22116ad75f822b1)，出問題的那行程式碼是在 2011-12-31 22:59:57 commit 的，不知道是開發者太累還是 NSA 的陰謀。根據 Bloomberg 的[報導](http://www.bloomberg.com/news/2014-04-11/nsa-said-to-have-used-heartbleed-bug-exposing-consumers.html)指出，知情人士表示 NSA 早在**兩年前**就已經知道此漏洞，並且**利用這個漏洞竊取許多網站的機敏資料**。這代表 NSA 在一開始就知道這個漏洞，令人不禁有其他聯想。
+由 github 上面的 [commit 記錄](https://github.com/openssl/openssl/commit/4817504d069b4c5082161b02a22116ad75f822b1)，出問題的那行程式碼是在 2011-12-31 22:59:57 commit 的，不知道是開發者太累還是 NSA 的陰謀。根據 Bloomberg 的[報導](http://www.bloomberg.com/blog/2014-04-11/nsa-said-to-have-used-heartbleed-bug-exposing-consumers.html)指出，知情人士表示 NSA 早在**兩年前**就已經知道此漏洞，並且**利用這個漏洞竊取許多網站的機敏資料**。這代表 NSA 在一開始就知道這個漏洞，令人不禁有其他聯想。
 
 
 > The U.S. National Security Agency knew for at least two years about a flaw in the way that many websites send sensitive information, now dubbed the Heartbleed bug, and regularly used it to gather critical intelligence, two people familiar with the matter said.
@@ -281,7 +281,7 @@ rev:3;)
 1. 不管哪種攻擊手法、多老舊的攻擊手法，在未來都可能會再度發生。
 2. 程式碼的 review 非常重要，一定要在開發過程中導入程式碼 review 機制，以免開發者寫出含有安全疑慮的程式碼。
 3. 加密、Session 控管、金鑰控管等議題，是永遠的課題。一天沒處理好，在未來的風險中會再度受害。
-4. 風險永遠會發生在你猜不到的地方，可能是程式、可能是函式庫、[可能是加密協定](http://technews.tw/2013/09/06/most-common-encryption-protocols-are-useless-against-nsa-surveillance/)、更可能是[亂數產生器](http://ckhung0.blogspot.tw/2014/03/dual-ec-drbg.html)。
+4. 風險永遠會發生在你猜不到的地方，可能是程式、可能是函式庫、[可能是加密協定](http://techblog.tw/2013/09/06/most-common-encryption-protocols-are-useless-against-nsa-surveillance/)、更可能是[亂數產生器](http://ckhung0.blogspot.tw/2014/03/dual-ec-drbg.html)。
 
 不斷的增強資安意識、不停的分享新知、廠商做好資安控管及[安全檢測](http://devco.re/services/penetration-test)、民眾對企業和政府要求資訊安全，集合大家的力量，是改善資安大環境的不二法門。
 

@@ -25,9 +25,9 @@ en:
       name:      Training
       url:       /en/services/security-training.html
   menu:
-    news:
-      name:      News
-      url:       /en/news/
+    blog:
+      name:      blog
+      url:       /en/blog/
     about:
       name:      About
       url:       /en/about/

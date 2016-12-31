@@ -18,4 +18,4 @@ require "components/_sns.scss"
 
 require "pages/_home.scss"
 require "pages/_service.scss"
-require "pages/_news.scss"
+require "pages/_blog.scss"

@@ -6,7 +6,7 @@
     - RCE
     - CVE
   category: 技術專欄
-  page: "/news/2016-09-22-advisory-accellion-file-transfer-appliance-vulnerability-eng-ver.html"
+  page: "/blog/2016-09-22-advisory-accellion-file-transfer-appliance-vulnerability-eng-ver.html"
 
 - title: "Android WebView 為你的使用者打開了漏洞之門你知道嗎？"
   tags:
@@ -15,13 +15,13 @@
     - WebView
     - UXSS
   category: 技術專欄
-  page: "/news/2014-10-13-android-webview-left-shortcuts-for-hacker.html"
+  page: "/blog/2014-10-13-android-webview-left-shortcuts-for-hacker.html"
 
 - title: 電商業者的資安困境？
   tags:
     - ecommerce
   category: 技術專欄
-  page: "/news/2016-07-29-the_security_dilemma_of_e-commerce.html"
+  page: "/blog/2016-07-29-the_security_dilemma_of_e-commerce.html"
 
 - title: "滲透 Facebook 的思路與發現"
   tags:
@@ -32,4 +32,4 @@
     - Reconnaissance
     - Pentest
   category: 技術專欄
-  page: "/news/2016-04-21-how-I-hacked-facebook-and-found-someones-backdoor-script.html"
+  page: "/blog/2016-04-21-how-I-hacked-facebook-and-found-someones-backdoor-script.html"

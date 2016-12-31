@@ -6,7 +6,7 @@ category: "案例剖析"
 tags: ["Facebook", "BugBounty", "RCE", "Backdoor", "Reconnaissance", "Pentest"]
 author: "orange"
 keywords: "Facebook, BugBounty, RCE, Backdoor, Reconnaissance, Pentest"
-image: "/images/news/20160421/facebook.jpg"
+image: "/images/blog/20160421/facebook.jpg"
 ---
 
 by [Orange Tsai](http://blog.orange.tw/)  
@@ -16,7 +16,7 @@ by [Orange Tsai](http://blog.orange.tw/)
 
 ----------
 
-![Facebook](/images/news/20160421/facebook.jpg)
+![Facebook](/images/blog/20160421/facebook.jpg)
 
 ----------
 
@@ -79,7 +79,7 @@ I found a special server among these C Class IPs.
 
     files.fb.com
 
-![files.fb.com](/images/news/20160421/1.jpg)
+![files.fb.com](/images/blog/20160421/1.jpg)
 *↑ Login Interface of files.fb.com*
 
 <br>
@@ -122,7 +122,7 @@ Apart from reporting to Facebook Security Team, other vulnerabilities were submi
 
 More details will be published after full disclosure policy!
 
-![shell on facebook](/images/news/20160421/2.jpg)
+![shell on facebook](/images/blog/20160421/2.jpg)
 *↑ Using Pre-Auth SQL Injection to Write Webshell*
 
 <br>
@@ -146,13 +146,13 @@ While collecting vulnerability details and evidences for reporting to Facebook, 
 First of all I found some strange PHP error messages in "**/var/opt/apache/php\_error\_log**"  
 These error messages seemed to be caused by modifying codes online?  
 
-![PHP error log](/images/news/20160421/3.jpg)
+![PHP error log](/images/blog/20160421/3.jpg)
 *↑ PHP error log*
 
 <br>
 I followed the PHP paths in error messages and ended up with discovering suspicious WEBSHELL files left by previous "visitors".  
 
-![Webshell on facebook server](/images/news/20160421/4.jpg)
+![Webshell on facebook server](/images/blog/20160421/4.jpg)
 *↑ Webshell on facebook server*
 
 some contents of the files are as follows:  
@@ -198,7 +198,7 @@ A brief summary, the hacker created a proxy on the credential page to log the cr
     wget https://files.fb.com/courier/B3dKe9sQaa0L.log
 
 
-![logged password](/images/news/20160421/5.jpg)
+![logged password](/images/blog/20160421/5.jpg)
 *↑ Logged passwords*
 
 <br>
@@ -247,7 +247,7 @@ dig a acme.facebook.com
 <br>
 
 Use ShellScript to scan internal network but forgot to redirect STDERR XD
-![Port Scanning](/images/news/20160421/6.jpg)
+![Port Scanning](/images/blog/20160421/6.jpg)
 <br>
 
 Attempt to connect internal LDAP server  
@@ -309,7 +309,7 @@ base64: invalid input
 
 After checking the browser, the SSL certificate of files.fb.com was *.fb.com ...  
 
-![certificate of files.fb.com](/images/news/20160421/7.jpg)
+![certificate of files.fb.com](/images/blog/20160421/7.jpg)
 
 ----------
 

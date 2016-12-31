@@ -6,7 +6,7 @@ category: "案例剖析"
 tags: ["Facebook", "BugBounty", "RCE", "Backdoor", "Reconnaissance", "Pentest"]
 author: "orange"
 keywords: "Facebook, BugBounty, RCE, Backdoor, Reconnaissance, Pentest"
-image: "/images/news/20160421/facebook.jpg"
+image: "/images/blog/20160421/facebook.jpg"
 ---
 
 [English Version](http://devco.re/blog/2016/04/21/how-I-hacked-facebook-and-found-someones-backdoor-script-eng-ver/)
@@ -71,7 +71,7 @@ TFBNW 看似是 Facebook 內部用的域名，來掃掃 vpn.tfbnw.net 同網段�
     files.fb.com
 
 
-![files.fb.com](/images/news/20160421/1.jpg)
+![files.fb.com](/images/blog/20160421/1.jpg)
 *↑ files.fb.com 登入介面*
 
 <br>
@@ -115,7 +115,7 @@ FTA 為一款標榜安全檔案傳輸的產品，可讓使用者線上分享、�
 
 詳細的弱點細節會待 Full Disclosure Policy 後公布!
 
-![shell on facebook](/images/news/20160421/2.jpg)
+![shell on facebook](/images/blog/20160421/2.jpg)
 *↑ 使用 Pre-Auth SQL Injection 寫入 Webshell*
 
 <br>
@@ -139,13 +139,13 @@ Facebook 大致有以下限制:
 
 首先是在 "**/var/opt/apache/php\_error\_log**" 中看到一些奇怪的 PHP 錯誤訊息，從錯誤訊息來看似乎像是邊改 Code 邊執行所產生的錯誤?  
 
-![PHP error log](/images/news/20160421/3.jpg)
+![PHP error log](/images/blog/20160421/3.jpg)
 *↑ PHP error log*
 
 <br>
 跟隨錯誤訊息的路徑去看發現疑似前人留下的 Webshell 後門  
 
-![Webshell on facebook server](/images/news/20160421/4.jpg)
+![Webshell on facebook server](/images/blog/20160421/4.jpg)
 *↑ Webshell on facebook server*
 
 <br>
@@ -194,7 +194,7 @@ include_once 中 "**sclient\_user\_class\_standard.inc.orig**" 為原本對密�
     wget https://files.fb.com/courier/B3dKe9sQaa0L.log
 
 
-![logged password](/images/news/20160421/5.jpg)
+![logged password](/images/blog/20160421/5.jpg)
 *↑ Logged passwords*
 
 <br>
@@ -244,7 +244,7 @@ dig a acme.facebook.com
 
 使用 Shell Script 進行內網掃描但忘記把 STDERR 導掉XD
 
-![Port Scanning](/images/news/20160421/6.jpg)
+![Port Scanning](/images/blog/20160421/6.jpg)
 <br>
 
 嘗試對內部 LDAP 進行連接
@@ -306,7 +306,7 @@ base64: invalid input
 
 從瀏覽器觀察 files.fb.com 的憑證還是 Wildcard 的 *.fb.com ...  
 
-![certificate of files.fb.com](/images/news/20160421/7.jpg)
+![certificate of files.fb.com](/images/blog/20160421/7.jpg)
 
 <br>
 

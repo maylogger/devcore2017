@@ -7,10 +7,10 @@ billboard:
 
 = partial "components/billboard", locals: {text_only: true}
 
-- data.news.each do |news|
+- data.blog.each do |blog|
   = partial "components/card", locals: {\
-    title: news.title,
-    tags:  news.tags,
-    category: news.category,
-    news: news.page\
+    title: blog.title,
+    tags:  blog.tags,
+    category: blog.category,
+    blog: blog.page\
   }

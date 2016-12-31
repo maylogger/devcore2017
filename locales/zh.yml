@@ -28,9 +28,9 @@ zh:
     about:
       name:      關於我們
       url:       /about/
-    news:
+    blog:
       name:      最新消息
-      url:       /news/
+      url:       /blog/
   contact:
     name:      聯絡我們
     url:       /contact/
@@ -40,7 +40,7 @@ zh:
     zh:
       name:      中文
       url:       http://core.dev/
-    
+
     en:
       name:      English
       url:       http://core.dev/en/

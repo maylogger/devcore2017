@@ -27,10 +27,10 @@ activate :i18n, :mount_at_root => :zh
 # for blog
 activate :blog do |blog|
   # set options on blog
-  blog.prefix = "news"
+  blog.prefix = "blog"
   blog.summary_separator = "READMORE"
   blog.paginate = true
-  blog.layout = "news"
+  blog.layout = "blog"
 end
 
 ###

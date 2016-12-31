@@ -1,25 +1,25 @@
-section.news-header
-  small.news-header__category = current_page.data.category
+section.blog-header
+  small.blog-header__category = current_page.data.category
   
   - if current_page.data.image_credit
     = link_to current_page.data.image_credit
       = image_tag current_page.data.image,
-        class: "news-header__image",
+        class: "blog-header__image",
         title: "Image credit: #{current_page.data.image_caption}",
         alt: "Image credit: #{current_page.data.image_caption}"
   
   - else
-    = image_tag current_page.data.image, class: "news-header__image"
+    = image_tag current_page.data.image, class: "blog-header__image"
 
-  h1.news-header__title = current_page.data.title
+  h1.blog-header__title = current_page.data.title
   
-  ul.news-header__tags.list--punctuated
+  ul.blog-header__tags.list--punctuated
     - current_page.data.tags.each do |tag|
-      li.news-header__tag
+      li.blog-header__tag
         = link_to tag, "#link"
         
-  p.news-header__info
+  p.blog-header__info
     ' Written by
-    => image_tag lorem.image("32x32"), class: "news-author-photo"
+    => image_tag lorem.image("32x32"), class: "blog-author-photo"
     => link_to current_page.data.author, "#link", class: "author-name"
     time.date on 2016-09-22 

@@ -6,7 +6,7 @@ category: "科普文章"
 tags: [ecommerce,]
 author: "allenown"
 keywords: "電子商務, 個資"
-image: "/images/news/20160729/cart.jpg"
+image: "/images/blog/20160729/cart.jpg"
 image_credit: "https://www.flickr.com/photos/zionfiction/7968029824/"
 image_caption: "Flickr"
 ---
@@ -40,7 +40,7 @@ READMORE
 
 解決方案：滲透測試、資安顧問、教育訓練
 
-![](/images/news/20160729/the_security_dilemma_of_e-commerce_1.png)
+![](/images/blog/20160729/the_security_dilemma_of_e-commerce_1.png)
 
 #### 委外開發網站存在漏洞，但承包商不處理
 
@@ -54,7 +54,7 @@ READMORE
 
 解決方案：強化資安思維、權限最小化、APT 防禦
 
-![](/images/news/20160729/the_security_dilemma_of_e-commerce_2.png)
+![](/images/blog/20160729/the_security_dilemma_of_e-commerce_2.png)
 
 #### 配合廠商個資外洩，如金流商、物流商
 
@@ -62,7 +62,7 @@ READMORE
 
 解決方案：配合廠商的資安規範、滲透測試
 
-![](/images/news/20160729/the_security_dilemma_of_e-commerce_3.png)
+![](/images/blog/20160729/the_security_dilemma_of_e-commerce_3.png)
 
 #### 攻擊者用已外洩帳號密碼登入電商網站
 
@@ -70,7 +70,7 @@ READMORE
 
 解決方案：企業間的聯防、提供使用者帳號保護
 
-![](/images/news/20160729/the_security_dilemma_of_e-commerce_4.png)
+![](/images/blog/20160729/the_security_dilemma_of_e-commerce_4.png)
 
 #### 買家在詐騙集團的賣場交易
 

@@ -1,0 +1,9 @@
+= wrap_layout :layout do
+  = partial "components/blog-header"    
+  
+  article.article = yield
+  
+  = partial "components/sns-widgets"
+  = partial "components/blog-author"
+  = partial "components/blog-comments"
+  = partial "components/blog-others"

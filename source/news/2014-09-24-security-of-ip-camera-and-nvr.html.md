@@ -14,7 +14,7 @@ og_image: "https://lh5.googleusercontent.com/-yzP5umnsAhg/VCKTF83dDpI/AAAAAAAAAp
 
 網路攝影機的普及率在近幾年來持續攀升，除了老人與幼兒居家照護、企業室內監控等需求迅速增加之外，結合手機應用程式讓人可隨時隨地觀看影像的方便性也成為普及的原因。當大家還以為黑帽駭客的目標仍然是網站、個人電腦時，已經有許多攻擊者悄悄地將目標轉向了各種物連網設備，例如 NAS、Wireless AP、Printer 等產品，而擁有眾多用戶的網路攝影機理所當然地也是目標之一。身為安控產品，卻造成一項資安的隱憂，是不是有點諷刺呢？
 
-恰好最近幾天忽然看到有新聞報導[「家用監視器遭駭客入侵 隱私全被看光光」](http://news.ltn.com.tw/news/world/breakingnews/1112329)這樣子的案例，而在去年也有類似的報導[「數十萬支監控攝影機潛藏被駭漏洞 電影情景恐真實上演」](http://news.networkmagazine.com.tw/classification/security/2013/06/18/51531/)，讓我們不禁想對這個事件做個深入的調查。就讓我們來看看網路攝影機以及相關產品究竟有哪些風險吧！
+恰好最近幾天忽然看到有新聞報導[「家用監視器遭駭客入侵 隱私全被看光光」](http://blog.ltn.com.tw/blog/world/breakingblog/1112329)這樣子的案例，而在去年也有類似的報導[「數十萬支監控攝影機潛藏被駭漏洞 電影情景恐真實上演」](http://blog.networkmagazine.com.tw/classification/security/2013/06/18/51531/)，讓我們不禁想對這個事件做個深入的調查。就讓我們來看看網路攝影機以及相關產品究竟有哪些風險吧！
 
 READMORE
 

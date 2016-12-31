@@ -13,7 +13,7 @@ keywords: "HTTP header,Defense,JavaScript,XSS"
 
 還記得在上一篇 [HTTP headers 的資安議題 (1)](http://devco.re/blog/2014/03/10/security-issues-of-http-headers-1/) 文章中，我們提到了多種資安相關的 HTTP headers 嗎？接下來的幾篇文章我們會介紹幾個專門對付 XSS 的 HTTP headers，首先就由 Content-Security-Policy 打頭陣。
 
-[Content-Security-Policy](https://www.owasp.org/index.php/Content_Security_Policy)（以下簡稱 CSP）是從 2010 年被提出來的一項 Web 規格，主要目的是用來防止 Cross-Site Scripting（以下簡稱 XSS）跟網頁樣式置換（例如[科技部被惡搞](http://udn.com/NEWS/NATIONAL/NAT5/8554327.shtml)就是一個最好的例子）。經過五年發展，CSP 1.0 已從 W3C 的 TR (Technical Report) 變成 [Candidate Recommendation](http://www.w3.org/TR/CSP/)，應該不久就會將成為 W3C 推薦標準。新的 [CSP 1.1](http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html) 則仍在草案階段。
+[Content-Security-Policy](https://www.owasp.org/index.php/Content_Security_Policy)（以下簡稱 CSP）是從 2010 年被提出來的一項 Web 規格，主要目的是用來防止 Cross-Site Scripting（以下簡稱 XSS）跟網頁樣式置換（例如[科技部被惡搞](http://udn.com/blog/NATIONAL/NAT5/8554327.shtml)就是一個最好的例子）。經過五年發展，CSP 1.0 已從 W3C 的 TR (Technical Report) 變成 [Candidate Recommendation](http://www.w3.org/TR/CSP/)，應該不久就會將成為 W3C 推薦標準。新的 [CSP 1.1](http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html) 則仍在草案階段。
 
 CSP 家族龐大，總共有三個類別，六個項目：
 
