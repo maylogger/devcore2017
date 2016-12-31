@@ -1,17 +1,17 @@
 section.news-header
-  small.news-header__category = category
+  small.news-header__category = current_page.data.category
   
-  = image_tag image, class: "news-header__image"
+  = image_tag current_page.data.image, class: "news-header__image"
 
-  h1.news-header__title = title
+  h1.news-header__title = current_page.data.title
   
   ul.news-header__tags.list--punctuated
-    - tags.each do |tag|
+    - current_page.data.tags.each do |tag|
       li.news-header__tag
         = link_to tag, "#link"
         
   p.news-header__info
     ' Written by
     => image_tag lorem.image("32x32"), class: "news-author-photo"
-    => link_to author, "#link", class: "author-name"
+    => link_to current_page.data.author, "#link", class: "author-name"
     time.date on 2016-09-22 

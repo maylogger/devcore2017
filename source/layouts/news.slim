@@ -1,27 +1,9 @@
 = wrap_layout :layout do
-  = partial "components/news-header", locals: {\
-    category: current_page.data.category,
-    image: current_page.data.image,
-    title: current_page.data.title,
-    tags: current_page.data.tags,
-    author: current_page.data.author\
-  }
-    
+  = partial "components/news-header"    
+  
   article.article = yield
   
   = partial "components/sns-widgets"
   = partial "components/news-author"
   = partial "components/news-comments"
   = partial "components/news-others"
-
-  -# .article-nav
-  -#   .prev
-  -#     - prev_article = current_article.previous_article
-  -#     - if prev_article
-  -#       |Previous:
-  -#       = link_to prev_article.title, prev_article.url
-  -#   .next
-  -#     - next_article = current_article.next_article
-  -#     - if next_article
-  -#       |Next:
-  -#       = link_to next_article.title, next_article.url
