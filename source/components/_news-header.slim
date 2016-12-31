@@ -1,7 +1,15 @@
 section.news-header
   small.news-header__category = current_page.data.category
   
-  = image_tag current_page.data.image, class: "news-header__image"
+  - if current_page.data.image_credit
+    = link_to current_page.data.image_credit
+      = image_tag current_page.data.image,
+        class: "news-header__image",
+        title: "Image credit: #{current_page.data.image_caption}",
+        alt: "Image credit: #{current_page.data.image_caption}"
+  
+  - else
+    = image_tag current_page.data.image, class: "news-header__image"
 
   h1.news-header__title = current_page.data.title
   

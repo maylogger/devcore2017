@@ -6,8 +6,24 @@
     - RCE
     - CVE
   category: 技術專欄
+  page: "/news/2016-09-22-advisory-accellion-file-transfer-appliance-vulnerability-eng-ver.html"
 
-- title: Accellion File Transfer Appliance 弱點報告
+- title: "Android WebView 為你的使用者打開了漏洞之門你知道嗎？"
+  tags:
+    - Mobile
+    - Android
+    - WebView
+    - UXSS
+  category: 技術專欄
+  page: "/news/2014-10-13-android-webview-left-shortcuts-for-hacker.html"
+
+- title: 電商業者的資安困境？
+  tags:
+    - ecommerce
+  category: 技術專欄
+  page: "/news/2016-07-29-the_security_dilemma_of_e-commerce.html"
+
+- title: "滲透 Facebook 的思路與發現"
   tags:
     - Facebook
     - BugBounty
@@ -16,17 +32,4 @@
     - Reconnaissance
     - Pentest
   category: 技術專欄
-
-- title: 電商業者的資安困境？
-  tags:
-    - ecommerce
-  category: 技術專欄
-
-- title: How I Hacked Facebook, and Found Someone's Backdoor Script
-  tags:
-    - Advisory
-    - Facebook
-    - BugBounty
-    - RCE
-    - CVE
-  category: 技術專欄
+  page: "/news/2016-04-21-how-I-hacked-facebook-and-found-someones-backdoor-script.html"
