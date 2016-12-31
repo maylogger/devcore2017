@@ -10,10 +10,12 @@
   @include rhythm-margins();
 
   .highlight-name + & {margin-top: 0;}
+}
 
-  pre  {
-    margin: 0;
-    padding: r(1) r(1.5);
-    color: #fff $primary;
-  }
+pre  {
+  padding: r(1) r(1.5);
+  color: #fff $primary;
+
+  .highlight-name + &,
+  .highlight & {margin: 0;}
 }

