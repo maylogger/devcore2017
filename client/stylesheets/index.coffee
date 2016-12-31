@@ -17,6 +17,9 @@ require "components/_list.scss"
 require "components/_sns.scss"
 require "components/_highlight.scss"
 
+# require "highlight/_zenburn.scss"
+require "highlight/_monokai.scss"
+
 require "pages/_home.scss"
 require "pages/_service.scss"
 require "pages/_blog.scss"
