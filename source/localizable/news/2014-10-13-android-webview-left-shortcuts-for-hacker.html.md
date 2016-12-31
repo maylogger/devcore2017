@@ -113,24 +113,6 @@ webView.loadUrl("http://www.example.com/");
 
 上述問題被發現後沒多久，再由相同研究員發現一個早在多年前已經被修正的 [WebKit 臭蟲](http://trac.webkit.org/changeset/96826)仍然出現在 Android 4.3 及之前的版本上。
 
-{% highlight html %}
-<script>
-window.onload = function()
-{
-    object = document.createElement("object");
-    object.setAttribute("data", "http://www.bing.com");
-    document.body.appendChild(object);
-    object.onload = function() {
-      object.setAttribute("data", "javascript:alert(document.domain)");
-        object.innerHTML = "foobar";
-    }
-}
-</script>
-
-上述的跨來源操作同樣違反了 SOP，應當被拒絕執行。但他卻能在有風險的 WebView 上被執行，造成風險。
-
-{% endhighlight %}
-
 #### 防範
 
 作為開發者
