@@ -4,6 +4,7 @@
   @include desktop {
     display: flex;
     justify-content: space-between;
+    margin-top: - $topbar-height--desktop;
   }
 }
 .billboard--text-only {

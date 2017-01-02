@@ -6,6 +6,10 @@
   flex-shrink: 0;
   position: relative;
   z-index: index($layers, topbar);
+  @include desktop {
+    padding: n() 30px;
+    height: $topbar-height--desktop;
+  }
 }
 .topbar__menu {
   margin-right: r(.5);
