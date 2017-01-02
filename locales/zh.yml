@@ -24,13 +24,13 @@ zh:
   menu:
     about:
       name:      駭客思維
-      url:       /about/
+      url:       /about.html
     blog:
       name:      最新訊息
       url:       /blog/
   contact:
     name:      聯絡我們
-    url:       /contact/
+    url:       /contact.html
 
   lang-label:    語言
   lang:
