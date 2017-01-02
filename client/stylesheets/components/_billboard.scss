@@ -35,6 +35,11 @@
     width: span(5);
     position: relative;
     z-index: index($layers, billboard-text);
+
+    .billboard--text-only & {
+      margin: n() auto;
+      width: auto;
+    }
   }
 }
 .billboard__title {
