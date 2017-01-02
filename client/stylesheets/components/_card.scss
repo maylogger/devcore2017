@@ -37,8 +37,10 @@
 }
 .card__tag {
   @include rhythm-type(-2);
-  margin-left: 4px;
-  vertical-align: top;
+  & + &::before {
+    content: ",";
+    margin-right: .5em;
+  }
 }
 .card__category {
   @include rhythm-type(-2);

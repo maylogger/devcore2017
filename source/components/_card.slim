@@ -8,10 +8,9 @@ section.card
     
     h3.card__title = title
   
-  ul.card__tags.list--punctuated
+  .card__tags
     - tags.each do |tag|
-      li.card__tag
-        = link_to tag, "#link"
+      = link_to tag, "#link", class: "card__tag"
 
   - if category
     small.card__category = link_to category, "#link"

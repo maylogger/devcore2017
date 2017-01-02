@@ -1,9 +1,6 @@
 .list--unstyled {
   @extend %scut-list-unstyled;
 }
-.list--punctuated {
-  @include scut-list-punctuated();
-}
 
 /**
  * Refereances list
@@ -14,7 +11,7 @@
 }
 .references__cell {
   & + &::before {
-    content: ", ";
-    margin: n() .5em n() .125em;
+    content: ",";
+    margin-right: .5em;
   }
 }

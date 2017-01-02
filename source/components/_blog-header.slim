@@ -13,10 +13,9 @@ section.blog-header
 
   h1.blog-header__title = current_page.data.title
   
-  ul.blog-header__tags.list--punctuated
+  .blog-header__tags
     - current_page.data.tags.each do |tag|
-      li.blog-header__tag
-        = link_to tag, "#link"
+      = link_to tag, "#link", class: "blog-header__tag"
         
   p.blog-header__info
     ' Written by
