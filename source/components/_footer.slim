@@ -1,22 +1,15 @@
 footer.main-footer
   .main-footer__about
     | 戴夫寇爾提供
-    = link_to "滲透測試", t("service.pt.url"), class: "link"
-    | 、
-    = link_to "資安顧問", t("service.consulting.url"), class: "link"
-    | 與
-    = link_to "資安訓練", t("service.training.url"), class: "link"
-    | 專業服務
+    | #{link_to t("service.pt.name"), t("service.pt.url"), class: "link"}、
+    | #{link_to t("service.consulting.name"), t("service.consulting.url"), class: "link"}與
+    | #{link_to t("service.training.name"), t("service.training.url"), class: "link"}專業服務
     br
-    | 在
-    = link_to "Facebook", data.site.sns.fb, class: "link"
-    | 或
-    = link_to "Twitter", data.site.sns.twitter, class: "link"
-    | 上追蹤我們的
-    = link_to "最新訊息", t("menu.blog.url"), class: "link"
+    | 在#{link_to "Facebook", data.site.sns.fb, class: "link"}
+    | 或#{link_to "Twitter", data.site.sns.twitter, class: "link"}
+    | 上追蹤我們的#{link_to t("menu.blog.name"), t("menu.blog.url"), class: "link"}
     br
-    | 瞭解更多戴夫寇爾的
-    = link_to "駭客思維", t("menu.about.url"), class: "link"
+    | 瞭解更多戴夫寇爾的#{link_to t("menu.about.name"), t("menu.about.url"), class: "link"}
 
   .main-footer__snses
     - data.site.sns.each do |name, url|

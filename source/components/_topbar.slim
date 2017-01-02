@@ -1,11 +1,20 @@
 - is_homepage = current_page.data.is_homepage || false
 
 .topbar
-  a.logo-wrapper href="/"
+  .topbar__brand
     - if is_homepage
-      h1.logo = t("site.name")
+      = link_to "/"
+        h1.logo = t("site.name")
+        
     - else
-      .logo = t("site.name")
+      = link_to "/"
+        .logo = t("site.name")
+    
+      p.slogan
+       | 我們提供
+       | #{link_to t("service.pt.name"), t("service.pt.url"), class: "link"}、
+       | #{link_to t("service.consulting.name"), t("service.consulting.url"), class: "link"}與
+       | #{link_to t("service.training.name"), t("service.training.url"), class: "link"}專業服務
 
   = partial "components/drawer"
     
