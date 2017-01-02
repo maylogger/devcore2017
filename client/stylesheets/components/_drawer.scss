@@ -1,4 +1,7 @@
-.drawer-activated {overflow: hidden;}
+.drawer-activated {
+  overflow: hidden;
+  @include desktop {overflow: auto;}
+}
 
 .drawer {
   display: flex;
@@ -8,6 +11,11 @@
   z-index: index($layers, drawer);
   background-color: white;
   @include toggle-fade();
+  @include desktop {
+    @include show();
+    position: static;
+    background-color: transparent;
+  }
 }
 .drawer__container {
   display: flex;
@@ -15,6 +23,17 @@
   justify-content: space-between;
   align-items: center;
   height: rhythm(12);
+  @include desktop {
+    flex-direction: row;
+    justify-content: flex-end;
+    height: auto;
+  }
+}
+.drawer__contact {
+  @include desktop {
+    margin-left: rhythm(.5);
+    order: 1;
+  }
 }
 
 .main-menu {
@@ -23,10 +42,20 @@
   justify-content: space-between;
   align-items: center;
   height: rhythm(8);
+  @include desktop {
+    flex-direction: row;
+    justify-content: flex-start;
+    height: auto;
+  }
 }
 .main-menu__link {
-  @include rhythm-type(1);
+  font-size: ms(1);
   color: $text-color;
+  @include desktop {
+    @include adjust-font-size-to(ms(-1));
+    font-weight: 600;
+    & + & {margin-left: rhythm(.5);}
+  }
 }
 
 .lang-menu {
@@ -35,6 +64,9 @@
   align-items: baseline;
   font-weight: 600;
   @include rhythm-type(-1);
+  @include desktop {
+    margin-left: rhythm(.5);
+  }
 }
 .lang-menu__label {color: $secondary;}
 .lang-menu__link {

@@ -4,7 +4,7 @@
       .hidden = t("menu-label")
       
       - t("service").each do | item, details |
-        = link_to details[:name], details[:url], class: "main-menu__link"
+        = link_to details[:name], details[:url], class: "main-menu__link mobile-only"
       - t("menu").each do | item, details |
         = link_to details[:name], details[:url], class: "main-menu__link"
         

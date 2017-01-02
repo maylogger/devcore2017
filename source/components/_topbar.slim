@@ -6,10 +6,12 @@
       h1.logo = t("site.name")
     - else
       .logo = t("site.name")
+
+  = partial "components/drawer"
     
-  span.topbar__menu menu
+  span.topbar__menu.mobile-only menu
   
-  button#drawer-toggle.appearance-none.topbar__hamburger type='button' data-toggle="#drawer"
+  button#drawer-toggle.appearance-none.topbar__hamburger.mobile-only type='button' data-toggle="#drawer"
     .bars
       .bar
       .bar
