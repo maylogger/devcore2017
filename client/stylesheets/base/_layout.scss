@@ -4,6 +4,7 @@
     width: span(8 of 12);
   }
 }
+
 .mobile-only {
   display: block !important;
   @include desktop { display: none !important };

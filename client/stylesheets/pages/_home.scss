@@ -1,1 +1,10 @@
-.home-news {@include padding-leader();}
+.home-news {
+  @include padding-leader();
+  @include desktop {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    .card {width: span(6);}
+  }
+}
