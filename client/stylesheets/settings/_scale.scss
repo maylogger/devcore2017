@@ -21,7 +21,7 @@ $ms-range:         $ms-ratio 0,
 @mixin rhythm-type($level) {
   font-size: ms($level);
   @include desktop {
-    @include adjust-font-size-to(ms($level, $Ratios: $ms-ratio-desktop));
+    @include adjust-font-size-to(ms($level, $Ratios: $ms-ratio));
   }
 }
 

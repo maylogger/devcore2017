@@ -1,9 +1,35 @@
 footer.main-footer
-  - data.site.sns.each do |media|
-    = link_to media.url, class: "main-footer__sns"
-      = inline_svg media.name
+  .main-footer__about
+    | 戴夫寇爾提供
+    = link_to "滲透測試", t("service.pt.url"), class: "link"
+    | 、
+    = link_to "資安顧問", t("service.consulting.url"), class: "link"
+    | 與
+    = link_to "資安訓練", t("service.training.url"), class: "link"
+    | 專業服務
+    br
+    | 在
+    = link_to "Facebook", data.site.sns.fb, class: "link"
+    | 或
+    = link_to "Twitter", data.site.sns.twitter, class: "link"
+    | 上追蹤我們的
+    = link_to "最新訊息", t("menu.blog.url"), class: "link"
+    br
+    | 瞭解更多戴夫寇爾的
+    = link_to "駭客思維", t("menu.about.url"), class: "link"
 
-  small.main-footer__copyright
-    | © DEVCORE 2016
+  .main-footer__snses
+    - data.site.sns.each do |name, url|
+      = link_to url, class: "main-footer__sns"
+        = inline_svg name
+      
+  address.main-footer__address
+    ul.list--unstyled
+      li 地址 10487 台北市中山區復興北路168號10樓
+      li Email contact@devco.re
+      li 電話 02-2718-0156
+      li 統編 53955237
     
-    = link_to "About", t("menu.about.url"), class: "link"
+  small.main-footer__copyright
+    = link_to "DEVCORE", "/", class: "logo"
+    | ©2016 DEVCORE 戴夫寇爾

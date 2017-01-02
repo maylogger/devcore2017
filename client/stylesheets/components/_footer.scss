@@ -1,10 +1,13 @@
 .contact-section {
-  @include rhythm(.5, 1, 1, .5);
+  @include rhythm(.5, 1, 1, 0);
   text-align: center;
   border: 2px solid $divider-gray;
   border-width: 2px 0 2px 0;
   @include bleed-x(r(1.5));
-  @include desktop {border-width: 2px;}
+  @include desktop {
+    border-width: 2px;
+    @include rhythm-padding(1.5);
+  }
 }
 .contact-section__title {
   @include rhythm-type(0);
@@ -13,26 +16,33 @@
 
 .main-footer {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   flex-shrink: 0;
-  @include rhythm-padding(.5);
+  text-align: center;
+  @include rhythm-padding(1.5, .5);
+  @include rhythm-type(-2);
+}
+.main-footer__snses {
+  display: flex;
+  justify-content: center;
+  @include leader(1.5);
 }
 .main-footer__sns {
   color: white;
-  background-color: $green;
-  margin: n() 16px;
-  @include ir(1/1, 32px);
+  background-color: $primary;
+  margin: n() rhythm(.25);
+  @include ir(1/1, 24px);
+}
+.main-footer__address {
+  @include rhythm-margins(.5, 1.5);
+  font-style: normal;
 }
 .main-footer__copyright {
-  @include leader(.5);
   @include rhythm-type(-2);
-  width: 100%;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  .link {
-    margin-left: r(1);
-    color: $text-color;
-    @include scut-link-bb;
-  }
+  .logo {display: inline-block;}
 }
