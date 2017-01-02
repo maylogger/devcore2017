@@ -2,9 +2,17 @@
   @extend %scut-list-unstyled;
   @include rhythm-type(-1);
   @include trailer();
+  margin-left: 0 !important;
   padding-left: 0 !important;
+  @include desktop {
+    column-count: 2;
+    column-gap: 1em;
+  }
 }
 .table-of-contents__cell {
   &::before {display: none !important;}
-  & + & {@include leader(.25);}
+  & + & {
+    @include leader(.25);
+    @include desktop {margin-top: 0;}
+  }
 }
