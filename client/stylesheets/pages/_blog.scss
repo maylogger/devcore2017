@@ -3,6 +3,10 @@
   flex-flow: column nowrap;
   align-items: center;
   text-align: center;
+  @include leader();
+  @include desktop {
+    @include leader(2);
+  }
 }
 .blog-header__title {
   @include rhythm-type(2);
