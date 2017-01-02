@@ -1,3 +1,16 @@
+.contact-section {
+  @include rhythm(.5, 1, 1, .5);
+  text-align: center;
+  border: 2px solid $divider-gray;
+  border-width: 2px 0 2px 0;
+  @include bleed-x(r(1.5));
+  @include desktop {border-width: 2px;}
+}
+.contact-section__title {
+  @include rhythm-type(0);
+  @include rhythm-margins(0, .25);
+}
+
 .main-footer {
   display: flex;
   flex-flow: row wrap;
