@@ -3,11 +3,13 @@
 
 section.billboard class=("billboard--text-only" if text_only)
   - unless text_only
-    = image_tag current_page.data.billboard.image, class: "billboard__image"
+    .billboard__image-wrapper
+      = image_tag current_page.data.billboard.image, class: "billboard__image"
+      
+  .billboard__text-wrapper
+    p.billboard__title = current_page.data.billboard.title
 
-  p.billboard__title = current_page.data.billboard.title
-
-  - if is_homepage
-    h2.billboard__sub-title = current_page.data.billboard.subtitle
-  - else
-    h1.billboard__sub-title = current_page.data.billboard.subtitle
+    - if is_homepage
+      h2.billboard__sub-title = current_page.data.billboard.subtitle
+    - else
+      h1.billboard__sub-title = current_page.data.billboard.subtitle

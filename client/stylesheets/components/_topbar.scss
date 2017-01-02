@@ -5,6 +5,7 @@
   height: $topbar-height;
   flex-shrink: 0;
   position: relative;
+  z-index: index($layers, topbar);
 }
 .topbar__menu {
   margin-right: r(.5);

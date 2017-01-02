@@ -43,6 +43,9 @@ $desktop-grid-padding: susy-get(column-width) * susy-get(gutters) / 2;
 //  {{ Layers ------ }}
 $layers: (
   base
+  billboard
+  billboard-text
+  topbar
   drawer
   drawer-element
 );

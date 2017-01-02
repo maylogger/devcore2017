@@ -1,23 +1,45 @@
 .billboard {
   @include trailer(2);
   margin-top: - $topbar-height;
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .billboard--text-only {
   @include rhythm(1.5);
   text-align: center;
 }
-.billboard__image {
-  width: calc(100% + #{r(1.5) * 2});
-  max-width: none;
+.billboard__image-wrapper {
+  $ratio: 620/443;
+  @include ir($ratio, 100%);
   margin: n() r(-1.5);
+  width: calc(100% + #{r(1.5) * 2});
+  @include desktop {
+    @include ir($ratio, span(8));
+  }
+}
+.billboard__image {
   @include desktop {
     width: auto;
     margin: n() auto;
   }
 }
+.billboard__text-wrapper {
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: - span(1 wide);
+    width: span(5);
+    position: relative;
+    z-index: index($layers, billboard-text);
+  }
+}
 .billboard__title {
   @include rhythm-type(2);
   font-weight: bold;
+  @include desktop {margin-bottom: 0;}
 
   .billboard--text-only & {margin-bottom: 0;}
 }
