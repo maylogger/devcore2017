@@ -2,9 +2,9 @@
 //  =============
 
 $layout-base: (
-  gutters: 1/5,
-  column-width: scut-rem(100),
-  // gutter-position: inside-static,
+  gutters: 1/3,
+  column-width: 60px,
+  gutter-position: split,
   debug: (
     // image: show,
   ),
@@ -17,7 +17,7 @@ $susy: layout(4 $layout-base);
 
 // {{ Element twick points }}
 $large:         900px;
-$large-columns: 10;
+$large-columns: 12;
 
 // {{ Device layouts }}
 $susy-media: (
@@ -27,7 +27,7 @@ $susy-media: (
   'tablet': '(min-width: 768px)',
   'tablet-portrait-min': '(min-width: 768px) and (orientation: portrait)',
   'tablet-landscape-min': '(min-width: 768px) and (orientation: landscape)',
-  'desktop': '(min-width: 1440px)'
+  'desktop': '(min-width: #{$large})'
 );
 $tablet: (
   query: map-get($susy-media, tablet),
@@ -36,10 +36,10 @@ $tablet: (
 $tablet-columns: susy-get(columns, map-get($tablet, layout));
 $desktop: (
   query: map-get($susy-media, desktop),
-  layout: 14 1.5 split
+  layout: $large-columns
 );
 $desktop-columns: susy-get(columns, map-get($desktop, layout));
-$desktop-grid-padding: scut-rem(15);
+$desktop-grid-padding: susy-get(column-width) * susy-get(gutters) / 2;
 
 //  {{ Layers ------ }}
 $layers: (

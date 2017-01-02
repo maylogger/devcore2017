@@ -19,12 +19,14 @@ html {
 body {background-color: white;}
 
 .page {
-  @include container;
   display: flex;
   flex-flow: column nowrap;
   height: 100vh;
   padding: n() r(1.5);
-  @include desktop {max-width: 1280px;}
+  @include desktop {
+    @include container();
+    padding: n() $desktop-grid-padding;
+  }
 }
 
 main[role="main"] {flex: 1 0 auto;}

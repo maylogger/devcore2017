@@ -15,13 +15,13 @@ billboard:
 
 = partial "components/billboard"
 
-.heading--side-lined 最新消息
+.heading--side-lined.container 最新消息
 
 .home-news
   - data.blog.each do |blog|
     = partial "components/card", locals: {title: blog.title, tags:  blog.tags}
 
-.home-contact
+.home-contact.container
   h2.home-contact__title 用最真實的攻擊，驗證企業的防禦
   
   = link_to "Contact", t("contact.url"), class: "home-contact__button button--dense"

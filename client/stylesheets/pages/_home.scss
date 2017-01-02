@@ -6,6 +6,7 @@
   border: 2px solid $divider-gray;
   border-width: 2px 0 2px 0;
   @include bleed-x(r(1.5));
+  @include desktop {border-width: 2px;}
 }
 .home-contact__title {
   @include rhythm-type(0);
