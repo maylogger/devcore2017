@@ -36,7 +36,7 @@
   font-weight: 600;
   @include rhythm-type(-1);
 }
-.lang-menu__label {color: $gray;}
+.lang-menu__label {color: $secondary;}
 .lang-menu__link {
   margin-left: r(.5);
   color: $text-color;
@@ -44,6 +44,8 @@
   & + &::before {
     content: "|";
     margin-right: r(.5);
+    font-weight: lighter;
+    color: $secondary;
     position: relative -1px n() n() n();
   }
 }

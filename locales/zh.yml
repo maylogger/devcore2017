@@ -12,9 +12,6 @@ zh:
 
   menu-label:    主選單
   service:
-    mind:
-      name:      駭客思維
-      url:       /services/hackers-mind.html
     pt:
       name:      滲透測試
       url:       /services/penetration-test.html
@@ -26,10 +23,10 @@ zh:
       url:       /services/security-training.html
   menu:
     about:
-      name:      關於我們
+      name:      駭客思維
       url:       /about/
     blog:
-      name:      最新消息
+      name:      最新訊息
       url:       /blog/
   contact:
     name:      聯絡我們
