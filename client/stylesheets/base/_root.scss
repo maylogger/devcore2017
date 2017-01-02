@@ -24,7 +24,7 @@ body {background-color: white;}
   height: 100vh;
   padding: n() r(1.5);
   @include desktop {
-    @include container();
+    @include container(split);
     padding: n() $desktop-grid-padding;
   }
 }
