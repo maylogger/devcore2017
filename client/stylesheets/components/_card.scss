@@ -24,7 +24,7 @@
 }
 .card__title {
   @include rhythm-type(0);
-  margin: r(.5) n();
+  margin: r(1) n() r(.5);
   font-weight: 600;
   color: $primary;
 }
@@ -37,6 +37,7 @@
 }
 .card__tag {
   @include rhythm-type(-2);
+  color: $accent;
   & + &::before {
     content: ",";
     margin-right: .5em;

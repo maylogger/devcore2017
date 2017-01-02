@@ -1,16 +1,26 @@
+- static = static || false
 - blog = blog || "/blog/2016-09-22-advisory-accellion-file-transfer-appliance-vulnerability-eng-ver.html"
 - category = category || nil
 
 section.card
-  = link_to blog
-    .card__thumbnail-wrapper
-      = image_tag lorem.image("200x200"), class: "card__thumbnail"
-    
+  - if static
+    = image_tag lorem.image("208x208"), class: "card__thumbnail"
     h3.card__title = title
+    
+  - else
+    = link_to blog
+      .card__thumbnail-wrapper
+        = image_tag lorem.image("208x208"), class: "card__thumbnail"
+    
+      h3.card__title = title
   
   .card__tags
     - tags.each do |tag|
-      = link_to tag, "#link", class: "card__tag"
+      - if static
+        .card__tag = tag
+      
+      - else
+        = link_to tag, "#link", class: "card__tag"
 
   - if category
     small.card__category = link_to category, "#link"

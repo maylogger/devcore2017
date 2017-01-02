@@ -1,0 +1,26 @@
+---
+title: 關於我們：駭客思維
+billboard:
+  title: 關於我們：駭客思維
+---
+
+= partial "components/billboard", locals: {text_only: true}
+
+article.article
+  .container
+    h2.heading--side-lined 駭客思維
+    
+    .service
+      h3 滲透測試服務是什麼？
+      p 滲透測試服務 (Penetration Test, PT) 是委請受信任的第三方專業資安團隊，從駭客的角度出發，模擬攻擊者的思考方式對企業進行各種入侵攻擊測試。
+      p 滲透測試結束後，專家會列出詳細的攻擊手法與步驟，提供完整的修補建議並輔導開發者修補漏洞，讓企業能儘速降低遭受入侵的風險。開發者修補完畢後，資安團隊會再次確認是否可使用其他手法繞過防護，以確保企業不會因為同樣的問題遭受損失。
+
+    h2.heading--side-lined 團隊
+    
+  .team
+    - data.team.members.each do |member|
+      = partial "components/card", locals: {\
+        static: true,
+        title: member.name,
+        tags: [member.title]\
+      }

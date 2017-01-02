@@ -1,3 +1,7 @@
+/**
+ * RWD Utility styles
+ */
+
 .container {
   @include desktop {
     margin: n() auto !important;
@@ -9,3 +13,18 @@
   display: block !important;
   @include desktop { display: none !important };
 }
+
+/**
+ * Components layouts
+ */
+
+ .relative-posts__cells,
+ .team {
+   @include desktop {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+
+     .card {width: span(4);}
+   }
+ }
