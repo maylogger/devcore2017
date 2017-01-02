@@ -1,0 +1,8 @@
+.relative-posts__cells {
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+
+    .card {width: span(4);}
+  }
+}

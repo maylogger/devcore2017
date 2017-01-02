@@ -1,0 +1,13 @@
+- relative_posts = current_page.data.relative_posts || false
+
+- if relative_posts
+  .relative-posts
+    .heading--side-lined.container 相關文章
+
+    .relative-posts__cells
+      - data.blog[0..2].each do |blog|
+        = partial "components/card", locals: {\
+          category: blog.category,
+          title: blog.title,
+          tags: blog.tags\
+        }
