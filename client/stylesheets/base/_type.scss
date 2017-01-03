@@ -16,6 +16,37 @@ a {
  * Typography
  */
 
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 300;
+  @include rhythm-margins(1);
+}
+h4 {font-weight: 600;}
+h5 {font-weight: 400;}
+h1 {letter-spacing: -.025em;}
+
+@include desktop {
+  h5 {letter-spacing: .2em;}
+  h6 {letter-spacing: .4em;}
+}
+
+h1 {@include rhythm-type(3);}
+h2 {@include rhythm-type(2);}
+h3 {@include rhythm-type(1);}
+h4 {@include rhythm-type(0);}
+h5 {@include rhythm-type(-1);}
+h6 {@include rhythm-type(-2);}
+
+p {
+  font-weight: 300;
+  @include rhythm-margins(1);
+}
+
+em {font-style: normal;}
+
+small {@include rhythm-type(-1);}
+
+ol, ul {@include rhythm-margins(.5);}
+
 /**
  * Heading
  */

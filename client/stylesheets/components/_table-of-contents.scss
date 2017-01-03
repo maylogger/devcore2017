@@ -10,6 +10,7 @@
   }
 }
 .table-of-contents__cell {
+  margin-bottom: 0 !important;
   &::before {display: none !important;}
   & + & {
     @include leader(.25);
