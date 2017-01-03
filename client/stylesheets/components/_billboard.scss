@@ -32,6 +32,7 @@
     flex-direction: column;
     justify-content: center;
     margin-left: - span(1 wide);
+    padding-top: $topbar-height--desktop;
     width: span(5);
     position: relative;
     z-index: index($layers, billboard-text);
@@ -43,14 +44,15 @@
   }
 }
 .billboard__title {
-  @include rhythm-type(2);
+  margin-bottom: 0;
+  font-size: ms(2);
   font-weight: bold;
-  @include desktop {margin-bottom: 0;}
-
-  .billboard--text-only & {margin-bottom: 0;}
+  line-height: rhythm();
 }
 .billboard__sub-title {
-  @include rhythm-type(0);
+  margin-top: 24px;
+  font-size: ms(0);
   font-weight: 300;
-  .billboard--text-only & {margin-top: 0;}
+  line-height: 26px;
+  .billboard--text-only & {margin-top: 2px;}
 }
