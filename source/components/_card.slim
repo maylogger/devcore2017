@@ -4,13 +4,13 @@
 
 section.card
   - if static
-    = image_tag lorem.image("208x208"), class: "card__thumbnail"
+    .card__thumbnail style="background-image: url(#{image_path(thumbnail)})"
+    
     h3.card__title = title
     
   - else
     = link_to blog
-      .card__thumbnail-wrapper
-        = image_tag lorem.image("208x208"), class: "card__thumbnail"
+      .card__thumbnail style="background-image: url(#{image_path(thumbnail)})"
     
       h3.card__title = title
   

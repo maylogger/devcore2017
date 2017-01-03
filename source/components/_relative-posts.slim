@@ -5,8 +5,9 @@
     .heading--side-lined.container 相關文章
 
     .relative-posts__cells
-      - data.blog[0..2].each do |blog|
+      - data.blog[0..2].each_with_index do |blog, index|
         = partial "components/card", locals: {\
+          thumbnail: "blog-thumbnail-#{index}.jpg",
           category: blog.category,
           title: blog.title,
           tags: blog.tags\

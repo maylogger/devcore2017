@@ -18,8 +18,9 @@ article.article
     h2.heading--side-lined 團隊
     
   .team
-    - data.team.members.each do |member|
+    - data.team.members.each_with_index do |member, index|
       = partial "components/card", locals: {\
+        thumbnail: "member-photo-#{index}.jpg",
         static: true,
         title: member.name,
         tags: [member.title]\

@@ -7,8 +7,9 @@ billboard:
 
 = partial "components/billboard", locals: {text_only: true}
 
-- data.blog.each do |blog|
+- data.blog.each_with_index do |blog, index|
   = partial "components/card", locals: {\
+    thumbnail: "blog-thumbnail-#{index}.jpg",
     title: blog.title,
     tags:  blog.tags,
     category: blog.category,
