@@ -1,19 +1,19 @@
-$ = require "jquery"
+import $ from "jquery"
 
 # Require Stylesheets
-require "stylesheets"
+import "stylesheets"
 
 # Require Modernizr
 # require "modernizr"
 
 # Require Smooth Scroll
-smoothScroll = require "smooth-scroll"
+import smoothScroll from "smooth-scroll"
 
 # Require Custom Modules
 # EX:
-ActiveToggle = require "./modules/toggle"
-ShareButton  = require "./modules/sns"
-import Form from "./modules/form"
+import ActiveToggle from "./modules/toggle"
+import ShareButton  from "./modules/sns"
+import Form         from "./modules/form"
 
 # Require entry modules
 # EX:

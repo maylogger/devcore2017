@@ -1,6 +1,6 @@
-$ = require "jquery"
+import $ from "jquery"
 
-module.exports = class ShareButton
+export default class ShareButton
   constructor: (@el, @url, @text, @type) ->
     @window_features = "height=300,width=550,resizable=1"
     @url  = encodeURIComponent(@url)
