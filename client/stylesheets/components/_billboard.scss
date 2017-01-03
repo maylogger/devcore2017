@@ -2,9 +2,8 @@
   @include trailer(2);
   margin-top: - $topbar-height;
   @include desktop {
-    display: flex;
-    justify-content: space-between;
     margin-top: - $topbar-height--desktop;
+    position: relative;
   }
 }
 .billboard--text-only {
@@ -14,10 +13,10 @@
 .billboard__image-wrapper {
   margin: n() r(-1.5);
   width: calc(100% + #{r(1.5) * 2});
-  @include aspect-ratio(620, 433, ".billboard__image");
+  @include aspect-ratio(940, 443, ".billboard__image");
   @include desktop {
     margin: n() 0;
-    width: span(8);
+    width: 100%;
   }
 }
 .billboard__image {
@@ -31,13 +30,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: - span(1 wide);
-    padding-top: $topbar-height--desktop;
     width: span(5);
-    position: relative;
+    position: absolute $topbar-height--desktop 0 0 n();
     z-index: index($layers, billboard-text);
 
     .billboard--text-only & {
+      position: static;
       margin: n() auto;
       width: auto;
     }

@@ -6,7 +6,6 @@ title: 滲透測試服務 Penetration Test
 billboard:
   title: 用最真實的攻擊，<br>驗證企業的防禦
   subtitle: 瞭解滲透測試
-  image: billboard-penetration-test.jpg
   
 table_of_contents:
   - 滲透測試服務是什麼 ›
@@ -20,7 +19,11 @@ table_of_contents:
 ---
 
 article.article
-  = partial "components/billboard"
+  = partial "components/billboard", locals: {\
+    mobile_image: "billboard-penetration-test.jpg",
+    desktop_image: fakepic("940", "443")\
+  }
+
 
   = partial "components/table-of-contents", locals: {\
     id: "service-content",

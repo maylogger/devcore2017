@@ -4,7 +4,8 @@
 section.billboard class=("billboard--text-only" if text_only)
   - unless text_only
     .billboard__image-wrapper
-      = image_tag current_page.data.billboard.image, class: "billboard__image"
+      = image_tag mobile_image, class: "billboard__image mobile-only"
+      = image_tag desktop_image, class: "billboard__image desktop-only"
       
   .billboard__text-wrapper
     p.billboard__title = current_page.data.billboard.title

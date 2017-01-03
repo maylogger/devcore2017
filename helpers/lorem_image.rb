@@ -1,5 +1,5 @@
 module LoremImage
-  def fakepic(width, height, bg = "282828", color = "eae0d0")
+  def fakepic(width, height, bg = "ededed", color = "ffffff")
     return "http://fakeimg.pl/#{width}x#{height}/#{bg}/#{color}"
   end
   def lorem_pic(width, height, category, gray = nil)

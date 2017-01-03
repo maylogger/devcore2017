@@ -10,10 +10,12 @@ billboard:
     <a href="/services/security-training.html">教育訓練</a>
     <br>
     保護你的商業價值
-  image: billboard-home.jpg
 ---
 
-= partial "components/billboard"
+= partial "components/billboard", locals: {\
+  mobile_image: "billboard-home.jpg",
+  desktop_image: fakepic("940", "443")\
+}
 
 .heading--side-lined.container.mobile-only 最新消息
 

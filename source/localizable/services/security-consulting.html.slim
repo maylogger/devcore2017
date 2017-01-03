@@ -6,7 +6,6 @@ title: 安顧問服務 Security Consulting
 billboard:
   title: 量身打造<br>屬於您的資安戰略
   subtitle: 瞭解資安顧問服務
-  image: billboard-security-consulting.jpg
   
 table_of_contents:
   - 資安顧問服務是什麼 ›
@@ -16,7 +15,10 @@ table_of_contents:
 ---
 
 article.article
-  = partial "components/billboard"
+  = partial "components/billboard", locals: {\
+    mobile_image: "billboard-security-consulting.jpg",
+    desktop_image: fakepic("940", "443")\
+  }
 
   = partial "components/table-of-contents", locals: {\
     id: "service-content",

@@ -6,7 +6,6 @@ title: 資安教育訓練 Security Training
 billboard:
   title: 了解攻擊，<br>就是最好的防禦
   subtitle: 瞭解資安教育訓練
-  image: billboard-security-training.jpg
   
 table_of_contents:
   - 資安教育訓練是什麼 ›
@@ -18,7 +17,10 @@ table_of_contents:
 ---
 
 article.article
-  = partial "components/billboard"
+  = partial "components/billboard", locals: {\
+    mobile_image: "billboard-security-training.jpg",
+    desktop_image: fakepic("940", "443")\
+  }
 
   = partial "components/table-of-contents", locals: {\
     id: "service-content",
