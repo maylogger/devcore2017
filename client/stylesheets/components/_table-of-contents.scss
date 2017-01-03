@@ -1,10 +1,11 @@
 .table-of-contents {
   @extend %scut-list-unstyled;
   @include rhythm-type(-1);
-  @include trailer();
+  @include rhythm-margins();
   margin-left: 0 !important;
   padding-left: 0 !important;
   @include desktop {
+    @include leader(-.75);
     column-count: 2;
     column-gap: 1em;
   }
