@@ -56,8 +56,12 @@ module.exports = (env) ->
     module:
       loaders: [
         test: /\.coffee$/
-        loader: 'coffee-loader'
+        loaders: ['babel-loader?cacheDirectory', 'coffee-loader']
         include: path_to.root
+      ,
+        test: /\.js$/
+        loader: 'babel-loader?cacheDirectory'
+        exclude: /node_modules/
       ,
         test: /\.svg$/
         include: path_to.icons
