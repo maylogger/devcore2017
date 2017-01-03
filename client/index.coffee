@@ -13,6 +13,7 @@ smoothScroll = require "smooth-scroll"
 # EX:
 ActiveToggle = require "./modules/toggle"
 ShareButton  = require "./modules/sns"
+import Form from "./modules/form"
 
 # Require entry modules
 # EX:
@@ -36,3 +37,16 @@ sns_widgets =
 
 for element, type of sns_widgets
   new ShareButton(element, document.location.href, document.title, type).init()
+
+form_inputs = '
+  input[type=text],
+  input[type=password],
+  input[type=email],
+  input[type=url],
+  input[type=tel],
+  input[type=number],
+  input[type=search],
+  textarea
+'
+
+new Form form_inputs

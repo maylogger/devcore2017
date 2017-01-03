@@ -38,7 +38,7 @@ $input-height: r(2);
   transition: all .3s ease-in-out 0s;
 
   .control-group__select + &,
-  :focus + & {
+  &.active {
     top: 0;
     font-size: ms(-2);
     color: $primary;
