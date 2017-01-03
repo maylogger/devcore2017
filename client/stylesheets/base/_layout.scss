@@ -28,13 +28,27 @@
  * Components layouts
  */
 
- .relative-posts__cells,
- .team {
-   @include desktop {
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: space-between;
+.relative-posts__cells,
+.team {
+ @include desktop {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
 
-     .card {width: span(4);}
-   }
+   .card {width: span(4);}
  }
+}
+
+.home-news,
+.blog-posts {
+ @include padding-leader();
+ @include desktop {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-between;
+
+   .card {width: span(6);}
+ }
+}
+
+.blog-posts {padding-top: 0;}

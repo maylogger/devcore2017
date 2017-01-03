@@ -21,7 +21,6 @@ require "components/_form.scss"
 # require "highlight/_zenburn.scss"
 require "highlight/_monokai.scss"
 
-require "pages/_home.scss"
 require "pages/_service.scss"
 require "pages/_blog.scss"
 require "pages/_contact.scss"
