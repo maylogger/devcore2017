@@ -19,6 +19,7 @@ $input-height: r(2);
   position: relative;
   padding-top: $leader-padding;
   margin-bottom: $leader-padding;
+  line-height: $input-height;
 }
 .control-group {
   @extend %control-group;
@@ -44,6 +45,7 @@ $input-height: r(2);
   @extend .control-group__input;
   border: 1px solid $divider-gray;
   background-color: transparent;
+  &:focus { background-color: $divider-gray; }
 }
 .control-group__textarea {
   @extend .control-group__input;
@@ -63,4 +65,13 @@ $input-height: r(2);
     color: $primary;
     line-height: $leader-padding;
   }
+}
+.control-group__underline {
+  position: absolute n() 0 0 0;
+  height: 1px;
+  background-color: $primary;
+  transform: scale(0);
+  transition: transform .3s ease-in-out 0s;
+
+  .control-group__input:focus ~ & { transform: scale(1); }
 }

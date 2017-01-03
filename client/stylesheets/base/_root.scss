@@ -37,7 +37,7 @@ html.turbolinks-progress-bar::before {background-color: $nprogress-color !import
 // Allow only vertical resizing of textareas.
 textarea {resize: vertical;}
 
-img, svg {vertical-align: middle;}
+img, svg, textarea {vertical-align: middle;}
 img[data-sizes="auto"]:not(.slick-slide) {
   display: block;
   size: 100% auto;
