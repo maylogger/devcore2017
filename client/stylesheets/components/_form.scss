@@ -45,6 +45,7 @@ $input-height: r(2);
 .control-group__select {
   @extend .control-group__input;
   border: 1px solid $divider-gray;
+  background-color: transparent;
   &:focus {border-color: $primary;}
 }
 .control-group__textarea {
