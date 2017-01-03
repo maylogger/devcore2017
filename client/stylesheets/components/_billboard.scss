@@ -13,10 +13,11 @@
 .billboard__image-wrapper {
   margin: n() r(-1.5);
   width: calc(100% + #{r(1.5) * 2});
-  @include aspect-ratio(940, 443, ".billboard__image");
+  @include aspect-ratio(375, 282, ".billboard__image");
   @include desktop {
     margin: n() 0;
     width: 100%;
+    &::before {padding-top: 443/940*100%;}
   }
 }
 .billboard__image {
@@ -26,13 +27,16 @@
   }
 }
 .billboard__text-wrapper {
+  @include leader(-1);
+  position: relative;
+  z-index: index($layers, billboard-text);
   @include desktop {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 0;
     width: span(5);
     position: absolute $topbar-height--desktop 0 0 n();
-    z-index: index($layers, billboard-text);
 
     .billboard--text-only & {
       position: static;
