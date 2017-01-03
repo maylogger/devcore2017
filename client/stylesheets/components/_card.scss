@@ -23,8 +23,9 @@
   max-width: 208px;
 }
 .card__title {
-  @include rhythm-type(0);
   margin: r(1) n() r(.5);
+  font-size: ms(0);
+  line-height: 24px;
   font-weight: 600;
   color: $primary;
 }

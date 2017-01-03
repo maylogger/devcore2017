@@ -20,8 +20,16 @@
   align-items: center;
   flex-shrink: 0;
   text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: .2em;
   @include rhythm-padding(1.5, .5);
-  @include rhythm-type(-2);
+}
+.main-footer__about {
+  .link {
+    font-weight: 600;
+    @include scut-link-bb;
+  }
 }
 .main-footer__snses {
   display: flex;

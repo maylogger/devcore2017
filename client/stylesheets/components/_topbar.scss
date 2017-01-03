@@ -80,9 +80,9 @@
     margin: 0;
     font-size: ms(-1);
     line-height: 1.5;
-    font-weight: 600;
 
     .link {
+      font-weight: 600;
       @include scut-link-bb();
     }
   }
