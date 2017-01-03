@@ -34,23 +34,25 @@ $input-height: r(2);
   }
 }
 .control-group__input {
+  padding: 0;
+  width: 100%;
+  height: $input-height;
   border: none;
   border-radius: 0;
   background-color: $bg-gray;
   outline: none;
-  width: 100%;
-  height: $input-height;
 }
 .control-group__select {
   @extend .control-group__input;
   border: 1px solid $divider-gray;
-  background-color: transparent;
-  &:focus { background-color: $divider-gray; }
+  &:focus {border-color: $primary;}
 }
 .control-group__textarea {
   @extend .control-group__input;
   min-height: 200px;
   height: auto;
+
+  .is-mobile-browser & {text-indent: -3px;}
 }
 .control-group__label {
   position: absolute $leader-padding n() n() 0;

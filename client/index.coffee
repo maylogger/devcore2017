@@ -8,7 +8,7 @@ import "stylesheets"
 
 # Require entry modules
 # EX:
-# { HomeBanners, HomeCover } = require "./entry/home"
+import "./modules/browser-detection"
 
 ###*
  * Prepend SVG Sprite into body
