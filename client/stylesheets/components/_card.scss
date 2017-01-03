@@ -21,7 +21,7 @@
   .card:nth-child(3n) &::before {background-color: transparentize($secondary, .7);}
 }
 .card__title {
-  margin: r(.5) n();
+  margin: r(1) n() r(.5);
   font-size: ms(0);
   line-height: 24px;
   font-weight: 600;
