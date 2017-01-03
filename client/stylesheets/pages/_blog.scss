@@ -8,6 +8,7 @@
     @include leader(2);
   }
 }
+.blog-header__image {max-width: 85%;}
 .blog-header__title {
   @include rhythm-type(2);
   margin: r(1) n();
