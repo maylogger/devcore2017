@@ -1,6 +1,13 @@
 $leader-padding: r(1);
 $input-height: r(2);
 
+.form {@include rhythm-margins();}
+.form__actions {
+  padding-top: $leader-padding;
+  text-align: center;
+  @include desktop {text-align: left;}
+}
+
 .control-group {
   position: relative;
   padding-top: $leader-padding;
