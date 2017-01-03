@@ -16,6 +16,7 @@ require "components/_table.scss"
 require "components/_list.scss"
 require "components/_sns.scss"
 require "components/_highlight.scss"
+require "components/_form.scss"
 
 # require "highlight/_zenburn.scss"
 require "highlight/_monokai.scss"

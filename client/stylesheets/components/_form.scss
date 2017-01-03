@@ -1,0 +1,40 @@
+$leader-padding: r(1);
+$input-height: r(2);
+
+.control-group {
+  position: relative;
+  padding-top: $leader-padding;
+  margin-bottom: $leader-padding;
+}
+.control-group__input {
+  border: none;
+  border-radius: 0;
+  background-color: $bg-gray;
+  outline: none;
+  width: 100%;
+  height: $input-height;
+}
+.control-group__select {
+  @extend .control-group__input;
+  border: 1px solid $divider-gray;
+  background-color: transparent;
+}
+.control-group__textarea {
+  @extend .control-group__input;
+  min-height: 200px;
+  height: auto;
+}
+.control-group__label {
+  position: absolute $leader-padding n() n() 0;
+  line-height: $input-height;
+  color: transparentize($primary, .5);
+  transition: all .3s ease-in-out 0s;
+
+  .control-group__select + &,
+  :focus + & {
+    top: 0;
+    font-size: ms(-2);
+    color: $primary;
+    line-height: $leader-padding;
+  }
+}
