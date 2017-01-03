@@ -4772,10 +4772,6 @@ sass-resources-loader@^1.1.0:
     chalk "^1.1.1"
     glob "^7.0.5"
 
-sass-toolkit@^2.10.2:
-  version "2.10.2"
-  resolved "https://registry.yarnpkg.com/sass-toolkit/-/sass-toolkit-2.10.2.tgz#c290ad71d76f435b068d963226f287e022dc696a"
-
 sax@~1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.1.tgz#7b8e656190b228e81a66aea748480d828cd2d37a"

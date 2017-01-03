@@ -1,16 +1,17 @@
 //  Root
 //  ====
 
-@import "~sass-toolkit/stylesheets/toolkit/kickstart";
-
 html {
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: 1.5;
   color: $text-color;
   -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
   &::after { @include share-breakpoints($susy-media); }
 }
+
+*, *:before, *:after {box-sizing: inherit;}
 
 @include desktop {
   @include establish-baseline();
@@ -37,11 +38,15 @@ html.turbolinks-progress-bar::before {background-color: $nprogress-color !import
 // Allow only vertical resizing of textareas.
 textarea {resize: vertical;}
 
-img, svg, textarea {vertical-align: middle;}
-img[data-sizes="auto"]:not(.slick-slide) {
-  display: block;
-  size: 100% auto;
+embed,
+img,
+object,
+video {
+  max-width: 100%;
+  height: auto;
 }
+
+img, svg, textarea {vertical-align: middle;}
 
 figure {
   margin: 0;
