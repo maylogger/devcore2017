@@ -8,6 +8,9 @@
 .card__thumbnail {
   display: inline-block;
   margin: n() auto;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
   z-index: index($layers, base);
   size: 208px;
