@@ -12,12 +12,12 @@
   text-align: center;
 }
 .billboard__image-wrapper {
-  $ratio: 620/443;
-  @include ir($ratio, 100%);
   margin: n() r(-1.5);
   width: calc(100% + #{r(1.5) * 2});
+  @include aspect-ratio(620, 433, ".billboard__image");
   @include desktop {
-    @include ir($ratio, span(8));
+    margin: n() 0;
+    width: span(8);
   }
 }
 .billboard__image {

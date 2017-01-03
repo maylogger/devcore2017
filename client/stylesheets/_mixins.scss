@@ -16,6 +16,22 @@
   }
 }
 
+@mixin aspect-ratio($width, $height, $element) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: $height / $width * 100%;
+  }
+  > #{$element} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    size: 100%;
+  }
+}
+
 @mixin reverse-hide-visually() {
   border: 0;
   clip: auto;
