@@ -1,6 +1,6 @@
 - type = type || "text"
 - full = full || false
 
-.control-group class=("control-group--full" if full)
+div class=(full ? "control-group--full" : "control-group")
   input.control-group__input type=type
   label.control-group__label = label

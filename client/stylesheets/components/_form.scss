@@ -1,17 +1,36 @@
 $leader-padding: r(1);
 $input-height: r(2);
 
-.form {@include rhythm-margins();}
+.form {
+  @include rhythm-margins();
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
 .form__actions {
   padding-top: $leader-padding;
   text-align: center;
   @include desktop {text-align: left;}
 }
 
-.control-group {
+%control-group {
   position: relative;
   padding-top: $leader-padding;
   margin-bottom: $leader-padding;
+}
+.control-group {
+  @extend %control-group;
+  @include desktop {
+    width: span(5 of 10);
+  }
+}
+.control-group--full {
+  @extend %control-group;
+  @include desktop {
+    width: 100%;
+  }
 }
 .control-group__input {
   border: none;

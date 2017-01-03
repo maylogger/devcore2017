@@ -8,10 +8,20 @@
     width: span(8 of 12);
   }
 }
+.container--wide {
+  @include desktop {
+    margin: n() auto !important;
+    width: span(10 of 12);
+  }
+}
 
 .mobile-only {
   display: block !important;
   @include desktop { display: none !important };
+}
+.desktop-only {
+  display: none;
+  @include desktop { display: block; }
 }
 
 /**
