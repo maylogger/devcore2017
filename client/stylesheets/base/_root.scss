@@ -27,8 +27,8 @@ body {background-color: white;}
   max-width: 600px;
   margin: 0 auto;
   @include desktop {
-    @include container(split);
-    padding: n() $desktop-grid-padding;
+    @include container();
+    padding: n() 0;
   }
 }
 
