@@ -1,13 +1,19 @@
 members:
   - name: 翁浩正 Allen Own
     title: CEO
+    photo: member-allenown.jpg
   - name: Anfa Sam
     title: Full Stack Developer
+    photo: member-anfa.jpg
   - name: Bowen Hsu
     title: Security Reseacher
+    photo: member-bowen.jpg
   - name: Orange Tsai
     title: Consultant
+    photo: member-orange.jpg
   - name: Shaolin Hsu
     title: Security Reseacher
+    photo: member-shaolin.jpg
   - name: Shon Wang
     title: System Engineer
+    photo: member-shon.jpg
