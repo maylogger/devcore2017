@@ -1,5 +1,5 @@
 .billboard {
-  @include trailer(2);
+  @include trailer(1);
   margin-top: - $topbar-height;
   @include desktop {
     margin-top: - $topbar-height--desktop;
@@ -58,7 +58,11 @@
   margin-top: 24px;
   font-size: ms(0);
   font-weight: 300;
-  line-height: 26px;
+  line-height: 1.5;
+  a {
+    border-bottom: 2px solid $accent;
+    font-weight: bold;
+  }
   .billboard--text-only & {
     margin-top: 2px;
     margin-bottom: 0;

@@ -22,12 +22,15 @@
   text-align: center;
   font-size: 14px;
   line-height: 24px;
-  letter-spacing: .2em;
   @include rhythm-padding(1.5, .5);
+  @include desktop {
+    letter-spacing: .2em;
+  };
 }
 .main-footer__about {
   .link {
     font-weight: 600;
+    margin: 0 2px;
     @include scut-link-bb;
   }
 }

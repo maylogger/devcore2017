@@ -9,8 +9,6 @@ keywords: "Facebook, BugBounty, RCE, Backdoor, Reconnaissance, Pentest"
 image: "/images/blog/20160421/facebook.jpg"
 ---
 
-[English Version](http://devco.re/blog/2016/04/21/how-I-hacked-facebook-and-found-someones-backdoor-script-eng-ver/)
-
 ### 寫在故事之前
 
 身為一位滲透測試人員，比起 Client Side 的弱點我更喜歡 Server Side 的攻擊，能夠直接的控制伺服器、獲得權限操作 SHELL 才爽 <(￣︶￣)>   

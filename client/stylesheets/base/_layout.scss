@@ -41,6 +41,7 @@
 
 .home-news,
 .blog-posts {
+  @include trailer(1);
  @include padding-leader();
  @include desktop {
    display: flex;

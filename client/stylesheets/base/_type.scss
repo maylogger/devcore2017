@@ -52,11 +52,11 @@ ol, ul {@include rhythm-margins(.5);}
  */
 
 .heading--side-lined {
-  @include rhythm-margins(1, .25);
+  @include rhythm-margins(1, 1);
   font-size: 14px;
   line-height: 24px;
   font-weight: 600;
-  color: $secondary;
+  color: #DEDEDE;
   @include scut-side-lined($color: tint($secondary, 60%), $space: r(1), $v-adjust: 1px);
   @include desktop {
     @include trailer(1.75);

@@ -1,4 +1,4 @@
-- title: "Advisory: Accellion File Transfer Appliance Vulnerability"
+- title: "WEB2PY 反序列化的安全問題－CVE-2016-3957"
   tags:
     - Advisory
     - Facebook
@@ -8,7 +8,7 @@
   category: 技術專欄
   page: "/blog/2016-09-22-advisory-accellion-file-transfer-appliance-vulnerability-eng-ver.html"
 
-- title: "Android WebView 為你的使用者打開了漏洞之門你知道嗎？"
+- title: "IoT設備商別成為幫兇 從Dyn DDoS攻擊事件看IoT安全"
   tags:
     - Mobile
     - Android
@@ -17,13 +17,13 @@
   category: 技術專欄
   page: "/blog/2014-10-13-android-webview-left-shortcuts-for-hacker.html"
 
-- title: 電商業者的資安困境？
+- title: "Accellion File Transfer Appliance 弱點報告"
   tags:
     - ecommerce
   category: 技術專欄
   page: "/blog/2016-07-29-the_security_dilemma_of_e-commerce.html"
 
-- title: "滲透 Facebook 的思路與發現"
+- title: "電商業者的資安困境？"
   tags:
     - Facebook
     - BugBounty

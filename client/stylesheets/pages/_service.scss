@@ -15,6 +15,8 @@
   align-items: center;
   @include rhythm-type(1);
   font-weight: 600;
+  padding: rhythm(.5) 0;
+  border-bottom: 1px solid $secondary;
 
   .text {flex: 1 1 auto;}
 

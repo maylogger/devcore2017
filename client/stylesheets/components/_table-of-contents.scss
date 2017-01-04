@@ -4,6 +4,7 @@
   @include rhythm-margins();
   margin-left: 0 !important;
   padding-left: 0 !important;
+  font-weight: bold;
   @include desktop {
     @include leader(-.75);
     column-count: 2;
