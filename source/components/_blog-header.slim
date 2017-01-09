@@ -17,10 +17,10 @@ section.blog-header
   
   .blog-header__tags
     - tags.each do |tag|
-      = link_to tag, "#link", class: "blog-header__tag"
+      = link_to tag, "/blog/tag/haker.html", class: "blog-header__tag"
         
   p.blog-header__info
     ' Written by
     span.blog-author-photo style="background-image: url(#{image_path('member-' + author + '.jpg')})"
-    =<> link_to author, "#link", class: "author-name"
+    =<> link_to author, "/blog/author/#{author}.html", class: "author-name"
     time.date on 2016-09-22 

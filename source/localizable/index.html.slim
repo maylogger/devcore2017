@@ -20,9 +20,10 @@ billboard:
 .heading--side-lined.container.mobile-only 最新消息
 
 .home-news
-  - data.blog.each_with_index do |blog, index|
+  - data.blog.each do |blog|
     = partial "components/card", locals: {\
-      thumbnail: "blog-thumbnail-#{index}.jpg",
+      page: blog.page,
+      thumbnail: blog.thumbnail,
       title: blog.title,
       tags:  blog.tags\
     }

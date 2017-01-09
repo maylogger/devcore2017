@@ -1,5 +1,5 @@
 - static = static || false
-- blog = blog || "/blog/2016-09-22-advisory-accellion-file-transfer-appliance-vulnerability-eng-ver.html"
+- page = page || "/blog/2016-09-22-advisory-accellion-file-transfer-appliance-vulnerability-eng-ver.html"
 - category = category || nil
 
 section.card
@@ -9,7 +9,7 @@ section.card
     h3.card__title = title
     
   - else
-    = link_to blog
+    = link_to page
       .card__thumbnail style="background-image: url(#{image_path(thumbnail)})"
     
       h3.card__title = title

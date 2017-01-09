@@ -1,4 +1,5 @@
 - title: "WEB2PY 反序列化的安全問題－CVE-2016-3957"
+  thumbnail: "blog-thumbnail-0.jpg"
   tags:
     - Advisory
     - Facebook
@@ -6,9 +7,10 @@
     - RCE
     - CVE
   category: 技術專欄
-  page: "/blog/2016-09-22-advisory-accellion-file-transfer-appliance-vulnerability-eng-ver.html"
+  page: "/blog/2016-04-21-how-I-hacked-facebook-and-found-someones-backdoor-script.html"
 
 - title: "IoT設備商別成為幫兇 從Dyn DDoS攻擊事件看IoT安全"
+  thumbnail: "blog-thumbnail-1.jpg"
   tags:
     - Mobile
     - Android
@@ -18,12 +20,8 @@
   page: "/blog/2014-10-13-android-webview-left-shortcuts-for-hacker.html"
 
 - title: "Accellion File Transfer Appliance 弱點報告"
-  tags:
-    - ecommerce
+  thumbnail: "blog-thumbnail-2.jpg"
   category: 技術專欄
-  page: "/blog/2016-07-29-the_security_dilemma_of_e-commerce.html"
-
-- title: "電商業者的資安困境？"
   tags:
     - Facebook
     - BugBounty
@@ -31,5 +29,11 @@
     - Backdoor
     - Reconnaissance
     - Pentest
+  page: "/blog/2016-09-22-advisory-accellion-file-transfer-appliance-vulnerability-eng-ver.html"
+
+- title: "電商業者的資安困境？"
+  thumbnail: "blog-thumbnail-3.jpg"
+  tags:
+    - ecommerce
   category: 技術專欄
-  page: "/blog/2016-04-21-how-I-hacked-facebook-and-found-someones-backdoor-script.html"
+  page: "/blog/2016-07-29-the_security_dilemma_of_e-commerce.html"
