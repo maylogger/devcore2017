@@ -14,7 +14,6 @@
   position: relative;
   z-index: index($layers, base);
   size: 200px;
-  &.card__thumbnail--person {size: 180px;}
   &::before {
     display: block;
     content: '';
@@ -23,6 +22,10 @@
   .card:nth-child(3n+1) &::before {background-color: transparentize($accent, .7);}
   .card:nth-child(3n+2) &::before {background-color: transparentize($primary, .7);}
   .card:nth-child(3n) &::before {background-color: transparentize($secondary, .7);}
+  &.card__thumbnail--person {
+    size: 180px;
+    &::before {display: none;}
+  }
 }
 .card__title {
   margin: r(1) n() r(.5);
