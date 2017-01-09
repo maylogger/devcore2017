@@ -1,5 +1,5 @@
 section.blog-header
-  small.blog-header__category = current_page.data.category
+  small.blog-header__category = link_to current_page.data.category, "#link"
   
   - if current_page.data.image_credit
     = link_to current_page.data.image_credit

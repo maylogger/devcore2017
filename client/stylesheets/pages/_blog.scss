@@ -39,8 +39,11 @@
   @include rhythm-type(-2);
   @include leader(.5);
   color: $secondary;
-
-  .author-name {color: $secondary;}
+  font-weight: normal;
+  .author-name {
+    color: $primary;
+    font-weight: bold;
+  }
 }
 
 .blog-author-photo {
