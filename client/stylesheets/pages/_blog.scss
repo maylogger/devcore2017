@@ -1,3 +1,7 @@
+.blog_index {
+  .contact-section {@include leader(2);}
+}
+
 .blog-header {
   display: flex;
   flex-flow: column nowrap;

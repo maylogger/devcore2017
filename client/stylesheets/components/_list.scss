@@ -3,6 +3,16 @@
 }
 
 /**
+ * Tags
+ */
+
+.list--tags {
+  @include adjust-leading-to(1);
+  @include scut-list-inline;
+  li {margin-right: .5em;}
+}
+
+/**
  * Refereances list
  */
 

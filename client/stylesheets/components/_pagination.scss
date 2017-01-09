@@ -4,7 +4,7 @@ $ctrl-size: 96px;
 
 .pagination {
   text-align: center;
-  @include padding-trailer(2.5);
+  @include padding-trailer(2);
   @include scut-list-inline;
 }
 .pagination__cell {
