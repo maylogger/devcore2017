@@ -1,0 +1,31 @@
+$font-size: 14px;
+$size: 28px;
+$ctrl-size: 96px;
+
+.pagination {
+  text-align: center;
+  @include padding-trailer(2.5);
+  @include scut-list-inline;
+}
+.pagination__cell {
+  display: block;
+  padding: 0;
+  font-size: $font-size;
+  font-weight: 600;
+  line-height: $size / $font-size;
+  color: $primary;
+  width: $size;
+  &:hover,
+  .active & {
+    color: white;
+    background-color: $primary;
+  }
+}
+.pagination__prev {
+  line-height: $size - 4px;
+  width: $ctrl-size;
+  border: 2px solid $primary;
+}
+.pagination__next {
+  @extend .pagination__prev;
+}

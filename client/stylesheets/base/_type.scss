@@ -4,7 +4,9 @@
 
 a {
   text-decoration: none;
-  @include scut-color-swap($link-color, $link-hover-color, $transition-duration);
+  transition: color $transition-duration ease 0s,
+              background-color $transition-duration ease 0s;
+  @include scut-color-swap($link-color, $link-hover-color);
 }
 
 .url {
