@@ -6,8 +6,6 @@
   flex-shrink: 0;
   position: relative;
   z-index: index($layers, topbar);
-  backdrop-filter: blur(10px) saturate(80%);
-  -webkit-backdrop-filter: blur(10px) saturate(80%);
   background: rgba(white,.1);
   margin: 0 -24px;
   padding: 0 24px;
