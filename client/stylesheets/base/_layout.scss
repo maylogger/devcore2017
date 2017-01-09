@@ -36,6 +36,7 @@
    justify-content: space-between;
 
    .card {width: span(4);}
+   .card__thumbnail::before {display: none;}
  }
 }
 
