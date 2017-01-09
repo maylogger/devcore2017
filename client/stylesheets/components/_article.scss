@@ -20,6 +20,15 @@
     }
   }
 
+  /**
+   * Dot list
+   */
+
+  ul.dot {
+    list-style-type: square;
+    li::before {display: none;}
+  }
+
   li ul {
     list-style-type: circle !important;
     margin: rhythm(.5) n() 0 1em;
