@@ -56,7 +56,7 @@ ol, ul {@include rhythm-margins(.5);}
   font-size: 14px;
   line-height: 24px;
   font-weight: 600;
-  color: #DEDEDE;
+  color: $secondary;
   @include scut-side-lined($color: tint($secondary, 60%), $space: r(1), $v-adjust: 1px);
   @include desktop {
     @include trailer(1.75);
