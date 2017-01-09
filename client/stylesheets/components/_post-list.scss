@@ -1,0 +1,21 @@
+.post-list {@include trailer(4);}
+.post-list__cell {
+  margin-bottom: 60px;
+  .heading {
+    margin-bottom: -44px;
+    font-family: AvenirNext-Bold, "Avenir Next";
+    font-weight: bold;
+    font-size: 120px;
+    line-height: 1;
+    letter-spacing: -5px;
+    text-align: center;
+    color: $lightgray;
+  }
+
+  .post {
+    font-weight: 600;
+    line-height: 1.25;
+    text-align: center;
+    & + .post {margin-top: rhythm(.5);}
+  }
+}

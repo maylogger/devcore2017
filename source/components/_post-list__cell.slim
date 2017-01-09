@@ -1,7 +1,7 @@
 section.post-list__cell
   .heading = heading
   
-  ul.posts
+  ul.posts.list--unstyled
     - articles.each do |article|
       li.post
         = link_to article.title, article.page,
