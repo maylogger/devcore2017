@@ -7,10 +7,10 @@
   position: relative;
   z-index: index($layers, topbar);
   background: rgba(white,.1);
-  margin: 0 -24px;
-  padding: 0 24px;
+  margin: 0 (-$topbar-padding);
+  padding: 0 $topbar-padding;
   @include desktop {
-    padding: n() 30px;
+    padding: n() $topbar-padding--desktop;
     margin: 0;
     height: $topbar-height--desktop;
   }
@@ -44,7 +44,7 @@
   }
 
   &.active {
-    position: fixed $hamburger-leader r(1.5) n() n();
+    position: absolute $hamburger-leader $topbar-padding n() n();
     z-index: index($layers, drawer-element);
     background-color: $lightgray;
 
