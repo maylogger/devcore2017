@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="21px" viewBox="0 0 14 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/search</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-header" transform="translate(-1019.000000, -30.000000)" fill="#53565A">
+            <g id="menu" transform="translate(1014.000000, 26.000000)">
+                <g id="icon/search" transform="translate(0.000000, 2.000000)">
+                    <g id="search-icon">
+                        <path d="M17.1316688,23.2431711 L18.7153965,33.0641794 L21.4102564,33.0641794 L20.000738,22.9263282 C24.1738551,21.8221393 27.25,18.0203057 27.25,13.5 C27.25,8.11522369 22.8847763,3.75 17.5,3.75 C12.1152237,3.75 7.75,8.11522369 7.75,13.5 C7.75,18.7614511 11.9175636,23.0495155 17.1316688,23.2431711 Z M17.5,20.75 C13.4959356,20.75 10.25,17.5040644 10.25,13.5 C10.25,9.49593556 13.4959356,6.25 17.5,6.25 C21.5040644,6.25 24.75,9.49593556 24.75,13.5 C24.75,17.5040644 21.5040644,20.75 17.5,20.75 Z"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
