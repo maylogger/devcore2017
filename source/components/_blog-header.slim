@@ -1,24 +1,26 @@
+- image_credit = image_credit || nil
+
 section.blog-header
-  small.blog-header__category = link_to current_page.data.category, "#link"
+  small.blog-header__category = link_to category, "#link"
   
-  - if current_page.data.image_credit
-    = link_to current_page.data.image_credit
-      = image_tag current_page.data.image,
+  - if image_credit
+    = link_to image_credit
+      = image_tag image,
         class: "blog-header__image",
-        title: "Image credit: #{current_page.data.image_caption}",
-        alt: "Image credit: #{current_page.data.image_caption}"
+        title: "Image credit: #{image_caption}",
+        alt: "Image credit: #{image_caption}"
   
   - else
-    = image_tag current_page.data.image, class: "blog-header__image"
+    = image_tag image, class: "blog-header__image"
 
-  h1.blog-header__title = current_page.data.title
+  h1.blog-header__title = title
   
   .blog-header__tags
-    - current_page.data.tags.each do |tag|
+    - tags.each do |tag|
       = link_to tag, "#link", class: "blog-header__tag"
         
   p.blog-header__info
     ' Written by
-    span.blog-author-photo style="background-image: url(#{image_path('member-' + current_page.data.author + '.jpg')})"
-    =<> link_to current_page.data.author, "#link", class: "author-name"
+    span.blog-author-photo style="background-image: url(#{image_path('member-' + author + '.jpg')})"
+    =<> link_to author, "#link", class: "author-name"
     time.date on 2016-09-22 

@@ -2,10 +2,10 @@
 
 = wrap_layout :layout do
   .container
-    = partial "components/blog-header"    
+    = partial "components/blog-header", locals: current_page.data
     
     article.article = yield
   
     = partial "components/sns-widgets"
-    = partial "components/blog-author"
+    = partial "components/blog-author", locals: current_page.data
     = partial "components/blog-comments"
