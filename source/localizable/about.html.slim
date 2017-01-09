@@ -26,9 +26,4 @@ article.article
     
   .team
     - data.team.members.each_with_index do |member, index|
-      = partial "components/card", locals: {\
-        thumbnail: member.photo,
-        static: true,
-        title: member.name,
-        tags: [member.title]\
-      }
+      = partial "components/avatar", locals: member
