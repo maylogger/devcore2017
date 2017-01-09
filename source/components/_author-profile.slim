@@ -1,0 +1,6 @@
+.container.author-profile
+  = partial "components/avatar", locals: author
+
+  h2.heading--side-lined.author-profile__heading 作者專欄
+
+  .author-profile__body = simple_format author.intro

@@ -19,6 +19,7 @@ require "components/_highlight.scss"
 require "components/_form.scss"
 require "components/_pagination.scss"
 require "components/_post-list.scss"
+require "components/_author.scss"
 
 # require "highlight/_zenburn.scss"
 require "highlight/_monokai.scss"

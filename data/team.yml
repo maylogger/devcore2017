@@ -2,18 +2,24 @@ members:
   - name: 翁浩正 Allen Own
     title: CEO
     photo: member-allenown.jpg
+    intro: "翁浩正 (Allen Own)，具備多年駭客技術研究以及網路管理經驗，擔任學術及政府單位專任講師及顧問。專長於網站應用程式安全、滲透測試、伺服器建置及開發、專業教育訓練。"
   - name: Anfa Sam
     title: Full Stack Developer
     photo: member-anfa.jpg
+    intro: ""
   - name: Bowen Hsu
     title: Security Reseacher
     photo: member-bowen.jpg
+    intro: ""
   - name: Orange Tsai
     title: Consultant
     photo: member-orange.jpg
+    intro: ""
   - name: Shaolin Hsu
     title: Security Reseacher
     photo: member-shaolin.jpg
+    intro: ""
   - name: Shon Wang
     title: System Engineer
     photo: member-shon.jpg
+    intro: ""

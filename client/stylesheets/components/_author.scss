@@ -1,0 +1,21 @@
+.author-profile {
+  @include desktop {
+    .card {
+      margin: rhythm(.5) auto 0;
+      width: span(4 of 8);
+    }
+    .card__thumbnail::before {display: none;}
+  }
+}
+.author-profile__heading {
+  margin: 0 auto;
+}
+.author-profile__body {
+  font-size: 17px;
+  line-height: 1.5;
+  text-align: center;
+  @include desktop {
+    margin: 0 auto rhythm(1.5);
+    width: span(4 of 8 wide);
+  }
+}
