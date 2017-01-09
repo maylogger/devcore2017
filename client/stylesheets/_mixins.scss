@@ -91,6 +91,7 @@
 }
 
 @mixin input-placeholder() {
+  &::placeholder,
   &::-webkit-input-placeholder,
   &::-moz-placeholder,
   &:-ms-input-placeholder { @content; }

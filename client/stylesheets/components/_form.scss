@@ -8,6 +8,12 @@ $input-height: r(2);
     flex-wrap: wrap;
     justify-content: space-between;
   }
+  &.search-bar {
+    margin: 0 auto;
+    @include desktop {
+      @include rhythm-margins(2.5, 3);
+    }
+  }
 }
 .form__actions {
   padding-top: $leader-padding;
@@ -23,8 +29,12 @@ $input-height: r(2);
 }
 .control-group {
   @extend %control-group;
-  @include desktop {
-    width: span(5 of 10);
+  @include desktop {width: span(5 of 10);}
+  .search-bar & {
+    @include desktop {
+      margin: auto;
+      width: span(6);
+    }
   }
 }
 .control-group--full {

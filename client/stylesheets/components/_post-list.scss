@@ -10,6 +10,11 @@
     letter-spacing: -5px;
     text-align: center;
     color: $lightgray;
+    &:only-child {
+      @include desktop {
+        @include trailer(12);
+      }
+    }
   }
 
   .post {
