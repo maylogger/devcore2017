@@ -13,7 +13,8 @@
   background-repeat: no-repeat;
   position: relative;
   z-index: index($layers, base);
-  size: 208px;
+  size: 200px;
+  &.card__thumbnail--person {size: 180px;}
   &::before {
     display: block;
     content: '';
