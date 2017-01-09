@@ -70,4 +70,11 @@
       &::before {content: '— ';}
     }
   }
+
+  p code {
+    padding: n() .2em;
+    color: white $primary;
+    border-radius: 3px;
+    word-break: keep-all;
+  }
 }
