@@ -1,7 +1,8 @@
 - type = type || "text"
 - full = full || false
+- value = value || ""
 
 div class=(full ? "control-group--full" : "control-group")
-  input.control-group__input type=type
+  input.control-group__input type=type value=value
   label.control-group__label = label
   .control-group__underline
