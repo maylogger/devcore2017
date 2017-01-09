@@ -44,9 +44,11 @@
   display: inline-block;
   margin: n() rhythm(.25);
   width: $size;
-  color: white;
+  color: white !important;
   background-color: $primary;
+  transition: background-color $transition-duration ease 0s;
   @include aspect-ratio($size, $size, ".icon");
+  @include scut-selected {background-color: $accent;}
 }
 .main-footer__address {
   @include rhythm-margins(.5, 1.5);

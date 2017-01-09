@@ -1,12 +1,19 @@
 .appearance-none {@include Normalize();}
 
 %base {
+  $duration: $transition-duration;
   @extend .appearance-none;
   display: inline-block;
   font-size: ms(-2);
   font-weight: 600;
   color: $accent;
   border: 2px solid $accent;
+  transition: color $duration ease 0s,
+              border-color $duration ease 0s;
+  @include scut-selected {
+    color: $accent-deep;
+    border-color: $accent-deep;
+  }
 }
 
 .button--dense {

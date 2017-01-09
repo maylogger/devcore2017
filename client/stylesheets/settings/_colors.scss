@@ -17,6 +17,7 @@ $black:         #222;
 $darkgray:      #53565a;
 $gray:          #b8b8b8;
 $green:         #44d62c;
+$green-dark:    darken($green, 10%);
 $lightgray:     #ededed;
 
 //  Pallete
@@ -31,6 +32,8 @@ $attention: #fdd521;
 $critical:  #e84444;
 $on-hold:   $darkgray;
 
+$accent-deep: $green-dark;
+
 $divider-gray: #DBDFE4;
 $bg-gray:      #E9E9E9;
 
@@ -43,7 +46,7 @@ $text-color: $darkgray;
 //  -----
 
 $link-color:           $green !default;
-$link-hover-color:     shade($link-color, 15%) !default;
+$link-hover-color:     $green-dark !default;
 $link-focus-color:     $gray-dark !default;
 $link-active-color:    $gray-dark !default;
 $link-visited-color:   $gray-dark !default;
