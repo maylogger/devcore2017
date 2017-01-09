@@ -1,0 +1,8 @@
+section.post-list__cell
+  .heading = heading
+  
+  ul.posts
+    - articles.each do |article|
+      li.post
+        = link_to article.title, article.page,
+          class: 'link'

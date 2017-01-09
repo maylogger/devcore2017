@@ -1,0 +1,7 @@
+.container
+  h2.heading--side-lined = heading
+  
+  .post-list
+    - list.each do |post|
+      = partial "components/post-list__cell",
+        locals: {heading: post.year, articles: post.articles}
