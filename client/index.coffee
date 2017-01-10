@@ -67,3 +67,26 @@ form_inputs = '
 '
 
 new Form form_inputs
+
+###*
+ * Contact map
+###
+
+import mapStyle from "./modules/map-style"
+
+window.initMap = () ->
+  location =
+    lat: 25.053660850000075
+    lng: 121.5439164000000
+
+  map = new google.maps.Map document.getElementById('contact-map'),
+                            center: location
+                            zoom: 16
+                            styles: mapStyle
+
+  marker =
+    new google.maps.Marker
+        map: map
+        position: location
+        title: "DEVCORE 戴夫寇爾"
+        animation: google.maps.Animation.DROP
