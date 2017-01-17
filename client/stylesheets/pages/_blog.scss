@@ -3,11 +3,9 @@
 }
 
 .blog-header {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
   text-align: center;
   @include leader(.5);
+  @include trailer(2);
   @include desktop {
     @include leader(2);
   }
@@ -35,6 +33,7 @@
 }
 .blog-header__category {
   @include rhythm-type(-2);
+  display: block;
   margin-bottom: r(.5);
   letter-spacing: .4em;
   color: $accent;
