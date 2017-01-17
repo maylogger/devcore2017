@@ -1,5 +1,7 @@
+- ip = Socket.ip_address_list.detect{|intf| intf.ipv4_private?}
+
 - if development?
-  = javascript_include_tag "http://localhost:8080/javascripts/webpack_bundle.js"
+  = javascript_include_tag "http://#{ip.ip_address}:8080/javascripts/webpack_bundle.js"
   
 - else
   = javascript_include_tag :webpack_bundle

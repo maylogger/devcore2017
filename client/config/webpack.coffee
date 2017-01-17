@@ -2,6 +2,7 @@ path     = require 'path'
 path_to  = require './'
 webpack  = require 'webpack'
 merge    = require 'webpack-merge'
+ip       = require 'ip'
 
 pkg = require path_to.package
 
@@ -128,11 +129,12 @@ module.exports = (env) ->
   if env is 'development'
     webpack_config = merge webpack_config,
       output:
-        publicPath: "http://localhost:8080" + pkg.publicPath
+        publicPath: "http://#{ip.address()}:8080#{pkg.publicPath}"
       devtool: 'eval'
       devServer:
         progress: on
         stats: 'errors-only'
+        host: '0.0.0.0'
         port:  8080
       debug: on
       module:
