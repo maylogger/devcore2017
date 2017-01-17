@@ -29,8 +29,12 @@ zh:
       name:      最新訊息
       url:       /blog/
   contact:
-    name:      聯絡我們
-    url:       /contact.html
+    name:        聯絡我們
+    url:         /contact.html
+
+  search:
+    name:        搜尋
+    url:         /blog/search/
 
   lang-label:    語言
   lang:

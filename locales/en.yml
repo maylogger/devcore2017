@@ -26,7 +26,7 @@ en:
       url:       /en/services/security-training.html
   menu:
     blog:
-      name:      blog
+      name:      Blog
       url:       /en/blog/
     about:
       name:      About
@@ -34,6 +34,10 @@ en:
     contact:
       name:      Contact Us
       url:       /contact/
+
+  search:
+    name:        Search
+    url:         /en/blog/search/
 
   lang-label:    Language
   lang:
