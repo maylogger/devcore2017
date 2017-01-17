@@ -3,6 +3,10 @@
     nav.main-menu
       .hidden = t("menu-label")
       
+      = link_to t("search")[:url], class: "main-menu__link main-menu__search desktop-only"
+        span.hidden = t("search")[:name]
+        = inline_svg "search"
+      
       - t("service").each do | item, details |
         = link_to details[:name], details[:url], class: "main-menu__link mobile-only"
       - t("menu").each do | item, details |

@@ -58,6 +58,11 @@
     & + & {margin-left: rhythm(.5);}
   }
 }
+.main-menu__search {
+  $size: 24px;
+  size: 24px;
+  @include aspect-ratio($size, $size, ".icon");
+}
 
 .lang-menu {
   display: flex;
