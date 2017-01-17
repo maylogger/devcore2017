@@ -10,13 +10,8 @@ billboard:
 h2.heading--side-lined.container 所有文章
 
 .blog-posts
-  - data.blog.each_with_index do |blog, index|
-    = partial "components/card", locals: {\
-      thumbnail: "blog-thumbnail-#{index}.jpg",
-      title: blog.title,
-      tags:  blog.tags,
-      blog: blog.page\
-    }
+  - data.blog.each do |blog|
+    = partial "components/card", locals: blog
 
 = partial "components/pagination"
 
