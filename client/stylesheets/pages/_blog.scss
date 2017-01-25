@@ -48,10 +48,12 @@
     font-weight: bold;
   }
 }
-
+.blog-author-name {
+  color: $primary;
+}
 .blog-author-photo {
   display: inline-block;
-  margin: n() 2px;
+  margin: n() 2px 0;
   border-radius: 50%;
   size: 32px;
   background-position: 50% 50%;
@@ -61,5 +63,8 @@
 }
 
 .blog-author-info {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
   @include rhythm-type(-1);
 }
