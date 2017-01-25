@@ -4,7 +4,7 @@ title: "滲透 Facebook 的思路與發現"
 description: "從滲透的角度看待 Bug Bounty，從如何定位出目標到找出 Facebook 遠端代碼執行漏洞，並在過程中發現其他駭客的足跡..."
 category: "案例剖析"
 tags: ["Facebook", "BugBounty", "RCE", "Backdoor", "Reconnaissance", "Pentest"]
-author: "orange"
+author: "Allen Own"
 keywords: "Facebook, BugBounty, RCE, Backdoor, Reconnaissance, Pentest"
 image: "/images/blog/20160421/facebook.jpg"
 ---
