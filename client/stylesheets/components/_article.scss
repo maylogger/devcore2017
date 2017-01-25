@@ -71,8 +71,12 @@
     }
   }
 
-  p code {
-    padding: n() .2em;
+  code {
+    font-family: monospace;
+    font-weight: normal;
+    font-size: 1em;
+    padding: n() .4em;
+    margin: n() .2em;
     color: white $primary;
     border-radius: 3px;
     word-break: keep-all;
