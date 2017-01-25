@@ -39,13 +39,13 @@
   .bar {
     height: $bar;
     background-color: white;
-    transition: transform .3s ease 0s;
+    // transition: transform .3s ease 0s;
   }
 
   &.active {
     position: absolute $hamburger-leader $topbar-padding n() n();
     z-index: index($layers, drawer-element);
-    background-color: $lightgray;
+    // background-color: $lightgray;
 
     .bar {
       &:first-child,
@@ -87,6 +87,7 @@
     .link {
       font-weight: 600;
       @include scut-link-bb();
+      margin: 0 .2em;
     }
   }
 }
