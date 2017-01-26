@@ -23,9 +23,6 @@
   font-size: 14px;
   line-height: 24px;
   @include rhythm-padding(1.5, .5);
-  @include desktop {
-    letter-spacing: .2em;
-  };
 }
 .main-footer__about {
   .link {
