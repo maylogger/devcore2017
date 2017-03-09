@@ -28,6 +28,7 @@
     "modernizr": "^3.3.1",
     "modularscale-sass": "^2.1.1",
     "node.normalize.scss": "^3.0.3",
+    "picturefill": "^3.0.2",
     "scut": "^1.4.0",
     "smooth-scroll": "cferdinandi/smooth-scroll",
     "susy": "^2.2.12"

@@ -1,4 +1,5 @@
 import $ from "jquery"
+import "picturefill"
 
 # Require Stylesheets
 import "stylesheets"
