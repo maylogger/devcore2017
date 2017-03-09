@@ -24,7 +24,7 @@ body {background-color: white;}
   flex-flow: column nowrap;
   height: 100vh;
   padding: n() r(1.5);
-  max-width: 600px;
+  max-width: $normal;
   margin: 0 auto;
   @include desktop {
     @include container();

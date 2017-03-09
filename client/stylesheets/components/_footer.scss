@@ -4,10 +4,8 @@
   border: 2px solid $divider-gray;
   border-width: 2px 0 2px 0;
   @include bleed-x(r(1.5));
-  @include desktop {
-    border-width: 2px;
-    @include rhythm-padding(1.5);
-  }
+  @include susy-media($normal) { border-width: 2px; }
+  @include desktop { @include rhythm-padding(1.5); }
 }
 .contact-section__title {
   @include rhythm-type(0);
