@@ -4,6 +4,8 @@
   @include desktop {
     margin-top: - $topbar-height--desktop;
     position: relative;
+
+    body.index & { padding-top: 280px; }
   }
 }
 .billboard--text-only {
@@ -21,6 +23,12 @@
     margin: n() 0;
     width: 100%;
     &::before {padding-top: 443/940*100%;}
+
+    body.index & {
+      margin: n() auto;
+      width: span(9 of 12);
+      &::before {padding-top: 1000/1562*100%;}
+    }
   }
 }
 .billboard__image {
@@ -45,6 +53,11 @@
       position: static;
       margin: n() auto;
       width: auto;
+    }
+
+    body.index & {
+      top: 140px;
+      bottom: auto;
     }
   }
 }
