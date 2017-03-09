@@ -49,6 +49,8 @@ small {@include rhythm-type(-1);}
 
 ol, ul {@include rhythm-margins(.5);}
 
+span.nowrap { white-space: nowrap; }
+
 /**
  * Heading
  */
