@@ -3,6 +3,10 @@
 
 @function r($times: 1) { @return $rhythm-gap * $times; }
 
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
 @mixin susy($map) {
   @include susy-breakpoint(map-get($map, query), map-get($map, layout)) {
     @content;
