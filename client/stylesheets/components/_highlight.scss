@@ -3,7 +3,7 @@
   @include rhythm-margins(1, 0);
   padding: r(.5) r(1.5);
   word-break: break-all;
-  color: white $accent;
+  color: $primary $bg-gray;
 }
 
 .highlight {
