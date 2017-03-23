@@ -1,0 +1,8 @@
+.heading--404 {
+  @extend %ultra-large-heading;
+  margin     : 110px auto;
+  line-height: 1.5;
+  @include desktop {
+    margin: 160px auto;
+  }
+}
