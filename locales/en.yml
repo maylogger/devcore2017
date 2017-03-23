@@ -24,6 +24,9 @@ en:
     training:
       name:      Training
       url:       /en/services/security-training.html
+    seal:
+      name:      Security Seal
+      url:       /en/services/security-seal.html
   menu:
     blog:
       name:      Blog
@@ -33,7 +36,12 @@ en:
       url:       /en/about/
     contact:
       name:      Contact Us
-      url:       /contact/
+      url:       /en/contact/
+
+  certified:
+    seal:
+      name:      網站安全標章範例
+      url:       /en/certified/security-seal-sample.html
 
   search:
     name:        Search

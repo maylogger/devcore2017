@@ -21,6 +21,9 @@ zh:
     training:
       name:      教育訓練
       url:       /services/security-training.html
+    seal:
+      name:      網站安全標章
+      url:       /services/security-seal.html
   menu:
     about:
       name:      駭客思維
@@ -35,6 +38,11 @@ zh:
   search:
     name:        搜尋
     url:         /blog/search/
+
+  certified:
+    seal:
+      name:      網站安全標章範例
+      url:       /certified/security-seal-sample.html
 
   lang-label:    語言
   lang:
