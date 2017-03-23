@@ -1,0 +1,7 @@
+.seal-intro-wrapper {
+  margin   : 0 auto;
+  max-width: 364px;
+  @include desktop {
+    margin: 50px auto;
+  }
+}

@@ -3,81 +3,101 @@
   margin-top: - $topbar-height;
   @include desktop {
     margin-top: - $topbar-height--desktop;
-    position: relative;
+    position  : relative;
 
-    body.index & { padding-top: 280px; }
+    body.index & {
+      padding-top: 280px;
+    }
   }
 }
+
 .billboard--text-only {
   @include rhythm-margins(1.5, .5);
   text-align: center;
   @include desktop {
-    @include rhythm-margins(2, 3);
+     @include rhythm-margins(2, 3);
   }
 }
+
 .billboard__image-wrapper {
   margin: n() r(-1.5);
-  width: calc(100% + #{r(1.5) * 2});
+  width : calc(100% + #{r(1.5) * 2});
   @include aspect-ratio(375, 282, ".billboard__image");
   @include desktop {
     margin: n() 0;
-    width: 100%;
-    &::before {padding-top: 443/940*100%;}
+    width : 100%;
+
+    &::before {
+      padding-top: 443/940*100%;
+    }
 
     body.index & {
       margin: n() auto;
-      width: span(9 of 12);
-      &::before {padding-top: 1000/1562*100%;}
+      width : span(9 of 12);
+
+      &::before {
+        padding-top: 1000/1562*100%;
+      }
     }
   }
 }
+
 .billboard__image {
   @include desktop {
-    width: auto;
+    width : auto;
     margin: n() auto;
   }
 }
+
 .billboard__text-wrapper {
   @include leader(-1);
   position: relative;
-  z-index: index($layers, billboard-text);
+  z-index : index($layers, billboard-text);
   @include desktop {
-    display: flex;
-    flex-direction: column;
+    display        : flex;
+    flex-direction : column;
     justify-content: center;
-    margin-top: 0;
-    width: span(5);
-    position: absolute $topbar-height--desktop 0 0 n();
+    margin-top     : 0;
+    width          : span(5);
+    position       : absolute $topbar-height--desktop 0 0 n();
 
     .billboard--text-only & {
       position: static;
-      margin: n() auto;
-      width: auto;
+      margin  : n() auto;
+      width   : auto;
     }
 
     body.index & {
-      top: 140px;
+      top   : 140px;
       bottom: auto;
     }
   }
 }
+
 .billboard__title {
   margin-bottom: 0;
-  font-size: ms(2);
-  font-weight: bold;
-  line-height: rhythm();
+  font-size    : ms(2);
+  font-weight  : bold;
+  line-height  : rhythm();
+
+  .nowrap {
+    white-space: nowrap;
+  }
 }
+
 .billboard__sub-title {
-  margin-top: 24px;
-  font-size: ms(0);
+  margin-top : 24px;
+  font-size  : ms(0);
   font-weight: 300;
   line-height: 1.5;
+
   a {
     border-bottom: 2px solid $accent;
-    font-weight: bold;
+    font-weight  : bold;
   }
+
   .billboard--text-only & {
-    margin-top: 2px;
+    margin-top   : 2px;
     margin-bottom: 0;
   }
 }

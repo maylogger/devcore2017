@@ -9,7 +9,12 @@ section.billboard class=("billboard--text-only" if text_only)
         = image_tag mobile_image
       
   .billboard__text-wrapper
-    p.billboard__title = current_page.data.billboard.title
+    - if current_page.data.billboard.inline_subtitle
+      p.billboard__title
+        => current_page.data.billboard.title
+        span.nowrap = current_page.data.billboard.inline_subtitle
+    - else
+      p.billboard__title = current_page.data.billboard.title
 
     - if is_homepage
       h2.billboard__sub-title = current_page.data.billboard.subtitle

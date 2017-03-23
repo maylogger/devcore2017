@@ -1,0 +1,18 @@
+---
+title: 網站安全標章 Security Seal
+billboard:
+  title: 網站安全標章
+  inline_subtitle: Security Seal
+---
+
+= partial "components/billboard", locals: {text_only: true}
+
+article.article
+  .container
+    h2.heading--side-lined.container 標章說明
+    
+    .seal-intro-wrapper = image_tag "seal.svg"
+    
+    p 擁有此網站安全標章，代表該資訊系統已經過戴夫寇爾資安團隊認證，通過 OSSTMM (Open Source Security Testing Methodology Manual) 及 OWASP (Open Web Application Security Project) 等國際安全組織所建議之測試標準，擁有高水準的網站安全品質。
+
+    p = link_to "觀看安全標章範例→", t("certified.seal.url")
