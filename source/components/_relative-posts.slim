@@ -1,8 +1,9 @@
 - relative_posts = current_page.data.relative_posts || false
+- relative_posts_heading = current_page.data.relative_posts_heading || "相關文章"
 
 - if relative_posts
   .relative-posts
-    .heading--side-lined.container 相關文章
+    .heading--side-lined.container = relative_posts_heading
 
     .relative-posts__cells
       - data.blog[0..2].each do |blog|
