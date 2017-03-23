@@ -2,7 +2,7 @@ import $ from "jquery"
 import "picturefill"
 
 # Require Stylesheets
-import "stylesheets"
+import "stylesheets/entry.scss"
 
 # Require Modernizr
 # require "modernizr"
