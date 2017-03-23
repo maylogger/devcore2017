@@ -5,3 +5,39 @@
     margin: 50px auto;
   }
 }
+
+.seal-card {
+  margin    : 36px auto 60px;
+  padding   : 20px;
+  max-width : 500px;
+  border    : 2px solid $green;
+  box-shadow: 10px 10px 0 rgba(black, .1);
+  @include desktop {
+    margin-top: 60px;
+  }
+}
+
+.seal-card__thumbnail {
+  margin-bottom: 60px;
+  position     : relative;
+
+  .seal {
+    max-width: 181px;
+    bottom   : -21px;
+    @include scut-center-transform(x);
+  }
+}
+
+.seal-card__info {
+  @extend %scut-list-unstyled;
+  list-style: none !important;
+
+  .term {
+    display: inline-block;
+    color  : $green;
+  }
+
+  .desc {
+    display: inline-block;
+  }
+}
