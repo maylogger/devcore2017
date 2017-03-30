@@ -11,10 +11,13 @@
     padding  : n() r(1.5);
     max-width: $normal;
     @include desktop {
-      margin   : 0;
-      padding  : 0 0 n();
-      max-width: none;
-      height   : calc(100vh - #{$topbar-height--desktop});
+      margin    : 0;
+      padding   : 0 0 (72px + r(1));
+      max-width : none;
+      min-height: calc(600px - #{$topbar-height--desktop});
+      height    : calc(100vh - #{$topbar-height--desktop});
+      max-height: calc(1200px - #{$topbar-height--desktop});
+      font-size : calc(100vmin / 50);
     }
   }
 }
@@ -113,5 +116,27 @@
   .billboard--text-only & {
     margin-top   : 2px;
     margin-bottom: 0;
+  }
+}
+
+.billboard__forward {
+  display: none;
+  @include desktop {
+    body.index & {
+      display: inline-block;
+      bottom : r(1);
+      outline: none;
+      @include scut-center-transform(x);
+    }
+  }
+
+  .text {
+    font-size: 14px;
+    color    : #B8B8B8;
+  }
+
+  .icon {
+    size : size("angle-down.svg");
+    color: #DEDEDE;
   }
 }

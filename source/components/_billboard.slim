@@ -20,3 +20,7 @@ section.billboard class=("billboard--text-only" if text_only)
       h2.billboard__sub-title = current_page.data.billboard.subtitle
     - else
       h1.billboard__sub-title = current_page.data.billboard.subtitle
+      
+  a.billboard__forward href="#home-news-anchor" data-scroll=""
+    .text 最新訊息
+    = inline_svg "angle-down"
