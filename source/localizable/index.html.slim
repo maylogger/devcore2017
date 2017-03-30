@@ -12,12 +12,12 @@ billboard:
     保護你的商業價值
 ---
 
-.container--wrapper
-  = partial "components/billboard", locals: {\
-    mobile_image: "cover-mobile.jpg",
-    desktop_image: "cover-desktop.jpg"\
-  }
+= partial "components/billboard", locals: {\
+  mobile_image: "cover-mobile.jpg",
+  desktop_image: "cover-desktop.jpg"\
+}
 
+.container--wrapper
   .heading--side-lined.container.mobile-only 最新消息
 
   .home-news

@@ -4,9 +4,17 @@
   @include desktop {
     margin-top: - $topbar-height--desktop;
     position  : relative;
+  }
 
-    body.index & {
-      padding-top: 280px;
+  body.index & {
+    margin   : n() auto;
+    padding  : n() r(1.5);
+    max-width: $normal;
+    @include desktop {
+      margin   : 0;
+      padding  : 0 0 n();
+      max-width: none;
+      height   : calc(100vh - #{$topbar-height--desktop});
     }
   }
 }
@@ -32,11 +40,13 @@
     }
 
     body.index & {
-      margin: n() auto;
-      width : span(9 of 12);
+      margin    : n() auto;
+      width     : span(9 of 12);
+      height    : 100%;
+      background: url("cover-desktop.jpg") 50% 50% / contain no-repeat transparent;
 
       &::before {
-        padding-top: 1000/1562*100%;
+        display: none;
       }
     }
   }
@@ -46,6 +56,10 @@
   @include desktop {
     width : auto;
     margin: n() auto;
+
+    body.index & {
+      display: none;
+    }
   }
 }
 
@@ -68,7 +82,7 @@
     }
 
     body.index & {
-      top   : 140px;
+      top   : 5%;
       bottom: auto;
     }
   }
@@ -76,9 +90,9 @@
 
 .billboard__title {
   margin-bottom: 0;
-  font-size    : ms(2);
+  font-size    : scut-em(ms(2));
   font-weight  : bold;
-  line-height  : rhythm();
+  line-height  : 1.25;
 
   .nowrap {
     white-space: nowrap;
@@ -87,7 +101,7 @@
 
 .billboard__sub-title {
   margin-top : 24px;
-  font-size  : ms(0);
+  font-size  : scut-em(ms(0));
   font-weight: 300;
   line-height: 1.5;
 

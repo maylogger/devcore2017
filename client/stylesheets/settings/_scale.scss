@@ -1,39 +1,30 @@
 //  Module Scale and base font settings
 //  ===================================
-
-$base-font-size:   20px;
-// $ideal-font-size:  36px;
+$base-font-size: 20px; // $ideal-font-size:  36px;
 $base-line-height: 36px;
 $round-to-nearest-half-line: true;
-
 $rhythm-unit: "px";
 $rhythm-gap: 16px;
 $rem-with-px-fallback: false;
-
 $scut-rem-base: scut-strip-unit($base-font-size);
-
-$ms-base:          $base-font-size;
-$ms-ratio:         $major-third;
+$scut-em-base: scut-strip-unit($base-font-size);
+$ms-base: $base-font-size;
+$ms-ratio: $major-third;
 $ms-ratio-desktop: 1.33;
-$ms-range:         $ms-ratio 0,
-                   $ms-ratio-desktop $large;
-
+$ms-range: $ms-ratio 0, $ms-ratio-desktop $large;
 @mixin rhythm-type($level) {
   font-size: ms($level);
   @include desktop {
-    @include adjust-font-size-to(ms($level, $Ratios: $ms-ratio));
+     @include adjust-font-size-to(ms($level, $Ratios: $ms-ratio));
   }
 }
-
 /**
  * Component size
  */
-
 $topbar-height: 76px;
 $topbar-height--desktop: 80px;
 $topbar-padding: 24px;
 $topbar-padding--desktop: 30px;
 $hamburger-size: 36px;
 $hamburger-leader: ($topbar-height - $hamburger-size) / 2;
-
 $transition-duration: .2s;
