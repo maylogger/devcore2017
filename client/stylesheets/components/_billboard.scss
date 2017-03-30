@@ -7,9 +7,14 @@
   }
 
   body.index & {
-    margin   : n() auto;
-    padding  : n() r(1.5);
-    max-width: $normal;
+    $min-vmin                  : 500px;
+    $min-font-size             : 12px;
+    $max-vmin                  : 1200px;
+    $max-font-size             : 30px;
+    $responsive-font-size-ratio: 1/50;
+    margin                     : n() auto;
+    padding                    : n() r(1.5);
+    max-width                  : $normal;
     @include desktop {
       margin    : 0;
       padding   : 0 0 (72px + r(1));
@@ -17,7 +22,19 @@
       min-height: calc(600px - #{$topbar-height--desktop});
       height    : calc(100vh - #{$topbar-height--desktop});
       max-height: calc(1200px - #{$topbar-height--desktop});
-      font-size : calc(100vmin / 50);
+      font-size : calc(100vmin * #{$responsive-font-size-ratio});
+    }
+    @include susy-media(( max-height: $min-vmin, orientation: landscape )) {
+      font-size: $min-font-size;
+    }
+    @include susy-media(( min-height: $max-vmin, orientation: landscape )) {
+      font-size: $max-font-size;
+    }
+    @include susy-media(( max-width: $min-vmin, orientation: portrait )) {
+      font-size: $min-font-size;
+    }
+    @include susy-media(( min-width: $max-vmin, orientation: portrait )) {
+      font-size: $max-font-size;
     }
   }
 }
