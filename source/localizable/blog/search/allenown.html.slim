@@ -2,9 +2,10 @@
 title: 搜尋
 ---
 
-form.form.search-bar
-  = partial "components/form/input-group",
-    locals: {type: "search", label: "請輸入關鍵字", value: "allenown"}
-  
-= partial "components/post-list",
-  locals: {heading: "搜尋結果", list: data.post_history}
+.container--wrapper
+  form.form.search-bar
+    = partial "components/form/input-group",
+      locals: {type: "search", label: "請輸入關鍵字", value: "allenown"}
+    
+  = partial "components/post-list",
+    locals: {heading: "搜尋結果", list: data.post_history}

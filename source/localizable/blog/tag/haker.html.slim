@@ -4,7 +4,8 @@ billboard:
   title: haker 標籤
 ---
 
-= partial "components/billboard", locals: {text_only: true}
+.container--wrapper
+  = partial "components/billboard", locals: {text_only: true}
 
-= partial "components/post-list",
-  locals: {heading: "文章列表", list: data.post_history}
+  = partial "components/post-list",
+    locals: {heading: "文章列表", list: data.post_history}

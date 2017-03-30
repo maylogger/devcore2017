@@ -4,7 +4,8 @@ billboard:
   title: 翁浩正 Allen Own
 ---
 
-= partial "components/author-profile", locals: {author: data.team.members[0]}
-  
-= partial "components/post-list",
-  locals: {heading: "文章列表", list: data.post_history}
+.container--wrapper
+  = partial "components/author-profile", locals: {author: data.team.members[0]}
+    
+  = partial "components/post-list",
+    locals: {heading: "文章列表", list: data.post_history}

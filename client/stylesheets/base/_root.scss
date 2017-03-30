@@ -2,58 +2,70 @@
 //  ====
 
 html {
-  font-family: $base-font-family;
-  font-size: $base-font-size;
-  line-height: 1.5;
-  color: $text-color;
+  font-family           : $base-font-family;
+  font-size             : $base-font-size;
+  line-height           : 1.5;
+  color                 : $text-color;
   -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-  &::after { @include share-breakpoints($susy-media); }
-}
+  box-sizing            : border-box;
 
-*, *:before, *:after {box-sizing: inherit;}
-
-@include desktop {
-  @include establish-baseline();
-}
-
-body {background-color: white;}
-
-.page {
-  display: flex;
-  flex-flow: column nowrap;
-  height: 100vh;
-  padding: n() r(1.5);
-  max-width: $normal;
-  margin: 0 auto;
-  @include desktop {
-    @include container();
-    padding: n() 0;
+  &::after {
+    @include share-breakpoints($susy-media);
   }
 }
 
-main[role="main"] {flex: 1 0 auto;}
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+@include desktop {
+   @include establish-baseline();
+}
 
+body {
+  background-color: white;
+}
+
+.page {
+  display  : flex;
+  flex-flow: column nowrap;
+  height   : 100vh;
+  margin   : 0 auto;
+}
+
+main[role="main"] {
+  flex: 1 0 auto;
+}
 // Turbolinks
-html.turbolinks-progress-bar::before {background-color: $nprogress-color !important;}
 
+html.turbolinks-progress-bar::before {
+  background-color: $nprogress-color !important;
+}
 // Allow only vertical resizing of textareas.
-textarea {resize: vertical;}
+
+textarea {
+  resize: vertical;
+}
 
 embed,
 img,
 object,
 video {
   max-width: 100%;
-  height: auto;
+  height   : auto;
 }
 
-img, svg, textarea {vertical-align: middle;}
+img,
+svg,
+textarea {
+  vertical-align: middle;
+}
 
 figure {
-  margin: 0;
-  padding: 0;
-  border: 0;
+  margin    : 0;
+  padding   : 0;
+  border    : 0;
   text-align: center;
 }
 
@@ -62,11 +74,19 @@ figcaption {
   @include ms-respond(font-size, -1);
 }
 
+.cf {
+  clear: fix;
+}
 
-.cf {clear: fix;}
-.clr{clear: both;}
+.clr {
+  clear: both;
+}
 
-.text-center {text-align: center;}
-
+.text-center {
+  text-align: center;
+}
 // Hide from both screenreaders and browsers: h5bp.com/u
-.hidden { @include Hidden; }
+
+.hidden {
+  @include Hidden;
+}

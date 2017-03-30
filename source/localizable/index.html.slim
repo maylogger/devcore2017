@@ -12,18 +12,19 @@ billboard:
     保護你的商業價值
 ---
 
-= partial "components/billboard", locals: {\
-  mobile_image: "cover-mobile.jpg",
-  desktop_image: "cover-desktop.jpg"\
-}
+.container--wrapper
+  = partial "components/billboard", locals: {\
+    mobile_image: "cover-mobile.jpg",
+    desktop_image: "cover-desktop.jpg"\
+  }
 
-.heading--side-lined.container.mobile-only 最新消息
+  .heading--side-lined.container.mobile-only 最新消息
 
-.home-news
-  - data.blog.each do |blog|
-    = partial "components/card", locals: {\
-      page: blog.page,
-      thumbnail: blog.thumbnail,
-      title: blog.title,
-      tags:  blog.tags\
-    }
+  .home-news
+    - data.blog.each do |blog|
+      = partial "components/card", locals: {\
+        page: blog.page,
+        thumbnail: blog.thumbnail,
+        title: blog.title,
+        tags:  blog.tags\
+      }

@@ -6,31 +6,32 @@ billboard:
 
 = partial "components/billboard", locals: {text_only: true}
 
-.container
-  h2.heading--side-lined 填寫表單
-  
-  = simple_format "您可以直接來信 contact [at] devco.re 或是利用下方的表單聯絡我們。\n本公司專精於滲透測試、資安教育訓練、資安事件處理、資安顧問服務等項目，若您對本公司的服務有興趣，歡迎來信洽詢。"
+.container--wrapper
+  .container
+    h2.heading--side-lined 填寫表單
+    
+    = simple_format "您可以直接來信 contact [at] devco.re 或是利用下方的表單聯絡我們。\n本公司專精於滲透測試、資安教育訓練、資安事件處理、資安顧問服務等項目，若您對本公司的服務有興趣，歡迎來信洽詢。"
 
-.container--wide
-  form.form
-    = partial "components/form/input-group", locals: {label: "姓名"}
-    = partial "components/form/input-group", locals: {label: "職稱"}
-    = partial "components/form/input-group", locals: {label: "公司"}
-    = partial "components/form/input-group", locals: {label: "電子信箱", type: "email"}
-    = partial "components/form/input-group", locals: {label: "電話", type: "tel"}
-    
-    .control-group.desktop-only
-    
-    = partial "components/form/select-group", locals: {\
-      label: "需求", options: ["滲透測試服務", "顧問服務", "教育訓練服務"]\
-    }
-    = partial "components/form/select-group", locals: {\
-      label: "預算", options: ["< 300,000", "300,000 ~ 500,000", "500,000 ~ 1,000,000", "> 1,000,000"]\
-    }
-    = partial "components/form/input-group", locals: {label: "主旨", full: true}
-    = partial "components/form/textarea-group", locals: {label: "留言"}
-    
-    .form__actions
-      button.button style="width: 220px" type="submit" 送出
+  .container--wide
+    form.form
+      = partial "components/form/input-group", locals: {label: "姓名"}
+      = partial "components/form/input-group", locals: {label: "職稱"}
+      = partial "components/form/input-group", locals: {label: "公司"}
+      = partial "components/form/input-group", locals: {label: "電子信箱", type: "email"}
+      = partial "components/form/input-group", locals: {label: "電話", type: "tel"}
+      
+      .control-group.desktop-only
+      
+      = partial "components/form/select-group", locals: {\
+        label: "需求", options: ["滲透測試服務", "顧問服務", "教育訓練服務"]\
+      }
+      = partial "components/form/select-group", locals: {\
+        label: "預算", options: ["< 300,000", "300,000 ~ 500,000", "500,000 ~ 1,000,000", "> 1,000,000"]\
+      }
+      = partial "components/form/input-group", locals: {label: "主旨", full: true}
+      = partial "components/form/textarea-group", locals: {label: "留言"}
+      
+      .form__actions
+        button.button style="width: 220px" type="submit" 送出
 
-  #contact-map.contact-map
+    #contact-map.contact-map

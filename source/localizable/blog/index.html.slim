@@ -5,74 +5,75 @@ billboard:
   subtitle: 資訊安全業界大小事
 ---
 
-= partial "components/billboard", locals: {text_only: true}
+.container--wrapper
+  = partial "components/billboard", locals: {text_only: true}
 
-h2.heading--side-lined.container 所有文章
+  h2.heading--side-lined.container 所有文章
 
-.blog-posts
-  - data.blog.each do |blog|
-    = partial "components/card", locals: blog
+  .blog-posts
+    - data.blog.each do |blog|
+      = partial "components/card", locals: blog
 
-= partial "components/pagination"
+  = partial "components/pagination"
 
-.container
-  h2.heading--side-lined 分類
-  
-  ul.list--tags
-    li = link_to "最新消息 (2)", "/blog/tag/haker.html"
-    li = link_to "案例剖析 (9)", "/blog/tag/haker.html"
-    li = link_to "技術專欄 (19)", "/blog/tag/haker.html"
-    li = link_to "科普文章 (5)", "/blog/tag/haker.html"
-    li = link_to "資安新聞 (1)","/blog/tag/haker.html"
-  
-  h2.heading--side-lined 標籤
-  
-  ul.list--tags
-    li = link_to "公告 (2)", "/blog/tag/haker.html"
-    li = link_to "JavaScript (3)", "/blog/tag/haker.html"
-    li = link_to "Hijack (2)", "/blog/tag/haker.html"
-    li = link_to "HTTP Header (6)", "/blog/tag/haker.html"
-    li = link_to "Defense (9)", "/blog/tag/haker.html"
-    li = link_to "OpenSource (1)", "/blog/tag/haker.html"
-    li = link_to "Vulnerability (8)", "/blog/tag/haker.html"
-    li = link_to "Mail (2)", "/blog/tag/haker.html"
-    li = link_to "Phishing (4)", "/blog/tag/haker.html"
-    li = link_to "XSS (3)", "/blog/tag/haker.html"
-    li = link_to "OpenSSL (4)", "/blog/tag/haker.html"
-    li = link_to "CVE (10)", "/blog/tag/haker.html"
-    li = link_to "WordPress (1)", "/blog/tag/haker.html"
-    li = link_to "Brute-force (1)", "/blog/tag/haker.html"
-    li = link_to "PHP (3)", "/blog/tag/haker.html"
-    li = link_to "LFI (1)", "/blog/tag/haker.html"
-    li = link_to "DNS (2)", "/blog/tag/haker.html"
-    li = link_to "Reconnaissance (4)", "/blog/tag/haker.html"
-    li = link_to "SVN (2)", "/blog/tag/haker.html"
-    li = link_to "IM (1)", "/blog/tag/haker.html"
-    li = link_to "Facebook (5)", "/blog/tag/haker.html"
-    li = link_to "Session (2)", "/blog/tag/haker.html"
-    li = link_to "Cookie (2)", "/blog/tag/haker.html"
-    li = link_to "Statistics (2)", "/blog/tag/haker.html"
-    li = link_to "WAF (1)", "/blog/tag/haker.html"
-    li = link_to "Proxy (1)", "/blog/tag/haker.html"
-    li = link_to "Mobile (2)", "/blog/tag/haker.html"
-    li = link_to "Android (2)", "/blog/tag/haker.html"
-    li = link_to "iOS (1)", "/blog/tag/haker.html"
-    li = link_to "SSL (1)", "/blog/tag/haker.html"
-    li = link_to "MITM (1)", "/blog/tag/haker.html"
-    li = link_to "infoleak (2)", "/blog/tag/haker.html"
-    li = link_to "IoT (2)", "/blog/tag/haker.html"
-    li = link_to "IP Camera (1)", "/blog/tag/haker.html"
-    li = link_to "Shell (1)", "/blog/tag/haker.html"
-    li = link_to "WebView (1)", "/blog/tag/haker.html"
-    li = link_to "UXSS (1)", "/blog/tag/haker.html"
-    li = link_to "Cashflow (1)", "/blog/tag/haker.html"
-    li = link_to "Vulreport (1)", "/blog/tag/haker.html"
-    li = link_to "Rails (1)", "/blog/tag/haker.html"
-    li = link_to "RCE (5)", "/blog/tag/haker.html"
-    li = link_to "IDOR (1)", "/blog/tag/haker.html"
-    li = link_to "徵才 (1)", "/blog/tag/haker.html"
-    li = link_to "BugBounty (4)", "/blog/tag/haker.html"
-    li = link_to "Backdoor (2)", "/blog/tag/haker.html"
-    li = link_to "Pentest (2)", "/blog/tag/haker.html"
-    li = link_to "ecommerce (1)", "/blog/tag/haker.html"
-    li = link_to "Advisory (2)", "/blog/tag/haker.html"
+  .container
+    h2.heading--side-lined 分類
+    
+    ul.list--tags
+      li = link_to "最新消息 (2)", "/blog/tag/haker.html"
+      li = link_to "案例剖析 (9)", "/blog/tag/haker.html"
+      li = link_to "技術專欄 (19)", "/blog/tag/haker.html"
+      li = link_to "科普文章 (5)", "/blog/tag/haker.html"
+      li = link_to "資安新聞 (1)","/blog/tag/haker.html"
+    
+    h2.heading--side-lined 標籤
+    
+    ul.list--tags
+      li = link_to "公告 (2)", "/blog/tag/haker.html"
+      li = link_to "JavaScript (3)", "/blog/tag/haker.html"
+      li = link_to "Hijack (2)", "/blog/tag/haker.html"
+      li = link_to "HTTP Header (6)", "/blog/tag/haker.html"
+      li = link_to "Defense (9)", "/blog/tag/haker.html"
+      li = link_to "OpenSource (1)", "/blog/tag/haker.html"
+      li = link_to "Vulnerability (8)", "/blog/tag/haker.html"
+      li = link_to "Mail (2)", "/blog/tag/haker.html"
+      li = link_to "Phishing (4)", "/blog/tag/haker.html"
+      li = link_to "XSS (3)", "/blog/tag/haker.html"
+      li = link_to "OpenSSL (4)", "/blog/tag/haker.html"
+      li = link_to "CVE (10)", "/blog/tag/haker.html"
+      li = link_to "WordPress (1)", "/blog/tag/haker.html"
+      li = link_to "Brute-force (1)", "/blog/tag/haker.html"
+      li = link_to "PHP (3)", "/blog/tag/haker.html"
+      li = link_to "LFI (1)", "/blog/tag/haker.html"
+      li = link_to "DNS (2)", "/blog/tag/haker.html"
+      li = link_to "Reconnaissance (4)", "/blog/tag/haker.html"
+      li = link_to "SVN (2)", "/blog/tag/haker.html"
+      li = link_to "IM (1)", "/blog/tag/haker.html"
+      li = link_to "Facebook (5)", "/blog/tag/haker.html"
+      li = link_to "Session (2)", "/blog/tag/haker.html"
+      li = link_to "Cookie (2)", "/blog/tag/haker.html"
+      li = link_to "Statistics (2)", "/blog/tag/haker.html"
+      li = link_to "WAF (1)", "/blog/tag/haker.html"
+      li = link_to "Proxy (1)", "/blog/tag/haker.html"
+      li = link_to "Mobile (2)", "/blog/tag/haker.html"
+      li = link_to "Android (2)", "/blog/tag/haker.html"
+      li = link_to "iOS (1)", "/blog/tag/haker.html"
+      li = link_to "SSL (1)", "/blog/tag/haker.html"
+      li = link_to "MITM (1)", "/blog/tag/haker.html"
+      li = link_to "infoleak (2)", "/blog/tag/haker.html"
+      li = link_to "IoT (2)", "/blog/tag/haker.html"
+      li = link_to "IP Camera (1)", "/blog/tag/haker.html"
+      li = link_to "Shell (1)", "/blog/tag/haker.html"
+      li = link_to "WebView (1)", "/blog/tag/haker.html"
+      li = link_to "UXSS (1)", "/blog/tag/haker.html"
+      li = link_to "Cashflow (1)", "/blog/tag/haker.html"
+      li = link_to "Vulreport (1)", "/blog/tag/haker.html"
+      li = link_to "Rails (1)", "/blog/tag/haker.html"
+      li = link_to "RCE (5)", "/blog/tag/haker.html"
+      li = link_to "IDOR (1)", "/blog/tag/haker.html"
+      li = link_to "徵才 (1)", "/blog/tag/haker.html"
+      li = link_to "BugBounty (4)", "/blog/tag/haker.html"
+      li = link_to "Backdoor (2)", "/blog/tag/haker.html"
+      li = link_to "Pentest (2)", "/blog/tag/haker.html"
+      li = link_to "ecommerce (1)", "/blog/tag/haker.html"
+      li = link_to "Advisory (2)", "/blog/tag/haker.html"

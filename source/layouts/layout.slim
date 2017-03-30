@@ -6,14 +6,15 @@ html lang="zh-TW"
 
   body class="#{page_classes} #{t("class")}"
     .page
-      = partial "components/topbar"
+      .container--wrapper = partial "components/topbar"
       
       main role="main" = yield
       
-      = partial "components/relative-posts"
-      
-      = partial "components/contact"
-      
-      = partial "components/footer"
+      .container--wrapper
+        = partial "components/relative-posts"
+        
+        = partial "components/contact"
+        
+        = partial "components/footer"
       
     = partial "layouts/layout-foot"

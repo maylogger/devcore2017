@@ -4,26 +4,27 @@ billboard:
   title: 關於我們：駭客思維
 ---
 
-= partial "components/billboard", locals: {text_only: true}
+.container--wrapper
+  = partial "components/billboard", locals: {text_only: true}
 
-article.article
-  .container
-    h2.heading--side-lined 駭客思維
-    
-    .service
-      ul
-        li
-          h3 具有駭客思維的資安專家
-          p 戴夫寇爾是一群真正貼近駭客想法的資安專家，熱衷挑戰不同思維、創新技術，藉由對技術的熱情，為企業建立堅強的資安後盾。
-        li
-          h3 對於企業的價值
-          p 我們相信資安可以增加消費者的忠誠度、強化企業的品牌形象。了解自己資安架構的問題是做好安全的第一步，我們的價值在於幫助企業精確找出問題根源，讓企業有效地投放資源在正確位置上。
-        li
-          h3 不只看的比較廣，也走的比別人前面
-          p 我們熟悉各種駭客社群發佈的最新情資及攻擊手法，能確保您的產品可抵禦最新攻擊。曾發佈多項國際知名產品漏洞的我們，更有能力比駭客先找出您的 #{content_tag :span, "0-day", class: "nowrap"} 漏洞！透過我們的服務，會讓您親身體驗現實世界中各種前所未見的入侵方式，讓您重新盤點現有防禦思維是否能應對這些攻擊手法。
+  article.article
+    .container
+      h2.heading--side-lined 駭客思維
+      
+      .service
+        ul
+          li
+            h3 具有駭客思維的資安專家
+            p 戴夫寇爾是一群真正貼近駭客想法的資安專家，熱衷挑戰不同思維、創新技術，藉由對技術的熱情，為企業建立堅強的資安後盾。
+          li
+            h3 對於企業的價值
+            p 我們相信資安可以增加消費者的忠誠度、強化企業的品牌形象。了解自己資安架構的問題是做好安全的第一步，我們的價值在於幫助企業精確找出問題根源，讓企業有效地投放資源在正確位置上。
+          li
+            h3 不只看的比較廣，也走的比別人前面
+            p 我們熟悉各種駭客社群發佈的最新情資及攻擊手法，能確保您的產品可抵禦最新攻擊。曾發佈多項國際知名產品漏洞的我們，更有能力比駭客先找出您的 #{content_tag :span, "0-day", class: "nowrap"} 漏洞！透過我們的服務，會讓您親身體驗現實世界中各種前所未見的入侵方式，讓您重新盤點現有防禦思維是否能應對這些攻擊手法。
 
-    h2.heading--side-lined 團隊
-    
-  .team
-    - data.team.members.each_with_index do |member, index|
-      = partial "components/avatar", locals: member
+      h2.heading--side-lined 團隊
+      
+    .team
+      - data.team.members.each_with_index do |member, index|
+        = partial "components/avatar", locals: member

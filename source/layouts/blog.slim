@@ -1,11 +1,12 @@
 - current_page.data.relative_posts = true
 
 = wrap_layout :layout do
-  .container
-    = partial "components/blog-header", locals: current_page.data
+  .container--wrapper
+    .container
+      = partial "components/blog-header", locals: current_page.data
+      
+      article.article = yield
     
-    article.article = yield
-  
-    = partial "components/sns-widgets"
-    = partial "components/blog-author", locals: current_page.data
-    = partial "components/blog-comments"
+      = partial "components/sns-widgets"
+      = partial "components/blog-author", locals: current_page.data
+      = partial "components/blog-comments"

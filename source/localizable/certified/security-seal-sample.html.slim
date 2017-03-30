@@ -4,41 +4,42 @@ billboard:
   title: 網站安全標章範例
 ---
 
-= partial "components/billboard", locals: {text_only: true}
+.container--wrapper
+  = partial "components/billboard", locals: {text_only: true}
 
-article.article
-  .container
-    h2.heading--side-lined.container 標章說明
-    
-    .seal-card
-      .seal-card__thumbnail
-        = image_tag lorem.image("1024x768"), class: "image"
-        = image_tag "seal.svg", class: "seal"
+  article.article
+    .container
+      h2.heading--side-lined.container 標章說明
+      
+      .seal-card
+        .seal-card__thumbnail
+          = image_tag lorem.image("1024x768"), class: "image"
+          = image_tag "seal.svg", class: "seal"
+          
+        h3.seal-card__title DEVCORE 戴夫寇爾官方網站
         
-      h3.seal-card__title DEVCORE 戴夫寇爾官方網站
+        ul.seal-card__info
+          li
+            span.term 網站位址：
+            span.desc http://devco.re/
+          li
+            span.term 公司名稱：
+            span.desc 戴夫寇爾股份有限公司
+          li
+            span.term 檢測日期：
+            span.desc 2017/01/01
+          li
+            span.term 標章有效期限：
+            span.desc  2017/01/01–2018/01/01        
       
-      ul.seal-card__info
-        li
-          span.term 網站位址：
-          span.desc http://devco.re/
-        li
-          span.term 公司名稱：
-          span.desc 戴夫寇爾股份有限公司
-        li
-          span.term 檢測日期：
-          span.desc 2017/01/01
-        li
-          span.term 標章有效期限：
-          span.desc  2017/01/01–2018/01/01        
-    
-    h2.heading--side-lined.container 免責聲明
-      
-    ul
-      li 本標章頁面僅代表檢測當時的網站安全狀態，於檢測結束日起算一年內有效。
-      li 若該網站有新增功能、重大改版而未重新進行滲透測試，戴夫寇爾有權將此認證撤除。
-      li 若使用者於該網站發現安全漏洞，建議儘速通報戴夫寇爾，戴夫寇爾會聯絡該廠商並決議是否將此認證撤除。
-      li 戴夫寇爾對於網站內之超連結或其他關連網站資訊內容的安全性，無法予以保證，亦不負任何賠償及連帶責任。
-      li 戴夫寇爾並無檢查網站是否含有任何侵害著作權或智慧財產權之內容，對於各種侵權之行為不負任何賠償及連帶責任。
-      li 戴夫寇爾並無檢查網站是否含有任何暴力、色情之內容，若有未成年人士欲觀看網站，請自行斟酌是否需要成年人陪同。
-      li 戴夫寇爾不會取用該網站之個資或內容，亦無權停止任何使用者之使用權利，若使用者與網站發生爭議事件，戴夫寇爾不負任何賠償及連帶責任。
-      li 執行滲透測試後無法保證網站永遠安全，使用者仍需注意基本的安全使用原則，以避免蒙受損失。    
+      h2.heading--side-lined.container 免責聲明
+        
+      ul
+        li 本標章頁面僅代表檢測當時的網站安全狀態，於檢測結束日起算一年內有效。
+        li 若該網站有新增功能、重大改版而未重新進行滲透測試，戴夫寇爾有權將此認證撤除。
+        li 若使用者於該網站發現安全漏洞，建議儘速通報戴夫寇爾，戴夫寇爾會聯絡該廠商並決議是否將此認證撤除。
+        li 戴夫寇爾對於網站內之超連結或其他關連網站資訊內容的安全性，無法予以保證，亦不負任何賠償及連帶責任。
+        li 戴夫寇爾並無檢查網站是否含有任何侵害著作權或智慧財產權之內容，對於各種侵權之行為不負任何賠償及連帶責任。
+        li 戴夫寇爾並無檢查網站是否含有任何暴力、色情之內容，若有未成年人士欲觀看網站，請自行斟酌是否需要成年人陪同。
+        li 戴夫寇爾不會取用該網站之個資或內容，亦無權停止任何使用者之使用權利，若使用者與網站發生爭議事件，戴夫寇爾不負任何賠償及連帶責任。
+        li 執行滲透測試後無法保證網站永遠安全，使用者仍需注意基本的安全使用原則，以避免蒙受損失。    
