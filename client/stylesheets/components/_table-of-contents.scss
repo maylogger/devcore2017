@@ -2,20 +2,28 @@
   @extend %scut-list-unstyled;
   @include rhythm-type(-1);
   @include rhythm-margins();
-  margin-left: 0 !important;
+  margin-left : 0 !important;
   padding-left: 0 !important;
-  font-weight: bold;
+  font-weight : bold;
+  list-style  : none !important;
   @include desktop {
-    @include leader(-.75);
+     @include leader(-.75);
     column-count: 2;
-    column-gap: 1em;
+    column-gap  : 1em;
   }
 }
+
 .table-of-contents__cell {
   margin-bottom: 0 !important;
-  &::before {display: none !important;}
+
+  &::before {
+    display: none !important;
+  }
+
   & + & {
     @include leader(.25);
-    @include desktop {margin-top: 0;}
+    @include desktop {
+      margin-top: 0;
+    }
   }
 }
